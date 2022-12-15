@@ -35,6 +35,16 @@
   width: 12px;
 }
 
+@media (prefers-color-scheme: dark) {
+  .scroll-button {
+    border-color: #fff;
+  }
+
+  .scroll-button::before {
+    border-color: #fff;
+  }
+}
+
 @keyframes bounce {
   0%,
   100%,

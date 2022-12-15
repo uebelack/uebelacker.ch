@@ -11,6 +11,7 @@ module.exports = {
         tabWidth: 4,
       },
     ],
+    'react/require-default-props': 'off',
   },
-  extends: ['next/core-web-vitals', 'airbnb-base', 'airbnb-typescript/base']
+  extends: ['next/core-web-vitals', 'airbnb', 'airbnb-typescript'],
 };

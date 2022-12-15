@@ -1,13 +1,19 @@
 export default {
   common: {
     more: 'More',
+    scroll_down: 'Scroll down',
+  },
+  home: {
+    quote: 'What one programmer can do in one month, two programmers can do in two months.',
+  },
+  blog: {
+    title: 'Blog',
+  },
+  apps: {
+    title: 'Apps',
   },
   about: {
     title: 'About',
-    subtitle: 'I code great apps like a cowboy!',
-    content_1: 'I am a passionate software engineer working for a Swiss company.',
-    content_2: 'From time to time i work on some nice projects in my free time, which i publish on this site.',
-    photo_alt: 'Photo of David Übelacker',
   },
   contact: {
     title: 'Contact',
@@ -28,44 +34,6 @@ export default {
     success: 'Thank you for your message! i will come back to you, as soon as possible!',
     error: 'Sorry, something went wrong, please retry later...',
   },
-  home: {
-    apps_title: 'Apps',
-    apps_subtitle: 'A couple of great apps for you!',
-  },
-  letter: {
-    title: 'Letter',
-    teaser: 'With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.',
-    link: '/en/letter',
-    features: 'Features',
-    features_subtitle: 'Overview of all features',
-    description: 'Description',
-    description_subtitle: 'The Letter App in detail',
-    screenshots: 'Screenshots',
-    screenshots_subtitle: 'The main screens of the Letter App',
-    video: 'Video',
-    video_subtitle: 'A video illustrating the operation of the Letter App',
-    description_1: 'With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.',
-    description_2: 'Your letters are stored and synchronized between devices using iCloud. They can be freely printed via AirPrint, sent by email and opened in other iOS applications in PDF format. The integrated search also makes finding things a breeze in many documents.',
-    description_3: 'The lean design is focused on the essentials to make creating the contents of your letter fast and uncomplicated. From now on tedious formatting is a thing of the past.',
-    description_4: 'Senders and receivers can easily be selected from your address book. International addresses are formatted automatically according to the applicable standard.',
-    description_5: 'With your own text templates you can create ready letters in just a few seconds.',
-    features_print_title: 'Printing & Sharing',
-    features_print_description: 'Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.',
-    features_storage_title: 'Storage',
-    features_storage_description: 'All letters are stored securely and synchronized between devices using iCloud.',
-    features_search_title: 'Search',
-    features_search_description: 'With the search function letters can be found again quickly and easily.',
-    features_addresses_title: 'Addresses',
-    features_addresses_description: 'International addresses are formatted automatically. Senders and receivers can easily be selected from your address book.',
-    features_signature_title: 'Signature',
-    features_signature_description: 'Letters can be signed directly in the application.',
-    features_templates_title: 'Templates',
-    features_templates_description: 'Text templates can be used to create ready letter in just a few seconds.',
-  },
-  video_party: {
-    title: 'Video Party',
-    teaser: 'Celebrate a video party with your friends, watch all your favorite videos together! (Coming soon...).',
-  },
   footer: {
     rights: 'all rights reserved.',
     imprint: 'Imprint',
@@ -74,18 +42,12 @@ export default {
     privacy_link: '/en/privacy',
   },
   cookie_consent: {
-    message: 'This website uses cookies to ensure you get the best experience on our website.',
-    dismiss: 'Got it!',
-    link: 'Learn more',
+    message: 'This website uses cookies to ensure you get the best experience on our website. To learn more, please refer to our',
+    accept: 'Accept',
   },
   lost: {
     title: "You're Lost! 404 - Not Found",
     description: "The page your are looking for doesn't exist",
     button: 'Go Home',
-  },
-  background: {
-    alt_5: 'Background image showing the Grand Canyon in Arizona',
-    alt_6: 'Background image showing the Horseshoe Bend in Arizona',
-    alt_7: 'Background image shoing the Wave in the Coyote Buttes North area of the Utah Arizona border',
   },
 };

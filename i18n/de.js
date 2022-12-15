@@ -1,6 +1,16 @@
 export default {
   common: {
     more: 'Mehr',
+    scroll_down: 'Nach unten scrollen',
+  },
+  home: {
+    quote: 'Was ein Programmierer in einem Monat schaffen kann, können zwei Programmierer in zwei Monaten schaffen.',
+  },
+  blog: {
+    title: 'Blog',
+  },
+  apps: {
+    title: 'Apps',
   },
   about: {
     title: 'Über',
@@ -32,9 +42,8 @@ export default {
     privacy_link: '/de/datenschutz',
   },
   cookie_consent: {
-    message: 'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können.',
-    dismiss: 'Alles klar',
-    link: 'Weitere Informationen',
+    message: 'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Um mehr zu erfahren, lesen Sie bitte unsere',
+    accept: 'Akzeptieren',
   },
   lost: {
     title: 'Verloren!? 404 - Nicht gefunden',

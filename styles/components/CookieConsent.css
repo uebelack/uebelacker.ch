@@ -1,0 +1,21 @@
+.CookieConsent {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+#rcc-confirm-button {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .CookieConsent {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  #rcc-confirm-button {
+    background: #000 !important;
+    color: #fff !important;
+  }
+}
