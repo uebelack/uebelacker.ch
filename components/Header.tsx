@@ -19,7 +19,7 @@ export default function Header({ title, description }: Props) {
         </title>
         {description && (<meta name="description" content={description} />)}
       </Head>
-      <div className="md:flex">
+      <div className="flex flex-col items-center md:items-start md:flex-row">
         <Link href="/" className="flex items-center transition ease-in-out delay-150 flex-grow">
           <Image className="dark:hidden" src="/logo.svg" alt="Übelacker Solutions logo" width={40} height={40} />
           <Image className="hidden dark:inline-block" src="/logo_dark.svg" alt="Übelacker Solutions logo" width={40} height={40} />
@@ -30,7 +30,7 @@ export default function Header({ title, description }: Props) {
           <li className="mr-2"><FormattedMessage id="apps.title" /></li>
           <li className="mr-2"><FormattedMessage id="about.title" /></li>
           <li className="mr-3"><FormattedMessage id="contact.title" /></li>
-          <li><a href="/">en</a></li>
+          <li><a href="/en">en</a></li>
           <li>|</li>
           <li><a href="/de">de</a></li>
         </ul>
