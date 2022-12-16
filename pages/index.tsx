@@ -44,6 +44,21 @@ export default function Home() {
           </ul>
         </Container>
       </Section>
+      <Section>
+        <Container>
+          <Heading id="apps"><FormattedMessage id="apps.title" /></Heading>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Heading id="about"><FormattedMessage id="about.title" /></Heading>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Heading id="contact"><FormattedMessage id="contact.title" /></Heading>
+        </Container>
+      </Section>
       <Footer />
     </Page>
   );

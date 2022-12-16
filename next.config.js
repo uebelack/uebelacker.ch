@@ -11,6 +11,7 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   images: {
+    deviceSizes: [480, 768, 976, 1024],
     remotePatterns: [
       {
         protocol: 'https',

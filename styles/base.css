@@ -1,6 +1,12 @@
 body {
   background-color: #fff;
   color: #000;
+  
+}
+
+header {
+  background-color:rgba(255, 255, 255, 0.8);
+  z-index: 100;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -8,4 +14,7 @@ body {
     background-color: #000;
     color: #fff;
   }
+  header {
+    background-color:rgba(0, 0, 0, 0.8);
+  }  
 } 
