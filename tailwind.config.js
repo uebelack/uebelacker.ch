@@ -26,5 +26,5 @@ module.exports = {
       sans: ['Fira Code', 'sans-serif'],
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp'),],
 }

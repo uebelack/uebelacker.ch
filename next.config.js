@@ -10,6 +10,16 @@ const nextConfig = {
     locales: ['en', 'de'],
     defaultLocale: 'en',
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.medium.com',
+        port: '',
+        pathname: '**/*',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

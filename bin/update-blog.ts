@@ -1,4 +1,7 @@
-import fetch from 'node-fetch';
+/* eslint-disable import/no-extraneous-dependencies */
+import fetch from 'isomorphic-fetch';
+import { JSDOM } from 'jsdom';
+import fs from 'fs';
 
 interface BlogItem {
   guid: string;
@@ -11,19 +14,18 @@ interface BlogItem {
 const updateBlog = async () => {
   const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@uebelack');
   const json = await response.json();
-  // const items = json.items.map((item:BlogItem) => {
-  //   const temp = document.createElement('div');
-  //   temp.innerHTML = item.description;
-  //   const teaser = temp.querySelector('p')?.textContent;
-  //   return {
-  //     guid: item.guid,
-  //     thumbnail: item.thumbnail,
-  //     title: item.title,
-  //     link: item.link,
-  //     teaser,
-  //   };
-  // });
-  console.log(json);
+  const items = json.items.map((item:BlogItem) => {
+    const dom = new JSDOM(item.description);
+    const teaser = dom.window.document.querySelector('p')?.textContent;
+    return {
+      guid: item.guid,
+      thumbnail: item.thumbnail,
+      title: item.title,
+      link: item.link,
+      teaser,
+    };
+  });
+  fs.writeFileSync('data/blog.json', JSON.stringify(items));
 };
 
 updateBlog();

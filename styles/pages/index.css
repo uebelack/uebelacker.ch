@@ -1,3 +1,4 @@
 .start {
   height: calc(100vh - 140px);
+  margin-bottom: 140px;
 }

@@ -26,7 +26,7 @@ export default function Header({ title, description }: Props) {
           <div className="text-2xl ml-2 pt-0.5">Übelacker Solutions</div>
         </Link>
         <ul className="flex pt-2 pl-1 md:pt-2.5">
-          <li className="mr-2"><FormattedMessage id="blog.title" /></li>
+          <li className="mr-2"><Link href="/#blog"><FormattedMessage id="blog.title" /></Link></li>
           <li className="mr-2"><FormattedMessage id="apps.title" /></li>
           <li className="mr-2"><FormattedMessage id="about.title" /></li>
           <li className="mr-3"><FormattedMessage id="contact.title" /></li>

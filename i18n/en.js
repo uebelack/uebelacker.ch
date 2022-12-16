@@ -8,6 +8,7 @@ export default {
   },
   blog: {
     title: 'Blog',
+    read_more: 'Read more',
   },
   apps: {
     title: 'Apps',
