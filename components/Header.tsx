@@ -4,6 +4,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import { scroller } from 'react-scroll';
 
@@ -40,6 +41,8 @@ export default function Header({ title, description }: Props) {
           <li><a href="/en">en</a></li>
           <li>|</li>
           <li><a href="/de">de</a></li>
+          <a className="ml-3" href="https://github.com/hackercowboy"><FaGithub size="1.5em" /></a>
+          <a className="ml-2" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.5em" /></a>
         </ul>
       </div>
     </header>
