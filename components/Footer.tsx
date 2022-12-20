@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useIntl, FormattedMessage } from 'react-intl';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+// import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
   const { formatMessage } = useIntl();
