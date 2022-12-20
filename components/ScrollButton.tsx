@@ -9,7 +9,7 @@ export default function ScrollButton({ target }: { target: string }) {
       className="scroll-button"
       type="button"
       aria-label={formatMessage({ id: 'common.scroll_down' })}
-      onClick={() => scroller.scrollTo(target, { offset: -94, duration: 500, smooth: true })}
+      onClick={() => scroller.scrollTo(target, { duration: 200, smooth: true })}
     />
   );
 }

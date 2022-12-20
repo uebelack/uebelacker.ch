@@ -3,7 +3,8 @@
 @import "./base.css";
 @import "./animations.css";
 
-@import "./pages/index.css";
-
+@import "./components/Section.css";
 @import "./components/ScrollButton.css";
 @import "./components/CookieConsent.css";
+@import "./components/Checkbox.css";
+@import "./components/Button.css";

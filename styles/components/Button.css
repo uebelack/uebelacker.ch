@@ -1,0 +1,11 @@
+/* button:disabled {
+  background-color: #FAFAFA;
+  color: #9DA3AE;
+}
+
+@media (prefers-color-scheme: dark) {
+  button:disabled {
+    background-color: #484848;
+    color: #9DA3AE;
+  }  
+}  */

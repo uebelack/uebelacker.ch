@@ -12,6 +12,24 @@ export default {
   },
   apps: {
     title: 'Apps',
+    more: 'More',
+    letter: {
+      title: 'Letter',
+      description: `
+      The Letter app is an app for iPhone and iPad to write classic letters. 
+      Even today, various things have to be done with classic letters. With this app, you can focus on the content and don't have to worry about formatting.
+      Templates for standard letters, such as the cancellation of subscriptions or insurance policies, make your life even easier.`,
+      thumbnail: '/letter.svg',
+      link: 'https://apps.apple.com/app/letter/id498506154',
+    },
+    skynjari: {
+      title: 'Skynjari',
+      description: `Skynjari, Icelandic for sensors. Small app to easily visualize the data from smart home sensors.
+      A small spare time project that is still in its early stages. 
+      Implemented with Typescript, Nest.js, Angular, GraphQL and InfluxDB for data storage.`,
+      thumbnail: '/skynjari.png',
+      link: 'https://github.com/uebelack/skynjari',
+    },
   },
   about: {
     title: 'About',
@@ -34,6 +52,7 @@ export default {
     privacy_error: 'Please accept the privacy policy',
     success: 'Thank you for your message! i will come back to you, as soon as possible!',
     error: 'Sorry, something went wrong, please retry later...',
+    cookie: 'Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.ch.',
   },
   footer: {
     rights: 'all rights reserved.',
