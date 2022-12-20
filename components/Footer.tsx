@@ -20,12 +20,6 @@ export default function Footer() {
         |
         {' '}
         <Link href={formatMessage({ id: 'footer.privacy_link' })}><FormattedMessage id="footer.privacy" /></Link>
-
-        {/* <div className="footer-item social-links">
-        <a id="github-link" href="https://github.com/hackercowboy"><FaGithub size="2.5em" /></a>
-        <a id="linkedin-link" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="2.5em" /></a>
-      </div> */}
-
       </div>
     </footer>
   );
