@@ -15,8 +15,10 @@ export interface Props {
 
 export default function Header({ title, description }: Props) {
   const handleOnClick = (e:any, target:string) => {
-    scroller.scrollTo(target, { duration: 200, smooth: true });
-    e.preventDefault();
+    if (window.location.pathname === '/en' || window.location.pathname === '/de') {
+      scroller.scrollTo(target, { duration: 200, smooth: true });
+      e.preventDefault();
+    }
   };
 
   return (
