@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export default {
   common: {
     more: 'More',
@@ -5,6 +6,7 @@ export default {
   },
   home: {
     quote: 'What one programmer can do in one month, two programmers can do in two months.',
+    description: 'The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland. I\'m a full-stack developer and software architect with 20+ years of experience in web and mobile application development.',
   },
   blog: {
     title: 'Blog',

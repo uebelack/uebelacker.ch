@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export default {
   common: {
     more: 'Mehr',
@@ -5,6 +6,7 @@ export default {
   },
   home: {
     quote: 'Was ein Programmierer in einem Monat schaffen kann, können zwei Programmierer in zwei Monaten schaffen.',
+    description: 'Die Firma Übelacker Solutions wurde von mir, David Übelacker, gegründet, um als Freelancer in der Schweiz zu arbeiten. Ich bin ein Full-Stack-Entwickler und Software-Architekt mit über 20 Jahren Erfahrung in der Entwicklung von Web- und mobilen Anwendungen.',
   },
   blog: {
     title: 'Blog',

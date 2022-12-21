@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
@@ -7,6 +8,7 @@ import Image from 'next/image';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import { scroller } from 'react-scroll';
+import { useCookieConsent } from './CookieConsent';
 
 export interface Props {
   title?: string;
@@ -14,6 +16,7 @@ export interface Props {
 }
 
 export default function Header({ title, description }: Props) {
+  const cookiesAccess = useCookieConsent();
   const handleOnClick = (e:any, target:string) => {
     if (window.location.pathname === '/en' || window.location.pathname === '/de') {
       scroller.scrollTo(target, { duration: 200, smooth: true });
@@ -29,6 +32,21 @@ export default function Header({ title, description }: Props) {
         </title>
         {description && (<meta name="description" content={description} />)}
       </Head>
+      {typeof window !== 'undefined' && cookiesAccess && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}', { 'anonymize_ip': true });
+          `,
+            }}
+          />
+        </>
+      )}
       <div className="md:container px-4 my-4 fade-in flex flex-col items-center md:items-start md:flex-row">
         <Link href="/" className="flex items-center transition ease-in-out delay-150 flex-grow">
           <Image className="dark:hidden" src="/logo.svg" alt="Übelacker Solutions logo" width={40} height={40} />

@@ -7,7 +7,8 @@
     "build": "tailwindcss ./styles/input.css --output ./styles/output.css && next build",
     "start": "next start",
     "lint": "next lint",
-    "blog:update": "ts-node  -O '{\"module\": \"commonjs\"}' bin/update-blog.ts"
+    "blog:update": "ts-node  -O '{\"module\": \"commonjs\"}' bin/update-blog.ts",
+    "sitemap:update": "ts-node  -O '{\"module\": \"commonjs\"}' bin/update-sitemap.ts"
   },
   "dependencies": {
     "@fontsource/fira-code": "^4.5.12",
@@ -41,6 +42,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "@types/isomorphic-fetch": "^0.0.36",
     "@types/jsdom": "^20.0.1",
+    "@types/prettier": "^2.7.2",
     "@types/react-lazyload": "^3.2.0",
     "@types/react-scroll": "^1.8.5",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
@@ -55,6 +57,7 @@
     "isomorphic-fetch": "^3.0.0",
     "jsdom": "^20.0.3",
     "postcss-import": "^15.1.0",
+    "prettier": "^2.8.1",
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1"
   }

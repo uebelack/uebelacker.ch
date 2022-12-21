@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import ReactCookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 
@@ -9,7 +9,9 @@ export function useCookieConsent() {
 }
 
 export default function CookieConsent({ children } : { children: ReactNode }) {
-  const [cookieConsentAccepted, setCookieConsentAccepted] = useState(getCookieConsentValue('uebelacker_cookie_consent') === 'true');
+  const [cookieConsentAccepted, setCookieConsentAccepted] = useState(false);
+
+  useEffect(() => setCookieConsentAccepted(getCookieConsentValue('uebelacker_cookie_consent') === 'true'), []);
 
   const { formatMessage } = useIntl();
   return (

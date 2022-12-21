@@ -20,7 +20,7 @@ export default function Home() {
   const { formatMessage } = useIntl();
   return (
     <Page>
-      <Header />
+      <Header description={formatMessage({ id: 'home.description' })} />
       <Section className="grid place-items-center first">
         <Container className="grid place-items-center">
           <div className="p-3 md:w-4/5 pt-20">
