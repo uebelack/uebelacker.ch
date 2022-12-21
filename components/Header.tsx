@@ -61,8 +61,8 @@ export default function Header({ title, description }: Props) {
           <li><a href="/en">en</a></li>
           <li>|</li>
           <li><a href="/de">de</a></li>
-          <a className="ml-3" href="https://github.com/uebelack"><FaGithub size="1.5em" /></a>
-          <a className="ml-2" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.5em" /></a>
+          <li className="ml-3"><a title="Github Profile" href="https://github.com/uebelack"><FaGithub size="1.5em" /></a></li>
+          <li className="ml-2"><a title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.5em" /></a></li>
         </ul>
       </div>
     </header>

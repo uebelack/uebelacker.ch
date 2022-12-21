@@ -32,7 +32,7 @@ export default function BlogItem({
         <div className="mt-2">
           {teaser}
           { ' ' }
-          <Link href={link} className="underline">
+          <Link href={link} className="underline" title={title}>
             <FormattedMessage id="blog.read_more" />
           </Link>
         </div>
