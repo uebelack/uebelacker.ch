@@ -17,7 +17,7 @@ export interface Props {
 
 export default function Header({ title, description }: Props) {
   const cookiesAccess = useCookieConsent();
-  const handleOnClick = (e:any, target:string) => {
+  const handleOnClick = (e: any, target: string) => {
     if (window.location.pathname === '/en' || window.location.pathname === '/de') {
       scroller.scrollTo(target, { duration: 200, smooth: true });
       e.preventDefault();
@@ -30,6 +30,7 @@ export default function Header({ title, description }: Props) {
         <title>
           {title ? `${title} | Übelacker Solutions` : 'Übelacker Solutions'}
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         {description && (<meta name="description" content={description} />)}
       </Head>
       {typeof window !== 'undefined' && cookiesAccess && (
@@ -47,7 +48,7 @@ export default function Header({ title, description }: Props) {
           />
         </>
       )}
-      <div className="md:container px-4 my-4 fade-in flex flex-col items-center md:items-start md:flex-row">
+      <div className="md:container px-4 my-4 fade-in flex flex-col md:flex-row">
         <Link href="/" className="flex items-center transition ease-in-out delay-150 flex-grow">
           <Image className="dark:hidden" src="/logo.svg" alt="Übelacker Solutions logo" width={40} height={40} />
           <Image className="hidden dark:inline-block" src="/logo_dark.svg" alt="Übelacker Solutions logo" width={40} height={40} />
