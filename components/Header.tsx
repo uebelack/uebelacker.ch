@@ -24,8 +24,6 @@ export default function Header({ title, description }: Props) {
     }
   };
 
-  console.log(cookiesAccess);
-
   return (
     <header className="fixed top-0 w-full">
       <Head>
