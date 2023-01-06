@@ -24,6 +24,8 @@ export default function Header({ title, description }: Props) {
     }
   };
 
+  console.log(cookiesAccess);
+
   return (
     <header className="fixed top-0 w-full">
       <Head>
@@ -32,22 +34,22 @@ export default function Header({ title, description }: Props) {
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         {description && (<meta name="description" content={description} />)}
-      </Head>
-      {typeof window !== 'undefined' && cookiesAccess && (
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}`} />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+        {typeof window !== 'undefined' && cookiesAccess && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY}', { 'anonymize_ip': true });
           `,
-            }}
-          />
-        </>
-      )}
+              }}
+            />
+          </>
+        )}
+      </Head>
       <div className="md:container px-4 my-4 fade-in flex flex-col md:flex-row">
         <Link href="/" className="flex items-center transition ease-in-out delay-150 flex-grow">
           <Image className="dark:hidden" src="/logo.svg" alt="Übelacker Solutions logo" width={40} height={40} />
