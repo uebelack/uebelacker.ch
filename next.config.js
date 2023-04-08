@@ -5,8 +5,8 @@ const withMDX = require('@next/mdx')({
 const nextConfig = withMDX({
   reactStrictMode: true,
   swcMinify: true,
+  transpilePackages: ["ui"],
   experimental: {
-    transpilePackages: ["ui"],
     appDir: true
   },
   i18n: {
