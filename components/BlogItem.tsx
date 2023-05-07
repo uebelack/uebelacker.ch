@@ -14,7 +14,7 @@ export default function BlogItem({
   thumbnail, title, link, teaser,
 } : Props) {
   return (
-    <div className="mb-10 md:flex">
+    <div className="mb-20 md:flex">
       <div className="relative h-48 md:h-32 md:w-48">
         <Image
           src={thumbnail}
