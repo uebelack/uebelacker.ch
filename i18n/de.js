@@ -22,7 +22,7 @@ export default {
       Mit dieser App können Sie sich auf den Inhalt konzentrieren und müssen sich nicht um die Formatierung kümmern.
       Vorlagen für Standardbriefe, wie z. B. die Kündigung von Abonnements oder Versicherungen, machen Ihnen das Leben noch leichter.`,
       thumbnail: '/letter.svg',
-      link: 'https://apps.apple.com/app/letter/id498506154',
+      link: 'https://briefe.app',
     },
     skynjari: {
       title: 'Skynjari',
