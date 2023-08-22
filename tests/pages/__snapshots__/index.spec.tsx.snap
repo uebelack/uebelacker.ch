@@ -472,7 +472,7 @@ exports[`<Home/> should render 1`] = `
             >
               <a
                 class="underline"
-                href="https://apps.apple.com/app/letter/id498506154"
+                href="https://briefe.app"
               >
                 More
               </a>
@@ -482,7 +482,7 @@ exports[`<Home/> should render 1`] = `
             class="ml-2 md:ml-10 mt-8"
           >
             <a
-              href="https://apps.apple.com/app/letter/id498506154"
+              href="https://briefe.app"
             >
               <img
                 alt="Letter"
