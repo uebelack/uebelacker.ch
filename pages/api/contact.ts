@@ -38,7 +38,7 @@ export default async function handler(request:{ method: string, body: { email: s
       await messageSchema.validate(message);
       const mailgun = new Mailgun(FormData);
       await mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY! })
-        .messages.create('mg.uebelacker.dev', {
+        .messages.create('mg.codecowboys.io', {
           from: message.email,
           to: ['david@uebelacker.dev'],
           subject: message.subject,
