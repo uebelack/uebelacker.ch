@@ -22,7 +22,7 @@ export default {
       Even today, various things have to be done with classic letters. With this app, you can focus on the content and don't have to worry about formatting.
       Templates for standard letters, such as the cancellation of subscriptions or insurance policies, make your life even easier.`,
       thumbnail: '/letter.svg',
-      link: 'https://apps.apple.com/app/letter/id498506154',
+      link: 'https://briefe.app',
     },
     skynjari: {
       title: 'Skynjari',
