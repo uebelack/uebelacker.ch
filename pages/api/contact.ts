@@ -40,7 +40,7 @@ export default async function handler(request:{ method: string, body: { email: s
       await mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY! })
         .messages.create('mg.uebelacker.dev', {
           from: message.email,
-          to: ['support@uebelacker.dev'],
+          to: ['david@uebelacker.dev'],
           subject: message.subject,
           text: message.message,
         });
