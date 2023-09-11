@@ -53,7 +53,7 @@
     "@types/react-lazyload": "^3.2.0",
     "@types/react-scroll": "^1.8.7",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.5.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "autoprefixer": "^10.4.15",
     "concurrently": "^8.2.1",
     "eslint": "8.47.0",
