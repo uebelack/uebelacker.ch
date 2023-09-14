@@ -16,21 +16,25 @@ export default function BlogItem({
   return (
     <div className="mb-20 md:flex">
       <div className="relative h-48 md:h-32 md:w-48">
-        <Image
-          src={thumbnail}
-          alt={title}
-          fill
-          style={{ objectFit: 'cover' }}
-          sizes="(max-width: 768px) 100vw,
+        <Link href={link} className="underline" title={title}>
+          <Image
+            src={thumbnail}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw,
             192px"
-        />
+          />
+        </Link>
       </div>
       <div className="max-h-64 md:flex-1 md:ml-10 md:justify-start">
         <div className="text-lg mt-3 md:mt-0">
-          {title}
+          <Link href={link} title={title}>
+            {title}
+          </Link>
         </div>
         <div className="mt-2">
-          {teaser}
+          <Link href={link} title={title}>{teaser}</Link>
           { ' ' }
           <Link href={link} className="underline" title={title}>
             <FormattedMessage id="blog.read_more" />
