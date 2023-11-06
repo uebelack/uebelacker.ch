@@ -3,16 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
 
-interface Props {
-  thumbnail: string,
-  title: string,
-  link: string,
-  teaser: string,
-}
-
 export default function BlogItem({
   thumbnail, title, link, teaser,
-} : Props) {
+}) {
   return (
     <div className="mb-20 md:flex">
       <div className="relative h-48 md:h-32 md:w-48">

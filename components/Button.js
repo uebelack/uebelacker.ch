@@ -1,16 +1,9 @@
 /* eslint-disable react/button-has-type */
-import React, { ReactNode } from 'react';
-
-interface Props {
-  id?: string;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-  children: ReactNode;
-}
+import React from 'react';
 
 function Button({
   id, type, disabled, children,
-} : Props) {
+}) {
   return (
     <button
       id={id}

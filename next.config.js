@@ -5,9 +5,9 @@ const withMDX = require('@next/mdx')({
 const nextConfig = withMDX({
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ["ui"],
+  transpilePackages: ['ui'],
   experimental: {
-    appDir: true
+    appDir: true,
   },
   i18n: {
     locales: ['en', 'de'],
@@ -24,7 +24,7 @@ const nextConfig = withMDX({
       },
     ],
   },
-  pageExtensions: ['tsx', 'mdx', 'ts'],
+  pageExtensions: ['js', 'mdx'],
 });
 
-module.exports = nextConfig
+module.exports = nextConfig;

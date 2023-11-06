@@ -1,8 +1,4 @@
 module.exports = {
-  parserOptions: {
-    project: ['./tsconfig.json'],
-    tsconfigRootDir: __dirname,
-  },
   rules: {
     'max-len': [
       'error',
@@ -12,6 +8,11 @@ module.exports = {
       },
     ],
     'react/require-default-props': 'off',
-  },
-  extends: ['next/core-web-vitals', 'airbnb', 'airbnb-typescript'],
+    'react/jsx-filename-extension': 'off',
+    'react/prop-types': 'off',
+    'import/no-unresolved': {
+      ignore: ['^@/'],
+    },
+  }
+  extends: ['next/core-web-vitals', 'airbnb'],
 };

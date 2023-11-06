@@ -10,14 +10,9 @@ import { FormattedMessage } from 'react-intl';
 import { scroller } from 'react-scroll';
 import { useCookieConsent } from './CookieConsent';
 
-export interface Props {
-  title?: string;
-  description?: string;
-}
-
-export default function Header({ title, description }: Props) {
+export default function Header({ title, description }) {
   const cookiesAccess = useCookieConsent();
-  const handleOnClick = (e: any, target: string) => {
+  const handleOnClick = (e, target) => {
     if (window.location.pathname === '/en' || window.location.pathname === '/de') {
       scroller.scrollTo(target, { duration: 200, smooth: true });
       e.preventDefault();

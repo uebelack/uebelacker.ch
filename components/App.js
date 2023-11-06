@@ -3,16 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
 
-interface Props {
-  thumbnail: string,
-  title: string,
-  link: string,
-  description: string,
-}
-
 export default function App({
   thumbnail, title, link, description,
-} : Props) {
+}) {
   return (
     <div className="flex mb-10">
       <div className="flex-grow flex-1">

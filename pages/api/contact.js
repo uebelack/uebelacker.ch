@@ -13,15 +13,6 @@ Yup.addMethod(Yup.string, 'captcha', function captcha() {
   });
 });
 
-declare module 'yup' {
-  interface DateSchema {
-    captcha(): DateSchema
-  }
-}
-
-interface CaptchaSchema extends Yup.StringSchema {
-  captcha(): Yup.StringSchema
-}
 
 const messageSchema = Yup.object({
   email: Yup.string().email().required(),

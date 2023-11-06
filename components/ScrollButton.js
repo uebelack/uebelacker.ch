@@ -2,7 +2,7 @@ import React from 'react';
 import { scroller } from 'react-scroll';
 import { useIntl } from 'react-intl';
 
-export default function ScrollButton({ target }: { target: string }) {
+export default function ScrollButton({ target }) {
   const { formatMessage } = useIntl();
   return (
     <button

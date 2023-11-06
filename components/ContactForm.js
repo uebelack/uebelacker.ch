@@ -17,7 +17,7 @@ export default function ContactForm() {
   const cookiesAccepted = useCookieConsent();
   const { formatMessage } = useIntl();
   const [state, setState] = useState('initial');
-  const [captcha, setCaptcha] = useState<string | undefined>(undefined);
+  const [captcha, setCaptcha] = useState(undefined);
 
   const ContactSchema = Yup.object().shape({
     email: Yup.string()
@@ -30,11 +30,11 @@ export default function ContactForm() {
     privacy: Yup.bool().oneOf([true], formatMessage({ id: 'contact.privacy_error' })),
   });
 
-  const handleOnCaptchaVerify = useCallback((token:string) => {
+  const handleOnCaptchaVerify = useCallback((token) => {
     setCaptcha(token);
   }, []);
 
-  const handleOnSubmit = async (values:any) => {
+  const handleOnSubmit = async (values) => {
     try {
       await axios.post('/api/contact', { ...values, captcha });
       setState('submitted');
@@ -46,7 +46,7 @@ export default function ContactForm() {
   return (
     <LazyLoad offset={100}>
       { cookiesAccepted ? (
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
           <GoogleReCaptcha onVerify={handleOnCaptchaVerify} />
         </GoogleReCaptchaProvider>
       ) : (<p className="mb-5"><FormattedMessage id="contact.cookie" /></p>)}

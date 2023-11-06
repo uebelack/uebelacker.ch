@@ -4,15 +4,9 @@ import { Field } from 'formik';
 
 import ErrorMessage from './ErrorMessage';
 
-interface Props {
-  name: string;
-  placeholder: string;
-  disabled: boolean;
-}
-
 function Textarea({
   name, placeholder, disabled,
-} : Props) {
+}) {
   return (
     <div className="w-full">
       <Field
