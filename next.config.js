@@ -6,9 +6,6 @@ const nextConfig = withMDX({
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: ['ui'],
-  experimental: {
-    appDir: true,
-  },
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'en',

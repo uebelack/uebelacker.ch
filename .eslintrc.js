@@ -1,4 +1,8 @@
 module.exports = {
+  extends: [
+    'next/core-web-vitals',
+    'airbnb',
+  ],
   rules: {
     'max-len': [
       'error',
@@ -10,9 +14,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/jsx-filename-extension': 'off',
     'react/prop-types': 'off',
-    'import/no-unresolved': {
-      ignore: ['^@/'],
-    },
-  }
-  extends: ['next/core-web-vitals', 'airbnb'],
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+  },
 };

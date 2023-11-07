@@ -81,7 +81,7 @@ export default function ContactForm() {
               >
                 <FormattedMessage id="contact.privacy_1" />
                 {' '}
-                <a href={formatMessage({ id: 'contact.privacy_link' })} className="underline">
+                <a href={formatMessage({ id: 'contact.privacy_link' })} className="underline" aria-label="Privacy">
                   <FormattedMessage id="contact.privacy_2" />
                 </a>
               </Checkbox>

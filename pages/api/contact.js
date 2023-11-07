@@ -13,22 +13,21 @@ Yup.addMethod(Yup.string, 'captcha', function captcha() {
   });
 });
 
-
 const messageSchema = Yup.object({
   email: Yup.string().email().required(),
   subject: Yup.string().required(),
   message: Yup.string().required(),
-  captcha: (Yup.string().required() as CaptchaSchema).captcha(),
+  captcha: (Yup.string().required()).captcha(),
   privacy: Yup.bool().oneOf([true]),
 });
 
-export default async function handler(request:{ method: string, body: { email: string, subject: string, message: string, } }, response: any) {
+export default async function handler(request, response) {
   if (request.method === 'POST') {
     const message = request.body;
     try {
       await messageSchema.validate(message);
       const mailgun = new Mailgun(FormData);
-      await mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY! })
+      await mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY })
         .messages.create('mg.codecowboys.io', {
           from: message.email,
           to: ['david@uebelacker.dev'],
@@ -36,7 +35,7 @@ export default async function handler(request:{ method: string, body: { email: s
           text: message.message,
         });
       response.status(204).send();
-    } catch (error : any) {
+    } catch (error) {
       if (error.errors) {
         response.status(400).send(JSON.stringify({ error: 'validation failed', causes: error.errors }));
       } else {

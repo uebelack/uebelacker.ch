@@ -1,11 +1,11 @@
 import React from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
+import Typist from 'react-typist-component';
 import Page from '@/components/Page';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Typist from 'react-typist-component';
 import ScrollButton from '@/components/ScrollButton';
 import Heading from '@/components/Heading';
 import About from '@/components/About';
