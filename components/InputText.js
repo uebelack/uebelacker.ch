@@ -3,15 +3,9 @@ import React from 'react';
 import { Field } from 'formik';
 import ErrorMessage from './ErrorMessage';
 
-interface Props {
-  name: string;
-  placeholder: string;
-  disabled: boolean;
-}
-
 function InputText({
   name, placeholder, disabled = false,
-} : Props) {
+}) {
   return (
     <div className="w-full">
       <Field

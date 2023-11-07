@@ -1,0 +1,837 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> should render 1`] = `
+<div>
+  <div
+    class="page"
+  >
+    <header
+      class="fixed top-0 w-full"
+    >
+      <div
+        class="md:container px-4 my-4 fade-in flex flex-col md:flex-row"
+      >
+        <a
+          class="flex items-center transition ease-in-out delay-150 flex-grow"
+          href="/"
+        >
+          <img
+            alt="Übelacker Solutions logo"
+            class="dark:hidden"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/logo.svg"
+            style="color: transparent;"
+            width="40"
+          />
+          <img
+            alt="Übelacker Solutions logo"
+            class="hidden dark:inline-block"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/logo_dark.svg"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="text-2xl ml-2 pt-0.5"
+          >
+            Übelacker Solutions
+          </div>
+        </a>
+        <ul
+          class="flex pt-2 pl-1 md:pt-2.5"
+        >
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/#blog"
+            >
+              Blog
+            </a>
+          </li>
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/#apps"
+            >
+              Apps
+            </a>
+          </li>
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/#about"
+            >
+              About
+            </a>
+          </li>
+          <li
+            class="mr-2"
+          >
+            <a
+              href="/#contact"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="/en"
+            >
+              en
+            </a>
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <a
+              href="/de"
+            >
+              de
+            </a>
+          </li>
+          <li
+            class="ml-3"
+          >
+            <a
+              href="https://github.com/uebelack"
+              title="Github Profile"
+            >
+              <svg
+                fill="currentColor"
+                height="1.5em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 496 512"
+                width="1.5em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="ml-2"
+          >
+            <a
+              href="https://www.linkedin.com/in/daviduebelacker/"
+              title="LinkedIn Profile"
+            >
+              <svg
+                fill="currentColor"
+                height="1.5em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1.5em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div
+      class="grid place-items-center first section"
+    >
+      <div
+        class="grid place-items-center md:container px-4"
+      >
+        <div
+          class="p-3 md:w-4/5 pt-20"
+        >
+          <div
+            class="text-2xl md:text-3xl mb-4"
+          >
+            W
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-label="Scroll down"
+      class="scroll-button"
+      type="button"
+    />
+    <div
+      class="section"
+    >
+      <div
+        class="md:container px-4"
+      >
+        <h1
+          class="text-2xl pt-5 mb-6"
+          id="blog"
+        >
+          Blog
+        </h1>
+        <ul>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
+                  title="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                >
+                  <img
+                    alt="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
+                    title="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                  >
+                    Use React and Cypress to Create Screenshots for Apple’s App Store
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
+                    title="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                  >
+                    In today’s digital age, a visually compelling presence in the Apple App Store can be the difference between obscurity and success. When potential users stumble upon your app’s listing, the first impression they get is often through the screenshots you provide. High-quality screenshots can effectively convey the value and functionality of your app, enticing users to explore further and, ideally, hit that “Download” button.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
+                    title="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
+                  title="The Evolution of Java"
+                >
+                  <img
+                    alt="The Evolution of Java"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
+                    title="The Evolution of Java"
+                  >
+                    The Evolution of Java
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
+                    title="The Evolution of Java"
+                  >
+                    On January 23, 1996, Java was first released, and over the years, it has undergone significant changes. I started working with Java in the early 2000s, using J2SE 1.3, which lacked features that are now commonplace. Java 5 introduced generics, “for each” loops, annotations, autoboxing, and unboxing, resulting in more modern Java code.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
+                    title="The Evolution of Java"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
+                  title="How Our Scrum Team Works —  Insights From a Software Developer"
+                >
+                  <img
+                    alt="How Our Scrum Team Works —  Insights From a Software Developer"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
+                    title="How Our Scrum Team Works —  Insights From a Software Developer"
+                  >
+                    How Our Scrum Team Works —  Insights From a Software Developer
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
+                    title="How Our Scrum Team Works —  Insights From a Software Developer"
+                  >
+                    In 2016 I changed jobs and finally was able to work in a team using the Scrum Framework. The whole company had switched to Scrum shortly before. To this day the transition to Scrum has still not been completed, but nevertheless, I was able to learn a lot about agile software development.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
+                    title="How Our Scrum Team Works —  Insights From a Software Developer"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
+                  title="8 Things I’ve Learned Over the Last Six Years Working With React"
+                >
+                  <img
+                    alt="8 Things I’ve Learned Over the Last Six Years Working With React"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
+                    title="8 Things I’ve Learned Over the Last Six Years Working With React"
+                  >
+                    8 Things I’ve Learned Over the Last Six Years Working With React
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
+                    title="8 Things I’ve Learned Over the Last Six Years Working With React"
+                  >
+                    Time flies. Five years ago we evaluated React, Angular, and Vue in our team and decided to go with React.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
+                    title="8 Things I’ve Learned Over the Last Six Years Working With React"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
+                  title="How to Use React in a Ruby on Rails App"
+                >
+                  <img
+                    alt="How to Use React in a Ruby on Rails App"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
+                    title="How to Use React in a Ruby on Rails App"
+                  >
+                    How to Use React in a Ruby on Rails App
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
+                    title="How to Use React in a Ruby on Rails App"
+                  >
+                    I started working with React 5 years ago. Due to the Rails experience in the team, rails were set as the backend and for the frontend. After a short evaluation of Angular, React and Vue.js, React convinced us the most at that time.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
+                    title="How to Use React in a Ruby on Rails App"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
+                  title="Gems for your Ruby on Rails application to make testing fun"
+                >
+                  <img
+                    alt="Gems for your Ruby on Rails application to make testing fun"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
+                    title="Gems for your Ruby on Rails application to make testing fun"
+                  >
+                    Gems for your Ruby on Rails application to make testing fun
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
+                    title="Gems for your Ruby on Rails application to make testing fun"
+                  >
+                    20 years ago, when I started working as a programmer, we had our own test departments and teams that were only responsible for testing. There were hardly any automated tests. Everything was tested using textually described manual test cases.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
+                    title="Gems for your Ruby on Rails application to make testing fun"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
+                  href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
+                  title="5 Things you can do to make your (React based) website load super fast"
+                >
+                  <img
+                    alt="5 Things you can do to make your (React based) website load super fast"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
+                    title="5 Things you can do to make your (React based) website load super fast"
+                  >
+                    5 Things you can do to make your (React based) website load super fast
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
+                    title="5 Things you can do to make your (React based) website load super fast"
+                  >
+                    React is one of the most popular libraries to create comprehensive single page applications.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
+                    title="5 Things you can do to make your (React based) website load super fast"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="section"
+    >
+      <div
+        class="md:container px-4"
+      >
+        <h1
+          class="text-2xl pt-5 mb-6"
+          id="apps"
+        >
+          Apps
+        </h1>
+        <div
+          class="flex mb-10"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-lg mb-2"
+            >
+              Letter
+            </div>
+            <div
+              class=""
+            >
+              
+      The Letter app is an app for iPhone and iPad to write classic letters. 
+      Even today, various things have to be done with classic letters. With this app, you can focus on the content and don't have to worry about formatting.
+      Templates for standard letters, such as the cancellation of subscriptions or insurance policies, make your life even easier.
+            </div>
+            <div
+              class="mt-2"
+            >
+              <a
+                class="underline"
+                href="https://briefe.app"
+              >
+                More
+              </a>
+            </div>
+          </div>
+          <div
+            class="ml-2 md:ml-10 mt-8"
+          >
+            <a
+              href="https://briefe.app"
+            >
+              <img
+                alt="Letter"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/letter.svg"
+                style="color: transparent;"
+                width="100"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex mb-10"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-lg mb-2"
+            >
+              Skynjari
+            </div>
+            <div
+              class=""
+            >
+              Skynjari, Icelandic for sensors. Small app to easily visualize the data from smart home sensors.
+      A small spare time project that is still in its early stages. 
+      Implemented with Typescript, Nest.js, Angular, GraphQL and InfluxDB for data storage.
+            </div>
+            <div
+              class="mt-2"
+            >
+              <a
+                class="underline"
+                href="https://github.com/uebelack/skynjari"
+              >
+                More
+              </a>
+            </div>
+          </div>
+          <div
+            class="ml-2 md:ml-10 mt-8"
+          >
+            <a
+              href="https://github.com/uebelack/skynjari"
+            >
+              <img
+                alt="Skynjari"
+                data-nimg="1"
+                decoding="async"
+                height="100"
+                loading="lazy"
+                src="/_next/image?url=%2Fskynjari.png&w=256&q=75"
+                srcset="/_next/image?url=%2Fskynjari.png&w=128&q=75 1x, /_next/image?url=%2Fskynjari.png&w=256&q=75 2x"
+                style="color: transparent;"
+                width="100"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="section"
+    >
+      <div
+        class="md:container px-4"
+      >
+        <h1
+          class="text-2xl pt-5 mb-6"
+          id="about"
+        >
+          About
+        </h1>
+        <div
+          class="md:flex"
+        >
+          <div
+            class="grid place-items-center m-5 md:hidden"
+          >
+            <img
+              alt="David Übelacker"
+              class="rounded-full align-center"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Fdavid.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+          <div
+            class="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-10"
+          >
+            <p>
+              The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland.
+            </p>
+            
+
+            <p>
+              I'm a full-stack developer and software architect with 20+ years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
+            </p>
+            
+
+            <p>
+              My fascination with computers started early on. When I was 12 years old, I reset my father's computer out of curiosity because I wanted to know what happens when you enter format c:. Only a few years later I created my first own homepage with pure HTML.
+            </p>
+            
+
+            <p>
+              Now, I look back on 20 years of experience in web-based application development. I started with PHP and then worked my way through Java-based development from servlets to JSP and Java Server Faces to Spring Boot and Angular.js. During this time I learned a lot about good web design and excellent user experience, which I can now rely on every day.
+            </p>
+            
+
+            <p>
+              For the last 6 years, I've been working for a large Swiss industrial company as technical lead for the implementation of the digitalization strategy with several IIoT services where I gained a lot of experience with React, React Native, Ruby on Rails, Node.js, DevOps and cloud based solutions.
+            </p>
+            
+
+            <p>
+              One of my strengths is that I’m very quick to get to grips with new topics and technologies, so I can easily adapt to ongoing projects or kick-off new ones from scratch. I believe in building quality from day one. Topics like clean code, secure coding, test driven development and a good user experience are central to my work.
+            </p>
+          </div>
+          <div
+            class="hidden md:inline-block"
+          >
+            <img
+              alt="David Übelacker"
+              class="rounded-full"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Fdavid.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="section"
+    >
+      <div
+        class="md:container px-4"
+      >
+        <h1
+          class="text-2xl pt-5 mb-6"
+          id="contact"
+        >
+          Contact
+        </h1>
+        <div
+          class="lazyload-wrapper "
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </div>
+      </div>
+    </div>
+    <footer
+      class="md:container mt-20 mb-20"
+    >
+      <div
+        class="mb-2 px-4 my-4"
+      >
+        ©
+         
+        2023
+         
+        Übelacker Solutions GmbH
+        <br />
+        <a
+          href="/en/imprint"
+        >
+          Imprint
+        </a>
+         
+        |
+         
+        <a
+          href="/en/privacy"
+        >
+          Privacy Policy
+        </a>
+      </div>
+    </footer>
+  </div>
+</div>
+`;
