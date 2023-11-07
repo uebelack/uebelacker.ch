@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "blog:update": "ts-node  -O '{\"module\": \"commonjs\"}' bin/update-blog.ts",
-    "sitemap:update": "ts-node  -O '{\"module\": \"commonjs\"}' bin/update-sitemap.ts"
+    "blog:update": "node bin/update-blog.mjs",
+    "sitemap:update": "node bin/update-sitemap.mjs"
   },
   "dependencies": {
     "@fontsource/fira-code": "^5.0.8",
