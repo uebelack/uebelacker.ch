@@ -27,7 +27,7 @@
     "react-dom": "18.2.0",
     "react-google-recaptcha-v3": "^1.10.1",
     "react-icons": "^4.11.0",
-    "react-intl": "^6.5.2",
+    "react-intl": "^6.5.5",
     "react-lazyload": "^3.2.0",
     "react-remark": "^2.1.0",
     "react-scroll": "^1.9.0",
