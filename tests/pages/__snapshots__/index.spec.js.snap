@@ -190,6 +190,64 @@ exports[`<Home/> should render 1`] = `
               >
                 <a
                   class="underline"
+                  href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
+                  title="Supercharge your Apps with AI"
+                >
+                  <img
+                    alt="Supercharge your Apps with AI"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
+                    title="Supercharge your Apps with AI"
+                  >
+                    Supercharge your Apps with AI
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
+                    title="Supercharge your Apps with AI"
+                  >
+                    In today’s rapidly evolving technological landscape, the integration of Large Language Models (LLMs) into various applications has become increasingly popular. These models, such as GPT-3 and GPT-4 from OpenAI, Turing-NLG from Microsoft, LaMDA from Google, and Llama 2.0 from Meta, possess the remarkable ability to comprehend and generate human-like text. In this article, I will focus on integrating OpenAI’s GPT into Java applications using Spring AI, a upcoming framework designed to simplify the development of AI-powered applications.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
+                    title="Supercharge your Apps with AI"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
                   href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
                   title="Use React and Cypress to Create Screenshots for Apple’s App Store"
                 >
