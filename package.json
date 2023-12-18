@@ -12,7 +12,7 @@
     "sitemap:update": "node bin/update-sitemap.mjs"
   },
   "dependencies": {
-    "@fontsource/fira-code": "^5.0.15",
+    "@fontsource/fira-code": "^5.0.16",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.1",
