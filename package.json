@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-react": "^7.23.3",
     "@tailwindcss/typography": "^0.5.10",
-    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
