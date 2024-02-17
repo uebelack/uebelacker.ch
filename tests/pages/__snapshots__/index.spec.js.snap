@@ -190,6 +190,64 @@ exports[`<Home/> should render 1`] = `
               >
                 <a
                   class="underline"
+                  href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
+                  title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                >
+                  <img
+                    alt="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 192px"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=3840&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0"
+                >
+                  <a
+                    href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
+                    title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                  >
+                    Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration
+                  </a>
+                </div>
+                <div
+                  class="mt-2"
+                >
+                  <a
+                    href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
+                    title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                  >
+                    Generative AI currently dominates discussions, inspiring my decision to integrate ChatGPT into my Letter App (https://letter-app.com). This app enables users to easily compose and print impeccably formatted letters across iPhone, iPad, and Mac devices. By leveraging ChatGPT, I can introduce users to a plethora of supplementary features. These include text correction, enhancement, professional and humorous writing styles, and even the generation of entire letters guided by specific instructions.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
+                    title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              class="mb-20 md:flex"
+            >
+              <div
+                class="relative h-48 md:h-32 md:w-48"
+              >
+                <a
+                  class="underline"
                   href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
                   title="Supercharge your Apps with AI"
                 >
@@ -871,7 +929,7 @@ exports[`<Home/> should render 1`] = `
       >
         ©
          
-        2023
+        2024
          
         Übelacker Solutions GmbH
         <br />
