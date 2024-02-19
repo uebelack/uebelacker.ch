@@ -17,7 +17,7 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
     "axios": "^1.6.2",
-    "flat": "5",
+    "flat": "6",
     "form-data": "^4.0.0",
     "formik": "^2.4.5",
     "mailgun.js": "^9.3.0",
