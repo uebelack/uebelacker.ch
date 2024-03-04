@@ -40,7 +40,7 @@
     "@babel/preset-react": "^7.23.3",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.1.2",
+    "@testing-library/react": "^14.2.1",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
     "eslint": "8.57.0",
