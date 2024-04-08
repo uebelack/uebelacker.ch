@@ -1022,16 +1022,7 @@
     debug "^4.3.1"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.20.7", "@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.24.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4":
-  version "7.24.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.24.0.tgz#3b951f435a92e7333eba05b7566fd297960ea1bf"
-  integrity sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==
-  dependencies:
-    "@babel/helper-string-parser" "^7.23.4"
-    "@babel/helper-validator-identifier" "^7.22.20"
-    to-fast-properties "^2.0.0"
-
-"@babel/types@^7.23.4":
+"@babel/types@^7.0.0", "@babel/types@^7.20.7", "@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.23.4", "@babel/types@^7.24.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4":
   version "7.24.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.24.0.tgz#3b951f435a92e7333eba05b7566fd297960ea1bf"
   integrity sha512-+j7a5c253RfKh8iABBhywc8NSfP5LURe7Uh4qpsh6jc+aLJguvmIUBdjSdEMQv2bENrCR5MfRdjGo7vzS/ob7w==
@@ -5893,10 +5884,10 @@ react-icons@^4.12.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.12.0.tgz#54806159a966961bfd5cdb26e492f4dafd6a8d78"
   integrity sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==
 
-react-intl@^6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.6.3.tgz#ac2dd81e7ec7003195163970ebf1db4f1af03b9d"
-  integrity sha512-vLKI0f+Q3pXD5szmCUPikTY7CJDPtxCBMG5YABQZ3IGEKzNB47zlvXyasUFfT25zpgQXeOfhRCdx4q6ubuR6bA==
+react-intl@^6.6.5:
+  version "6.6.5"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.6.5.tgz#3dee5c4a9f866aebc8384a540a6d132a3fc694eb"
+  integrity sha512-OErDPbGqus0QKVj77MGCC9Plbnys3CDQrq6Lw41c60pmeTdn41AhoS1SIzXG6SUlyF7qNN2AVqfrrIvHUgSyLQ==
   dependencies:
     "@formatjs/ecma402-abstract" "1.18.2"
     "@formatjs/icu-messageformat-parser" "2.7.6"
