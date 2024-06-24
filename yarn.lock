@@ -6237,10 +6237,10 @@ react-scroll@^1.9.0:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
-react-typist-component@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/react-typist-component/-/react-typist-component-1.0.5.tgz#e89f5e08919587da1aa6809670d48d6999d77cb0"
-  integrity sha512-UMMwkHFU7qiBA+w/knNMdNZ5lR184pb2cKOjBH7qZpW7ZVWxFZ+iwXXDwz+JpvO/iyGbMnfS8l643LDmcnE37Q==
+react-typist-component@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-typist-component/-/react-typist-component-1.1.0.tgz#cec9973c04703bb104169a6ba40bcc2298c91972"
+  integrity sha512-qMe7ZtnWszbMP4ykRn+01EBx3y8nBN2xq/PGk6XVnYqRzjSMMBsNuymdeOmhAgvRPtGypTWBvFCOriIYKgRSNQ==
 
 react@18.3.1:
   version "18.3.1"
