@@ -24,12 +24,12 @@ export default function Home() {
         <Container className="grid place-items-center">
           <div className="p-3 md:w-4/5 pt-20">
             <Typist typingDelay={30}>
-              <div className="text-2xl md:text-3xl mb-4">
+              <div className="text-3xl md:text-4xl mb-4 leading-snug tracking-tight">
                 { formatMessage({ id: 'home.quote' }) }
                 <br />
               </div>
               <Typist.Paste>
-                <div className="text-1xl mt-4">- Fred Brooks</div>
+                <div className="text-lg mt-6 text-gray-dark dark:text-gray">- Fred Brooks</div>
               </Typist.Paste>
             </Typist>
           </div>

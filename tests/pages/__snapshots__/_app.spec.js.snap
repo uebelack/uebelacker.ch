@@ -40,10 +40,10 @@ exports[`<App/> should render 1`] = `
       class="fixed top-0 w-full"
     >
       <div
-        class="md:container px-4 my-4 fade-in flex flex-col md:flex-row"
+        class="md:container px-4 py-4 fade-in flex flex-col md:flex-row md:items-center"
       >
         <a
-          class="flex items-center transition ease-in-out delay-150 flex-grow"
+          class="flex items-center transition-opacity duration-200 hover:opacity-70 flex-grow"
           href="/"
         >
           <img
@@ -69,112 +69,117 @@ exports[`<App/> should render 1`] = `
             width="40"
           />
           <div
-            class="text-2xl ml-2 pt-0.5"
+            class="text-2xl ml-2 pt-0.5 tracking-tight"
           >
             Übelacker Solutions
           </div>
         </a>
-        <ul
-          class="flex pt-2 pl-1 md:pt-2.5"
-        >
-          <li
-            class="mr-2"
+        <nav>
+          <ul
+            class="flex items-center pt-2 pl-1 md:pt-0 gap-4"
           >
-            <a
-              href="/#blog"
-            >
-              Blog
-            </a>
-          </li>
-          <li
-            class="mr-2"
-          >
-            <a
-              href="/#apps"
-            >
-              Apps
-            </a>
-          </li>
-          <li
-            class="mr-2"
-          >
-            <a
-              href="/#about"
-            >
-              About
-            </a>
-          </li>
-          <li
-            class="mr-2"
-          >
-            <a
-              href="/#contact"
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              href="/en"
-            >
-              en
-            </a>
-          </li>
-          <li>
-            |
-          </li>
-          <li>
-            <a
-              href="/de"
-            >
-              de
-            </a>
-          </li>
-          <li
-            class="ml-3"
-          >
-            <a
-              href="https://github.com/uebelack"
-              title="Github Profile"
-            >
-              <svg
-                fill="currentColor"
-                height="1.5em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 496 512"
-                width="1.5em"
-                xmlns="http://www.w3.org/2000/svg"
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/#blog"
               >
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li
-            class="ml-2"
-          >
-            <a
-              href="https://www.linkedin.com/in/daviduebelacker/"
-              title="LinkedIn Profile"
-            >
-              <svg
-                fill="currentColor"
-                height="1.5em"
-                stroke="currentColor"
-                stroke-width="0"
-                viewBox="0 0 448 512"
-                width="1.5em"
-                xmlns="http://www.w3.org/2000/svg"
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/#apps"
               >
-                <path
-                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
+                Apps
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/#about"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/#contact"
+              >
+                Contact
+              </a>
+            </li>
+            <li
+              class="text-gray"
+            >
+              |
+            </li>
+            <li
+              class="flex items-center gap-1 text-sm"
+            >
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/en"
+              >
+                en
+              </a>
+              <span
+                class="text-gray"
+              >
+                /
+              </span>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="/de"
+              >
+                de
+              </a>
+            </li>
+            <li
+              class="flex items-center gap-2 ml-1"
+            >
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack"
+                title="Github Profile"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1.3em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 496 512"
+                  width="1.3em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
+                href="https://www.linkedin.com/in/daviduebelacker/"
+                title="LinkedIn Profile"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1.3em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1.3em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div
@@ -187,7 +192,7 @@ exports[`<App/> should render 1`] = `
           class="p-3 md:w-4/5 pt-20"
         >
           <div
-            class="text-2xl md:text-3xl mb-4"
+            class="text-3xl md:text-4xl mb-4 leading-snug tracking-tight"
           >
             W
           </div>
@@ -205,31 +210,38 @@ exports[`<App/> should render 1`] = `
       <div
         class="md:container px-4"
       >
-        <h1
-          class="text-2xl pt-5 mb-6"
+        <div
+          class="pt-5 mb-10"
           id="blog"
         >
-          Blog
-        </h1>
+          <h1
+            class="text-3xl tracking-tight"
+          >
+            Blog
+          </h1>
+          <div
+            class="w-10 h-0.5 bg-black dark:bg-white mt-3"
+          />
+        </div>
         <ul>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
                   title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
                 >
                   <img
                     alt="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -237,10 +249,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
@@ -250,7 +262,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
@@ -272,22 +284,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
                   title="Supercharge your Apps with AI"
                 >
                   <img
                     alt="Supercharge your Apps with AI"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -295,10 +307,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
@@ -308,7 +320,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
@@ -330,22 +342,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
                   title="Use React and Cypress to Create Screenshots for Apple’s App Store"
                 >
                   <img
                     alt="Use React and Cypress to Create Screenshots for Apple’s App Store"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -353,10 +365,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
@@ -366,7 +378,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
@@ -388,22 +400,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
                   title="The Evolution of Java"
                 >
                   <img
                     alt="The Evolution of Java"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -411,10 +423,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
@@ -424,7 +436,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
@@ -446,22 +458,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
                   title="How Our Scrum Team Works —  Insights From a Software Developer"
                 >
                   <img
                     alt="How Our Scrum Team Works —  Insights From a Software Developer"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -469,10 +481,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
@@ -482,7 +494,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
@@ -504,22 +516,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
                   title="8 Things I’ve Learned Over the Last Six Years Working With React"
                 >
                   <img
                     alt="8 Things I’ve Learned Over the Last Six Years Working With React"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -527,10 +539,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
@@ -540,7 +552,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
@@ -562,22 +574,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
                   title="How to Use React in a Ruby on Rails App"
                 >
                   <img
                     alt="How to Use React in a Ruby on Rails App"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -585,10 +597,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
@@ -598,7 +610,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
@@ -620,22 +632,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
                   title="Gems for your Ruby on Rails application to make testing fun"
                 >
                   <img
                     alt="Gems for your Ruby on Rails application to make testing fun"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -643,10 +655,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
@@ -656,7 +668,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
@@ -678,22 +690,22 @@ exports[`<App/> should render 1`] = `
           </li>
           <li>
             <div
-              class="mb-20 md:flex"
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
             >
               <div
-                class="relative h-48 md:h-32 md:w-48"
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
-                  class="underline"
                   href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
                   title="5 Things you can do to make your (React based) website load super fast"
                 >
                   <img
                     alt="5 Things you can do to make your (React based) website load super fast"
+                    class="transition-transform duration-300 group-hover:scale-105"
                     data-nimg="fill"
                     decoding="async"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 192px"
+                    sizes="(max-width: 768px) 100vw, 208px"
                     src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75"
                     srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
@@ -701,10 +713,10 @@ exports[`<App/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-10 md:justify-start"
+                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
-                  class="text-lg mt-3 md:mt-0"
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
                 >
                   <a
                     href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
@@ -714,7 +726,7 @@ exports[`<App/> should render 1`] = `
                   </a>
                 </div>
                 <div
-                  class="mt-2"
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
                 >
                   <a
                     href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
@@ -743,25 +755,32 @@ exports[`<App/> should render 1`] = `
       <div
         class="md:container px-4"
       >
-        <h1
-          class="text-2xl pt-5 mb-6"
+        <div
+          class="pt-5 mb-10"
           id="apps"
         >
-          Apps
-        </h1>
+          <h1
+            class="text-3xl tracking-tight"
+          >
+            Apps
+          </h1>
+          <div
+            class="w-10 h-0.5 bg-black dark:bg-white mt-3"
+          />
+        </div>
         <div
-          class="flex mb-10"
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
         >
           <div
             class="flex-grow flex-1"
           >
             <div
-              class="text-lg mb-2"
+              class="text-xl mb-2 tracking-tight"
             >
               Letter
             </div>
             <div
-              class=""
+              class="text-gray-dark dark:text-gray leading-relaxed"
             >
               
       The Letter app is an app for iPhone and iPad to write classic letters. 
@@ -769,10 +788,10 @@ exports[`<App/> should render 1`] = `
       Templates for standard letters, such as the cancellation of subscriptions or insurance policies, make your life even easier.
             </div>
             <div
-              class="mt-2"
+              class="mt-3"
             >
               <a
-                class="underline"
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
                 href="https://briefe.app"
               >
                 More
@@ -780,13 +799,14 @@ exports[`<App/> should render 1`] = `
             </div>
           </div>
           <div
-            class="ml-2 md:ml-10 mt-8"
+            class="ml-4 md:ml-10 flex items-center"
           >
             <a
               href="https://briefe.app"
             >
               <img
                 alt="Letter"
+                class="rounded-lg transition-transform duration-300 group-hover:scale-105"
                 data-nimg="1"
                 decoding="async"
                 height="100"
@@ -799,28 +819,28 @@ exports[`<App/> should render 1`] = `
           </div>
         </div>
         <div
-          class="flex mb-10"
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
         >
           <div
             class="flex-grow flex-1"
           >
             <div
-              class="text-lg mb-2"
+              class="text-xl mb-2 tracking-tight"
             >
               Skynjari
             </div>
             <div
-              class=""
+              class="text-gray-dark dark:text-gray leading-relaxed"
             >
               Skynjari, Icelandic for sensors. Small app to easily visualize the data from smart home sensors.
       A small spare time project that is still in its early stages. 
       Implemented with Typescript, Nest.js, Angular, GraphQL and InfluxDB for data storage.
             </div>
             <div
-              class="mt-2"
+              class="mt-3"
             >
               <a
-                class="underline"
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
                 href="https://github.com/uebelack/skynjari"
               >
                 More
@@ -828,13 +848,14 @@ exports[`<App/> should render 1`] = `
             </div>
           </div>
           <div
-            class="ml-2 md:ml-10 mt-8"
+            class="ml-4 md:ml-10 flex items-center"
           >
             <a
               href="https://github.com/uebelack/skynjari"
             >
               <img
                 alt="Skynjari"
+                class="rounded-lg transition-transform duration-300 group-hover:scale-105"
                 data-nimg="1"
                 decoding="async"
                 height="100"
@@ -855,14 +876,21 @@ exports[`<App/> should render 1`] = `
       <div
         class="md:container px-4"
       >
-        <h1
-          class="text-2xl pt-5 mb-6"
+        <div
+          class="pt-5 mb-10"
           id="about"
         >
-          About
-        </h1>
+          <h1
+            class="text-3xl tracking-tight"
+          >
+            About
+          </h1>
+          <div
+            class="w-10 h-0.5 bg-black dark:bg-white mt-3"
+          />
+        </div>
         <div
-          class="md:flex"
+          class="md:flex md:items-start"
         >
           <div
             class="grid place-items-center m-5 md:hidden"
@@ -872,16 +900,16 @@ exports[`<App/> should render 1`] = `
               class="rounded-full align-center"
               data-nimg="1"
               decoding="async"
-              height="200"
+              height="220"
               loading="lazy"
               src="/_next/image?url=%2Fdavid.jpg&w=480&q=75"
               srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=480&q=75 2x"
               style="color: transparent;"
-              width="200"
+              width="220"
             />
           </div>
           <div
-            class="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-10"
+            class="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed"
           >
             <p>
               The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland.
@@ -913,19 +941,19 @@ exports[`<App/> should render 1`] = `
             </p>
           </div>
           <div
-            class="hidden md:inline-block"
+            class="hidden md:inline-block flex-shrink-0"
           >
             <img
               alt="David Übelacker"
               class="rounded-full"
               data-nimg="1"
               decoding="async"
-              height="200"
+              height="220"
               loading="lazy"
               src="/_next/image?url=%2Fdavid.jpg&w=480&q=75"
               srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=480&q=75 2x"
               style="color: transparent;"
-              width="200"
+              width="220"
             />
           </div>
         </div>
@@ -937,12 +965,19 @@ exports[`<App/> should render 1`] = `
       <div
         class="md:container px-4"
       >
-        <h1
-          class="text-2xl pt-5 mb-6"
+        <div
+          class="pt-5 mb-10"
           id="contact"
         >
-          Contact
-        </h1>
+          <h1
+            class="text-3xl tracking-tight"
+          >
+            Contact
+          </h1>
+          <div
+            class="w-10 h-0.5 bg-black dark:bg-white mt-3"
+          />
+        </div>
         <p
           class="mb-5"
         >
@@ -959,7 +994,7 @@ exports[`<App/> should render 1`] = `
               class="w-full"
             >
               <input
-                class="w-full p-2 border disabled:border-gray dark:text-black"
+                class="w-full p-3 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 name="email"
                 placeholder="Your email address"
@@ -974,7 +1009,7 @@ exports[`<App/> should render 1`] = `
               class="w-full"
             >
               <input
-                class="w-full p-2 border disabled:border-gray dark:text-black"
+                class="w-full p-3 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 name="subject"
                 placeholder="Your issue"
@@ -989,7 +1024,7 @@ exports[`<App/> should render 1`] = `
               class="w-full"
             >
               <textarea
-                class="w-full p-2 h-48 border disabled:border-gray dark:text-black"
+                class="w-full p-3 h-48 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 maxlength="4000"
                 name="message"
@@ -1032,7 +1067,7 @@ exports[`<App/> should render 1`] = `
               />
             </div>
             <button
-              class=" py-2 px-4 border hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black disabled:bg-gray-light disabled:text-gray dark:disabled:bg-gray-dark"
+              class=" py-3 px-8 border rounded-md transition-all duration-200 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black disabled:bg-gray-light disabled:text-gray dark:disabled:bg-gray-dark disabled:cursor-not-allowed"
               disabled=""
               id="contact-form-button"
               type="submit"
@@ -1044,30 +1079,45 @@ exports[`<App/> should render 1`] = `
       </div>
     </div>
     <footer
-      class="md:container mt-20 mb-20"
+      class="md:container mt-24 mb-16"
     >
       <div
-        class="mb-2 px-4 my-4"
+        class="px-4"
       >
-        ©
-         
-        2026
-         
-        Übelacker Solutions GmbH
-        <br />
-        <a
-          href="/en/imprint"
+        <div
+          class="border-t border-gray-light dark:border-gray-dark pt-8"
         >
-          Imprint
-        </a>
-         
-        |
-         
-        <a
-          href="/en/privacy"
-        >
-          Privacy Policy
-        </a>
+          <div
+            class="text-gray-dark dark:text-gray text-sm"
+          >
+            ©
+             
+            2026
+             
+            Übelacker Solutions GmbH
+          </div>
+          <div
+            class="mt-2 text-sm flex gap-3"
+          >
+            <a
+              class="hover:opacity-60 transition-opacity duration-200"
+              href="/en/imprint"
+            >
+              Imprint
+            </a>
+            <span
+              class="text-gray"
+            >
+              |
+            </span>
+            <a
+              class="hover:opacity-60 transition-opacity duration-200"
+              href="/en/privacy"
+            >
+              Privacy Policy
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </div>

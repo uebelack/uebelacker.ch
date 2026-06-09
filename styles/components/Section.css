@@ -6,6 +6,16 @@
   padding-top: 120px;
 }
 
+.section + .section {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .section + .section {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
+
 @media (min-width: 768px) {
   .section {
     min-height: calc(100vh - 125px);

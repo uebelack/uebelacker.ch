@@ -40,23 +40,30 @@ export default function Header({ title, description }) {
           </>
         )}
       </Head>
-      <div className="md:container px-4 my-4 fade-in flex flex-col md:flex-row">
-        <Link href="/" className="flex items-center transition ease-in-out delay-150 flex-grow">
+      <div className="md:container px-4 py-4 fade-in flex flex-col md:flex-row md:items-center">
+        <Link href="/" className="flex items-center transition-opacity duration-200 hover:opacity-70 flex-grow">
           <Image className="dark:hidden" src="/logo.svg" alt="Übelacker Solutions logo" width={40} height={40} />
           <Image className="hidden dark:inline-block" src="/logo_dark.svg" alt="Übelacker Solutions logo" width={40} height={40} />
-          <div className="text-2xl ml-2 pt-0.5">Übelacker Solutions</div>
+          <div className="text-2xl ml-2 pt-0.5 tracking-tight">Übelacker Solutions</div>
         </Link>
-        <ul className="flex pt-2 pl-1 md:pt-2.5">
-          <li className="mr-2"><Link href="/#blog" onClick={(e) => handleOnClick(e, 'blog')}><FormattedMessage id="blog.title" /></Link></li>
-          <li className="mr-2"><Link href="/#apps" onClick={(e) => handleOnClick(e, 'apps')}><FormattedMessage id="apps.title" /></Link></li>
-          <li className="mr-2"><Link href="/#about" onClick={(e) => handleOnClick(e, 'about')}><FormattedMessage id="about.title" /></Link></li>
-          <li className="mr-2"><Link href="/#contact" onClick={(e) => handleOnClick(e, 'contact')}><FormattedMessage id="contact.title" /></Link></li>
-          <li><a href="/en">en</a></li>
-          <li>|</li>
-          <li><a href="/de">de</a></li>
-          <li className="ml-3"><a title="Github Profile" href="https://github.com/uebelack"><FaGithub size="1.5em" /></a></li>
-          <li className="ml-2"><a title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.5em" /></a></li>
-        </ul>
+        <nav>
+          <ul className="flex items-center pt-2 pl-1 md:pt-0 gap-4">
+            <li><Link href="/#blog" onClick={(e) => handleOnClick(e, 'blog')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="blog.title" /></Link></li>
+            <li><Link href="/#apps" onClick={(e) => handleOnClick(e, 'apps')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="apps.title" /></Link></li>
+            <li><Link href="/#about" onClick={(e) => handleOnClick(e, 'about')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="about.title" /></Link></li>
+            <li><Link href="/#contact" onClick={(e) => handleOnClick(e, 'contact')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="contact.title" /></Link></li>
+            <li className="text-gray">|</li>
+            <li className="flex items-center gap-1 text-sm">
+              <a href="/en" className="hover:opacity-60 transition-opacity duration-200">en</a>
+              <span className="text-gray">/</span>
+              <a href="/de" className="hover:opacity-60 transition-opacity duration-200">de</a>
+            </li>
+            <li className="flex items-center gap-2 ml-1">
+              <a title="Github Profile" href="https://github.com/uebelack" className="hover:opacity-60 transition-opacity duration-200"><FaGithub size="1.3em" /></a>
+              <a title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/" className="hover:opacity-60 transition-opacity duration-200"><FaLinkedin size="1.3em" /></a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

@@ -35,13 +35,13 @@ export default function About() {
   const language = locale && locale.startsWith('de') ? 'de' : 'en';
   const reactContent = useRemarkSync(content[language]);
   return (
-    <div className="md:flex">
+    <div className="md:flex md:items-start">
       <div className="grid place-items-center m-5 md:hidden">
-        <Image src="/david.jpg" alt="David Übelacker" width={200} height={200} className="rounded-full align-center" />
+        <Image src="/david.jpg" alt="David Übelacker" width={220} height={220} className="rounded-full align-center" />
       </div>
-      <div className="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-10">{reactContent}</div>
-      <div className="hidden md:inline-block">
-        <Image src="/david.jpg" alt="David Übelacker" width={200} height={200} className="rounded-full" />
+      <div className="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed">{reactContent}</div>
+      <div className="hidden md:inline-block flex-shrink-0">
+        <Image src="/david.jpg" alt="David Übelacker" width={220} height={220} className="rounded-full" />
       </div>
     </div>
   );
