@@ -37,13 +37,13 @@ exports[`<App/> should render 1`] = `
     class="page"
   >
     <header
-      class="fixed top-0 w-full"
+      class="fixed top-0 w-full z-50"
     >
       <div
-        class="md:container px-4 py-4 fade-in flex flex-col md:flex-row md:items-center"
+        class="md:container px-4 py-4 fade-in flex items-center justify-between"
       >
         <a
-          class="flex items-center transition-opacity duration-200 hover:opacity-70 flex-grow"
+          class="flex items-center transition-opacity duration-200 hover:opacity-70"
           href="/"
         >
           <img
@@ -74,9 +74,33 @@ exports[`<App/> should render 1`] = `
             Übelacker Solutions
           </div>
         </a>
-        <nav>
+        <button
+          aria-label="Toggle menu"
+          class="md:hidden p-2 hover:opacity-60 transition-opacity duration-200"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            height="1.5em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 20 20"
+            width="1.5em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <nav
+          class="hidden md:block"
+        >
           <ul
-            class="flex items-center pt-2 pl-1 md:pt-0 gap-4"
+            class="flex items-center gap-4"
           >
             <li>
               <a
@@ -1059,12 +1083,7 @@ exports[`<App/> should render 1`] = `
             class="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed"
           >
             <p>
-              The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland.
-            </p>
-            
-
-            <p>
-              I'm a full-stack developer and software architect with 20+ years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
+              I'm a full-stack developer and software architect with over 20 years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
             </p>
             
 
@@ -1074,17 +1093,22 @@ exports[`<App/> should render 1`] = `
             
 
             <p>
-              Now, I look back on 20 years of experience in web-based application development. I started with PHP and then worked my way through Java-based development from servlets to JSP and Java Server Faces to Spring Boot and Angular.js. During this time I learned a lot about good web design and excellent user experience, which I can now rely on every day.
+              Since then, I've worked my way through the full evolution of web development: starting with PHP, then Java-based development from servlets to JSP and JavaServer Faces, on to Spring Boot and Angular. Along the way I learned a lot about good web design and excellent user experience, which I still rely on every day.
             </p>
             
 
             <p>
-              For the last 6 years, I've been working for a large Swiss industrial company as technical lead for the implementation of the digitalization strategy with several IIoT services where I gained a lot of experience with React, React Native, Ruby on Rails, Node.js, DevOps and cloud based solutions.
+              I spent six years as technical lead at a large Swiss industrial company, implementing its digitalization strategy with several IIoT services. There I gained extensive experience with React, React Native, Ruby on Rails, Node.js, DevOps and cloud-based solutions.
             </p>
             
 
             <p>
-              One of my strengths is that I’m very quick to get to grips with new topics and technologies, so I can easily adapt to ongoing projects or kick-off new ones from scratch. I believe in building quality from day one. Topics like clean code, secure coding, test driven development and a good user experience are central to my work.
+              Today, I work as a senior software developer and technical lead in the Swiss financial sector, building business-critical applications with Java, Spring Boot, Camunda BPM, Angular, Kubernetes and ArgoCD. As an iSAQB-certified software architect, I have a strong focus on AI-augmented engineering: I build solutions with LLMs, AI agents and RAG using LangChain and LangChain4j, maintain open-source developer tooling, and share my experience as a speaker at conferences.
+            </p>
+            
+
+            <p>
+              One of my strengths is that I'm very quick to get to grips with new topics and technologies, so I can easily adapt to ongoing projects or kick off new ones from scratch. I believe in building quality from day one. Topics like clean code, secure coding, test-driven development and a good user experience are central to my work.
             </p>
           </div>
           <div
