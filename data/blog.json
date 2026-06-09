@@ -1,5 +1,12 @@
 [
     {
+        "guid": "https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/",
+        "thumbnail": "https://nag.ch/wp-content/uploads/2026/01/nag-team-am-baselhack.jpg",
+        "title": "In 48 Stunden zum automatisierten Underwriting mit AI",
+        "link": "https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/",
+        "teaser": "Das nag informatik Team hat am BaselHack 2025 eine funktionsfähige Applikation entwickelt, die mithilfe von künstlicher Intelligenz Lebensversicherungsanträge automatisch bewertet und entscheidet, ob diese angenommen, abgelehnt oder weitere Informationen angefordert werden sollen."
+    },
+    {
         "guid": "https://medium.com/p/c63989c92057",
         "thumbnail": "https://cdn-images-1.medium.com/max/1024/1*4LzaoPeV10DEQ_IMCYGS3g.png",
         "title": "Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration",

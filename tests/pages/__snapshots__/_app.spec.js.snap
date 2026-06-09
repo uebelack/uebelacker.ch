@@ -227,7 +227,7 @@ exports[`<App/> should render 1`] = `
           <div
             class="text-3xl md:text-4xl mb-4 leading-snug tracking-tight"
           >
-            T
+            A
           </div>
         </div>
       </div>
@@ -257,6 +257,65 @@ exports[`<App/> should render 1`] = `
           />
         </div>
         <ul>
+          <li>
+            <div
+              class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+            >
+              <div
+                class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
+              >
+                <a
+                  class="relative block h-full"
+                  href="https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/"
+                  title="In 48 Stunden zum automatisierten Underwriting mit AI"
+                >
+                  <img
+                    alt="In 48 Stunden zum automatisierten Underwriting mit AI"
+                    class="transition-transform duration-300 group-hover:scale-105"
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 208px"
+                    src="/_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=1024&q=75 1024w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  />
+                </a>
+              </div>
+              <div
+                class="md:flex-1 md:ml-8 md:justify-start"
+              >
+                <div
+                  class="text-lg mt-3 md:mt-0 tracking-tight"
+                >
+                  <a
+                    href="https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/"
+                    title="In 48 Stunden zum automatisierten Underwriting mit AI"
+                  >
+                    In 48 Stunden zum automatisierten Underwriting mit AI
+                  </a>
+                </div>
+                <div
+                  class="mt-2 text-gray-dark dark:text-gray leading-relaxed"
+                >
+                  <a
+                    href="https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/"
+                    title="In 48 Stunden zum automatisierten Underwriting mit AI"
+                  >
+                    Das nag informatik Team hat am BaselHack 2025 eine funktionsfähige Applikation entwickelt, die mithilfe von künstlicher Intelligenz Lebensversicherungsanträge automatisch bewertet und entscheidet, ob diese angenommen, abgelehnt oder weitere Informationen angefordert werden sollen.
+                  </a>
+                   
+                  <a
+                    class="underline"
+                    href="https://nag.ch/blog/in-48-stunden-zum-automatisierten-underwriting-mit-ai/"
+                    title="In 48 Stunden zum automatisierten Underwriting mit AI"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
           <li>
             <div
               class="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"

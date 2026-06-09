@@ -17,6 +17,12 @@ const nextConfig = withMDX({
         port: '',
         pathname: '**/*',
       },
+      {
+        protocol: 'https',
+        hostname: 'nag.ch',
+        port: '',
+        pathname: '**/*',
+      },
     ],
   },
   pageExtensions: ['js', 'mdx'],
