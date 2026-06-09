@@ -50,6 +50,7 @@ export default function Header({ title, description }) {
           <ul className="flex items-center pt-2 pl-1 md:pt-0 gap-4">
             <li><Link href="/#blog" onClick={(e) => handleOnClick(e, 'blog')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="blog.title" /></Link></li>
             <li><Link href="/#apps" onClick={(e) => handleOnClick(e, 'apps')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="apps.title" /></Link></li>
+            <li><Link href="/#opensource" onClick={(e) => handleOnClick(e, 'opensource')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="opensource.title" /></Link></li>
             <li><Link href="/#about" onClick={(e) => handleOnClick(e, 'about')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="about.title" /></Link></li>
             <li><Link href="/#contact" onClick={(e) => handleOnClick(e, 'contact')} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="contact.title" /></Link></li>
             <li className="text-gray">|</li>

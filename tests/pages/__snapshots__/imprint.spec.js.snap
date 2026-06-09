@@ -66,6 +66,14 @@ exports[`<Imprint/> should render 1`] = `
             <li>
               <a
                 class="hover:opacity-60 transition-opacity duration-200"
+                href="/#opensource"
+              >
+                Open Source
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
                 href="/#about"
               >
                 About

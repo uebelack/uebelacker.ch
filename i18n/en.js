@@ -24,13 +24,38 @@ export default {
       thumbnail: '/letter.svg',
       link: 'https://briefe.app',
     },
-    skynjari: {
-      title: 'Skynjari',
-      description: `Skynjari, Icelandic for sensors. Small app to easily visualize the data from smart home sensors.
-      A small spare time project that is still in its early stages. 
-      Implemented with Typescript, Nest.js, Angular, GraphQL and InfluxDB for data storage.`,
-      thumbnail: '/skynjari.png',
-      link: 'https://github.com/uebelack/skynjari',
+  },
+  opensource: {
+    title: 'Open Source',
+    babeli: {
+      title: 'Babeli',
+      description: 'AI-powered translation management. Validate, sort, and automatically generate missing translations using LLMs.',
+      link: 'https://github.com/uebelack/babeli',
+    },
+    babeli4j: {
+      title: 'Babeli4j',
+      description: 'AI-powered translation file management for Java projects. Babeli detects missing translations, sorts keys, and generates translations using LLMs — integrated into your Maven or Gradle build, or used standalone via CLI.',
+      link: 'https://github.com/uebelack/babeli4j',
+    },
+    nodeappattest: {
+      title: 'node-app-attest',
+      description: 'A JavaScript implementation of the App Attest protocol, which checks whether clients connecting to your server are valid instances of your app.',
+      link: 'https://github.com/uebelack/node-app-attest',
+    },
+    tossitin: {
+      title: 'Toss It In',
+      description: 'AI-powered git workflow tool that analyzes your changes, generates meaningful commit messages, and pushes to your repository — all in one command.',
+      link: 'https://github.com/uebelack/tossitin',
+    },
+    tratschtante: {
+      title: 'Tratschtante',
+      description: 'Just another logging library for Node.js.',
+      link: 'https://github.com/uebelack/tratschtante',
+    },
+    screegen: {
+      title: 'Screegen',
+      description: 'A screenshot generation toolkit for creating App Store screenshots. Build beautiful, localized screenshots for multiple devices with React and Playwright.',
+      link: 'https://github.com/uebelack/screegen',
     },
   },
   about: {

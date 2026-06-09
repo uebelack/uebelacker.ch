@@ -62,11 +62,40 @@ export default function Home() {
             thumbnail={formatMessage({ id: 'apps.letter.thumbnail' })}
             link={formatMessage({ id: 'apps.letter.link' })}
           />
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Heading id="opensource"><FormattedMessage id="opensource.title" /></Heading>
           <App
-            title={formatMessage({ id: 'apps.skynjari.title' })}
-            description={formatMessage({ id: 'apps.skynjari.description' })}
-            thumbnail={formatMessage({ id: 'apps.skynjari.thumbnail' })}
-            link={formatMessage({ id: 'apps.skynjari.link' })}
+            title={formatMessage({ id: 'opensource.babeli.title' })}
+            description={formatMessage({ id: 'opensource.babeli.description' })}
+            link={formatMessage({ id: 'opensource.babeli.link' })}
+          />
+          <App
+            title={formatMessage({ id: 'opensource.babeli4j.title' })}
+            description={formatMessage({ id: 'opensource.babeli4j.description' })}
+            link={formatMessage({ id: 'opensource.babeli4j.link' })}
+          />
+          <App
+            title={formatMessage({ id: 'opensource.nodeappattest.title' })}
+            description={formatMessage({ id: 'opensource.nodeappattest.description' })}
+            link={formatMessage({ id: 'opensource.nodeappattest.link' })}
+          />
+          <App
+            title={formatMessage({ id: 'opensource.tossitin.title' })}
+            description={formatMessage({ id: 'opensource.tossitin.description' })}
+            link={formatMessage({ id: 'opensource.tossitin.link' })}
+          />
+          <App
+            title={formatMessage({ id: 'opensource.tratschtante.title' })}
+            description={formatMessage({ id: 'opensource.tratschtante.description' })}
+            link={formatMessage({ id: 'opensource.tratschtante.link' })}
+          />
+          <App
+            title={formatMessage({ id: 'opensource.screegen.title' })}
+            description={formatMessage({ id: 'opensource.screegen.description' })}
+            link={formatMessage({ id: 'opensource.screegen.link' })}
           />
         </Container>
       </Section>

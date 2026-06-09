@@ -21,17 +21,19 @@ export default function App({
           </Link>
         </div>
       </div>
-      <div className="ml-4 md:ml-10 flex items-center">
-        <Link href={link}>
-          <Image
-            src={thumbnail}
-            alt={title}
-            width={100}
-            height={100}
-            className="rounded-lg transition-transform duration-300 group-hover:scale-105"
-          />
-        </Link>
-      </div>
+      {thumbnail && (
+        <div className="ml-4 md:ml-10 flex items-center">
+          <Link href={link}>
+            <Image
+              src={thumbnail}
+              alt={title}
+              width={100}
+              height={100}
+              className="rounded-lg transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

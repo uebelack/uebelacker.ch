@@ -66,6 +66,14 @@ exports[`<Home/> should render 1`] = `
             <li>
               <a
                 class="hover:opacity-60 transition-opacity duration-200"
+                href="/#opensource"
+              >
+                Open Source
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:opacity-60 transition-opacity duration-200"
                 href="/#about"
               >
                 About
@@ -787,6 +795,27 @@ exports[`<Home/> should render 1`] = `
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div
+      class="section"
+    >
+      <div
+        class="md:container px-4"
+      >
+        <div
+          class="pt-5 mb-10"
+          id="opensource"
+        >
+          <h1
+            class="text-3xl tracking-tight"
+          >
+            Open Source
+          </h1>
+          <div
+            class="w-10 h-0.5 bg-black dark:bg-white mt-3"
+          />
+        </div>
         <div
           class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
         >
@@ -796,45 +825,163 @@ exports[`<Home/> should render 1`] = `
             <div
               class="text-xl mb-2 tracking-tight"
             >
-              Skynjari
+              Babeli
             </div>
             <div
               class="text-gray-dark dark:text-gray leading-relaxed"
             >
-              Skynjari, Icelandic for sensors. Small app to easily visualize the data from smart home sensors.
-      A small spare time project that is still in its early stages. 
-      Implemented with Typescript, Nest.js, Angular, GraphQL and InfluxDB for data storage.
+              AI-powered translation management. Validate, sort, and automatically generate missing translations using LLMs.
             </div>
             <div
               class="mt-3"
             >
               <a
                 class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
-                href="https://github.com/uebelack/skynjari"
+                href="https://github.com/uebelack/babeli"
               >
                 More
               </a>
             </div>
           </div>
+        </div>
+        <div
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+        >
           <div
-            class="ml-4 md:ml-10 flex items-center"
+            class="flex-grow flex-1"
           >
-            <a
-              href="https://github.com/uebelack/skynjari"
+            <div
+              class="text-xl mb-2 tracking-tight"
             >
-              <img
-                alt="Skynjari"
-                class="rounded-lg transition-transform duration-300 group-hover:scale-105"
-                data-nimg="1"
-                decoding="async"
-                height="100"
-                loading="lazy"
-                src="/_next/image?url=%2Fskynjari.png&w=256&q=75"
-                srcset="/_next/image?url=%2Fskynjari.png&w=128&q=75 1x, /_next/image?url=%2Fskynjari.png&w=256&q=75 2x"
-                style="color: transparent;"
-                width="100"
-              />
-            </a>
+              Babeli4j
+            </div>
+            <div
+              class="text-gray-dark dark:text-gray leading-relaxed"
+            >
+              AI-powered translation file management for Java projects. Babeli detects missing translations, sorts keys, and generates translations using LLMs — integrated into your Maven or Gradle build, or used standalone via CLI.
+            </div>
+            <div
+              class="mt-3"
+            >
+              <a
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack/babeli4j"
+              >
+                More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-xl mb-2 tracking-tight"
+            >
+              node-app-attest
+            </div>
+            <div
+              class="text-gray-dark dark:text-gray leading-relaxed"
+            >
+              A JavaScript implementation of the App Attest protocol, which checks whether clients connecting to your server are valid instances of your app.
+            </div>
+            <div
+              class="mt-3"
+            >
+              <a
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack/node-app-attest"
+              >
+                More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-xl mb-2 tracking-tight"
+            >
+              Toss It In
+            </div>
+            <div
+              class="text-gray-dark dark:text-gray leading-relaxed"
+            >
+              AI-powered git workflow tool that analyzes your changes, generates meaningful commit messages, and pushes to your repository — all in one command.
+            </div>
+            <div
+              class="mt-3"
+            >
+              <a
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack/tossitin"
+              >
+                More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-xl mb-2 tracking-tight"
+            >
+              Tratschtante
+            </div>
+            <div
+              class="text-gray-dark dark:text-gray leading-relaxed"
+            >
+              Just another logging library for Node.js.
+            </div>
+            <div
+              class="mt-3"
+            >
+              <a
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack/tratschtante"
+              >
+                More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex mb-12 border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group"
+        >
+          <div
+            class="flex-grow flex-1"
+          >
+            <div
+              class="text-xl mb-2 tracking-tight"
+            >
+              Screegen
+            </div>
+            <div
+              class="text-gray-dark dark:text-gray leading-relaxed"
+            >
+              A screenshot generation toolkit for creating App Store screenshots. Build beautiful, localized screenshots for multiple devices with React and Playwright.
+            </div>
+            <div
+              class="mt-3"
+            >
+              <a
+                class="inline-flex items-center gap-1 underline underline-offset-4 hover:opacity-60 transition-opacity duration-200"
+                href="https://github.com/uebelack/screegen"
+              >
+                More
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -963,7 +1110,7 @@ exports[`<Home/> should render 1`] = `
               class="w-full"
             >
               <input
-                class="w-full p-3 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
+                class="w-full p-3 border rounded-md disabled:border-gray bg-white dark:bg-black dark:text-white dark:placeholder-gray transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 name="email"
                 placeholder="Your email address"
@@ -978,7 +1125,7 @@ exports[`<Home/> should render 1`] = `
               class="w-full"
             >
               <input
-                class="w-full p-3 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
+                class="w-full p-3 border rounded-md disabled:border-gray bg-white dark:bg-black dark:text-white dark:placeholder-gray transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 name="subject"
                 placeholder="Your issue"
@@ -993,7 +1140,7 @@ exports[`<Home/> should render 1`] = `
               class="w-full"
             >
               <textarea
-                class="w-full p-3 h-48 border rounded-md disabled:border-gray dark:text-black transition-colors duration-200 focus:border-black dark:focus:border-white"
+                class="w-full p-3 h-48 border rounded-md disabled:border-gray bg-white dark:bg-black dark:text-white dark:placeholder-gray transition-colors duration-200 focus:border-black dark:focus:border-white"
                 disabled=""
                 maxlength="4000"
                 name="message"

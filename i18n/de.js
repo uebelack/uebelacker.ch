@@ -24,13 +24,38 @@ export default {
       thumbnail: '/letter.svg',
       link: 'https://briefe.app',
     },
-    skynjari: {
-      title: 'Skynjari',
-      description: `Skynjari, Isländisch für Sensoren. Kleine App zur einfachen Visualisierung der Daten von Smart Home Sensoren.
-      Ein kleines Freizeitprojekt, das sich noch im Anfangsstadium befindet.
-      Implementiert mit Typescript, Nest.js, Angular, GraphQL und InfluxDB für die Datenspeicherung.`,
-      thumbnail: '/skynjari.png',
-      link: 'https://github.com/uebelack/skynjari',
+  },
+  opensource: {
+    title: 'Open Source',
+    babeli: {
+      title: 'Babeli',
+      description: 'KI-gestützte Übersetzungsverwaltung. Validieren, sortieren und automatisch fehlende Übersetzungen mit LLMs generieren.',
+      link: 'https://github.com/uebelack/babeli',
+    },
+    babeli4j: {
+      title: 'Babeli4j',
+      description: 'KI-gestützte Übersetzungsdateiverwaltung für Java-Projekte. Babeli erkennt fehlende Übersetzungen, sortiert Schlüssel und generiert Übersetzungen mit LLMs — integriert in Maven- oder Gradle-Builds oder als eigenständiges CLI.',
+      link: 'https://github.com/uebelack/babeli4j',
+    },
+    nodeappattest: {
+      title: 'node-app-attest',
+      description: 'Eine JavaScript-Implementierung des App-Attest-Protokolls, das überprüft, ob Clients, die sich mit Ihrem Server verbinden, gültige Instanzen Ihrer App sind.',
+      link: 'https://github.com/uebelack/node-app-attest',
+    },
+    tossitin: {
+      title: 'Toss It In',
+      description: 'KI-gestütztes Git-Workflow-Tool, das Ihre Änderungen analysiert, aussagekräftige Commit-Nachrichten generiert und in Ihr Repository pusht — alles in einem Befehl.',
+      link: 'https://github.com/uebelack/tossitin',
+    },
+    tratschtante: {
+      title: 'Tratschtante',
+      description: 'Eine weitere Logging-Bibliothek für Node.js.',
+      link: 'https://github.com/uebelack/tratschtante',
+    },
+    screegen: {
+      title: 'Screegen',
+      description: 'Ein Toolkit zur Screenshot-Generierung für App-Store-Screenshots. Erstellen Sie schöne, lokalisierte Screenshots für mehrere Geräte mit React und Playwright.',
+      link: 'https://github.com/uebelack/screegen',
     },
   },
   about: {
