@@ -298,6 +298,13 @@ exports[`<Imprint/> should render 1`] = `
               Privacy Policy
             </a>
           </div>
+          <div
+            class="text-gray-dark dark:text-gray text-sm mt-2"
+          >
+            Powered by 
+            24,587
+             cups of coffee and counting ☕
+          </div>
         </div>
       </div>
     </footer>

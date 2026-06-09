@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useIntl, FormattedMessage } from 'react-intl';
+import CoffeeCounter from './CoffeeCounter';
 
 export default function Footer() {
   const { formatMessage } = useIntl();
@@ -20,6 +21,7 @@ export default function Footer() {
             <span className="text-gray">|</span>
             <Link href={formatMessage({ id: 'footer.privacy_link' })} className="hover:opacity-60 transition-opacity duration-200"><FormattedMessage id="footer.privacy" /></Link>
           </div>
+          <CoffeeCounter />
         </div>
       </div>
     </footer>

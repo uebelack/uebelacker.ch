@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 import Typist from 'react-typist-component';
 import Page from '@/components/Page';
@@ -15,8 +15,22 @@ import ContactForm from '@/components/ContactForm';
 
 const blogItems = require('../data/blog.json');
 
+const devQuotes = [
+  { text: 'What one programmer can do in one month, two programmers can do in two months.', author: 'Fred Brooks' },
+  { text: 'There are only two hard things in Computer Science: cache invalidation and naming things.', author: 'Phil Karlton' },
+  { text: 'The best code is no code at all.', author: 'Jeff Atwood' },
+  { text: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.', author: 'Martin Fowler' },
+  { text: 'First, solve the problem. Then, write the code.', author: 'John Johnson' },
+  { text: 'Talk is cheap. Show me the code.', author: 'Linus Torvalds' },
+  { text: 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.', author: 'Brian Kernighan' },
+  { text: 'The most disastrous thing that you can ever learn is your first programming language.', author: 'Alan Kay' },
+  { text: "It's not a bug — it's an undocumented feature.", author: 'Anonymous' },
+  { text: 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.', author: 'Rick Cook' },
+];
+
 export default function Home() {
   const { formatMessage } = useIntl();
+  const quote = useMemo(() => devQuotes[Math.floor(Math.random() * devQuotes.length)], []);
   return (
     <Page>
       <Header description={formatMessage({ id: 'home.description' })} />
@@ -25,11 +39,11 @@ export default function Home() {
           <div className="p-3 md:w-4/5 pt-20">
             <Typist typingDelay={30}>
               <div className="text-3xl md:text-4xl mb-4 leading-snug tracking-tight">
-                { formatMessage({ id: 'home.quote' }) }
+                {quote.text}
                 <br />
               </div>
               <Typist.Paste>
-                <div className="text-lg mt-6 text-gray-dark dark:text-gray">- Fred Brooks</div>
+                <div className="text-lg mt-6 text-gray-dark dark:text-gray">- {quote.author}</div>
               </Typist.Paste>
             </Typist>
           </div>
