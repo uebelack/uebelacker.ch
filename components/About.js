@@ -1,47 +1,61 @@
 /* eslint-disable max-len */
-import React from 'react';
-import { useRemarkSync } from 'react-remark';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
+import React from "react";
+import { useRemarkSync } from "react-remark";
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 const content = {
-  en: `The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland.
+  en: `I'm a full-stack developer and software architect with over 20 years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
 
-  I'm a full-stack developer and software architect with 20+ years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
-  
-  My fascination with computers started early on. When I was 12 years old, I reset my father's computer out of curiosity because I wanted to know what happens when you enter format c:. Only a few years later I created my first own homepage with pure HTML.
-  
-  Now, I look back on 20 years of experience in web-based application development. I started with PHP and then worked my way through Java-based development from servlets to JSP and Java Server Faces to Spring Boot and Angular.js. During this time I learned a lot about good web design and excellent user experience, which I can now rely on every day.
-  
-  For the last 6 years, I've been working for a large Swiss industrial company as technical lead for the implementation of the digitalization strategy with several IIoT services where I gained a lot of experience with React, React Native, Ruby on Rails, Node.js, DevOps and cloud based solutions.
-  
-  One of my strengths is that I’m very quick to get to grips with new topics and technologies, so I can easily adapt to ongoing projects or kick-off new ones from scratch. I believe in building quality from day one. Topics like clean code, secure coding, test driven development and a good user experience are central to my work.
+My fascination with computers started early on. When I was 12 years old, I reset my father's computer out of curiosity because I wanted to know what happens when you enter format c:. Only a few years later I created my first own homepage with pure HTML.
+
+Since then, I've worked my way through the full evolution of web development: starting with PHP, then Java-based development from servlets to JSP and JavaServer Faces, on to Spring Boot and Angular. Along the way I learned a lot about good web design and excellent user experience, which I still rely on every day.
+
+I spent six years as technical lead at a large Swiss industrial company, implementing its digitalization strategy with several IIoT services. There I gained extensive experience with React, React Native, Ruby on Rails, Node.js, DevOps and cloud-based solutions.
+
+Today, I work as a senior software developer and technical lead in the Swiss financial sector, building business-critical applications with Java, Spring Boot, Camunda BPM, Angular, Kubernetes and ArgoCD. As an iSAQB-certified software architect, I have a strong focus on AI-augmented engineering: I build solutions with LLMs, AI agents and RAG using LangChain and LangChain4j, maintain open-source developer tooling, and share my experience as a speaker at conferences.
+
+One of my strengths is that I'm very quick to get to grips with new topics and technologies, so I can easily adapt to ongoing projects or kick off new ones from scratch. I believe in building quality from day one. Topics like clean code, secure coding, test-driven development and a good user experience are central to my work.
   `,
-  de: `Die Firma Übelacker Solutions wurde von mir, David Übelacker, gegründet, um als Freelancer in der Schweiz zu arbeiten.
+  de: `Ich bin Full-Stack-Entwickler und Softwarearchitekt mit über 20 Jahren Erfahrung in der Entwicklung von Web- und Mobile-Applikationen. Mit Leidenschaft für Programmierung, Problemlösung und moderne Technologien.
 
-  Ich bin ein Full-Stack-Entwickler und Software-Architekt mit über 20 Jahren Erfahrung in der Entwicklung von Web- und mobilen Anwendungen. Meine Leidenschaft gilt dem Programmieren, dem Lösen von Problemen und modernen Technologien.
-  
-  Meine Faszination für Computer begann schon früh. Als ich 12 Jahre alt war, habe ich den Computer meines Vaters aus Neugierde zurückgesetzt, weil ich wissen wollte, was passiert, wenn man Format c: eingibt. Nur ein paar Jahre später habe ich meine erste eigene Homepage mit reinem HTML erstellt.
-  
-  Heute blicke ich auf 20 Jahre Erfahrung in der webbasierten Anwendungsentwicklung zurück. Angefangen habe ich mit PHP und mich dann über die Java-basierte Entwicklung von Servlets über JSP und Java Server Faces zu Spring Boot und Angular.js vorgearbeitet. Während dieser Zeit habe ich viel über gutes Webdesign und exzellente Benutzererfahrung gelernt, auf die ich nun täglich zurückgreifen kann.
-  
-  In den letzten 6 Jahren habe ich bei einem großen Schweizer Industrieunternehmen als technischer Lead für die Umsetzung der Digitalisierungsstrategie mit verschiedenen IIoT-Services gearbeitet und dabei viel Erfahrung mit React, React Native, Ruby on Rails, Node.js, DevOps und cloudbasierten Lösungen gesammelt.
-  
-  Eine meiner Stärken ist, dass ich mich sehr schnell in neue Themen und Technologien einarbeiten kann, so dass ich mich leicht in laufende Projekte einarbeiten oder neue Projekte von Grund auf beginnen kann. Mir ist gute Qualität vom ersten Tag an wichtig. Themen wie Clean Code, Secure Coding, testgetriebene Entwicklung und ein gutes Benutzererlebnis sind für mich von zentraler Bedeutung.`,
+Meine Faszination für Computer begann früh. Mit 12 Jahren habe ich aus Neugier den Computer meines Vaters zurückgesetzt, weil ich wissen wollte, was passiert, wenn man format c: eingibt. Nur wenige Jahre später erstellte ich meine erste eigene Homepage in purem HTML.
+
+Seither habe ich die gesamte Evolution der Webentwicklung durchlaufen: angefangen mit PHP, dann Java-basierte Entwicklung von Servlets über JSP und JavaServer Faces bis hin zu Spring Boot und Angular. Dabei habe ich viel über gutes Webdesign und exzellente User Experience gelernt – Wissen, auf das ich mich noch heute täglich verlasse.
+
+Sechs Jahre lang war ich als Technical Lead bei einem grossen Schweizer Industrieunternehmen tätig und habe dort die Umsetzung der Digitalisierungsstrategie mit mehreren IIoT-Services verantwortet. Dabei sammelte ich umfangreiche Erfahrung mit React, React Native, Ruby on Rails, Node.js, DevOps und Cloud-basierten Lösungen.
+
+Heute arbeite ich als Senior Software Developer und Technical Lead im Schweizer Finanzsektor und entwickle geschäftskritische Applikationen mit Java, Spring Boot, Camunda BPM, Angular, Kubernetes und ArgoCD. Als iSAQB-zertifizierter Softwarearchitekt lege ich einen starken Fokus auf AI-augmented Engineering: Ich baue Lösungen mit LLMs, AI Agents und RAG auf Basis von LangChain und LangChain4j, pflege Open-Source-Entwicklertools und teile meine Erfahrungen als Speaker an Konferenzen.
+
+Eine meiner Stärken ist, dass ich mich sehr schnell in neue Themen und Technologien einarbeite und mich dadurch problemlos in laufende Projekte integrieren oder neue von Grund auf starten kann. Ich glaube daran, Qualität vom ersten Tag an zu bauen. Themen wie Clean Code, Secure Coding, Test-Driven Development und eine gute User Experience sind zentral für meine Arbeit.`,
 };
 
 export default function About() {
   const { locale } = useRouter();
-  const language = locale && locale.startsWith('de') ? 'de' : 'en';
+  const language = locale && locale.startsWith("de") ? "de" : "en";
   const reactContent = useRemarkSync(content[language]);
   return (
     <div className="md:flex md:items-start">
       <div className="grid place-items-center m-5 md:hidden">
-        <Image src="/david.jpg" alt="David Übelacker" width={220} height={220} className="rounded-full align-center" />
+        <Image
+          src="/david.jpg"
+          alt="David Übelacker"
+          width={220}
+          height={220}
+          className="rounded-full align-center"
+        />
       </div>
-      <div className="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed">{reactContent}</div>
+      <div className="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed">
+        {reactContent}
+      </div>
       <div className="hidden md:inline-block flex-shrink-0">
-        <Image src="/david.jpg" alt="David Übelacker" width={220} height={220} className="rounded-full" />
+        <Image
+          src="/david.jpg"
+          alt="David Übelacker"
+          width={220}
+          height={220}
+          className="rounded-full"
+        />
       </div>
     </div>
   );
