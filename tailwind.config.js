@@ -1,8 +1,4 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
   theme: {
     screens: {
       sm: '480px',
@@ -23,6 +19,7 @@ module.exports = {
       'blue': '#1982c4',
       'black': '#000',
       'white': '#fff',
+      'transparent': 'transparent',
     },
     fontFamily: {
       sans: ['Fira Code', 'sans-serif'],
@@ -104,5 +101,4 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/typography')],
 }

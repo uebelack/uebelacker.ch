@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from 'react-google-recaptcha-v3';
-import LazyLoad from 'react-lazyload';
 import { useCookieConsent } from './CookieConsent';
 import Form from './Form';
 import InputText from './InputText';
@@ -44,7 +43,7 @@ export default function ContactForm() {
   };
 
   return (
-    <LazyLoad offset={100}>
+    <>
       { cookiesAccepted ? (
         <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
           <GoogleReCaptcha onVerify={handleOnCaptchaVerify} />
@@ -99,6 +98,6 @@ export default function ContactForm() {
         <p className="contact-form-error">{formatMessage({ id: 'contact.error' })}</p>
       )}
 
-    </LazyLoad>
+    </>
   );
 }

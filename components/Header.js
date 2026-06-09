@@ -1,6 +1,3 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -50,10 +47,10 @@ export default function Header({ title, description }) {
           <div className="text-2xl ml-2 pt-0.5">Übelacker Solutions</div>
         </Link>
         <ul className="flex pt-2 pl-1 md:pt-2.5">
-          <li className="mr-2"><a href="/#blog" onClick={(e) => handleOnClick(e, 'blog')}><FormattedMessage id="blog.title" /></a></li>
-          <li className="mr-2"><a href="/#apps" onClick={(e) => handleOnClick(e, 'apps')}><FormattedMessage id="apps.title" /></a></li>
-          <li className="mr-2"><a href="/#about" onClick={(e) => handleOnClick(e, 'about')}><FormattedMessage id="about.title" /></a></li>
-          <li className="mr-2"><a href="/#contact" onClick={(e) => handleOnClick(e, 'contact')}><FormattedMessage id="contact.title" /></a></li>
+          <li className="mr-2"><Link href="/#blog" onClick={(e) => handleOnClick(e, 'blog')}><FormattedMessage id="blog.title" /></Link></li>
+          <li className="mr-2"><Link href="/#apps" onClick={(e) => handleOnClick(e, 'apps')}><FormattedMessage id="apps.title" /></Link></li>
+          <li className="mr-2"><Link href="/#about" onClick={(e) => handleOnClick(e, 'about')}><FormattedMessage id="about.title" /></Link></li>
+          <li className="mr-2"><Link href="/#contact" onClick={(e) => handleOnClick(e, 'contact')}><FormattedMessage id="contact.title" /></Link></li>
           <li><a href="/en">en</a></li>
           <li>|</li>
           <li><a href="/de">de</a></li>

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import Link from 'next/link';
 import { useIntl, FormattedMessage } from 'react-intl';

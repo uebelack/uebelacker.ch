@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import fetch from 'isomorphic-fetch';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
