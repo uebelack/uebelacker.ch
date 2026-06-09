@@ -89,7 +89,11 @@ exports[`<Home/> should render 1`] = `
                 class="hover:opacity-60 transition-opacity duration-200"
                 href="/#opensource"
               >
-                Open Source
+                <span
+                  class="whitespace-nowrap"
+                >
+                  Open Source
+                </span>
               </a>
             </li>
             <li>
@@ -192,7 +196,7 @@ exports[`<Home/> should render 1`] = `
           <div
             class="text-3xl md:text-4xl mb-4 leading-snug tracking-tight"
           >
-            F
+            P
           </div>
         </div>
       </div>
@@ -230,6 +234,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://uebelack.medium.com/ensuring-secure-api-access-harnessing-apples-attest-protocol-for-ios-app-integration-c63989c92057?source=rss-97a4cd81e55c------2"
                   title="Ensuring Secure API Access: Harnessing Apple’s Attest Protocol for iOS App Integration"
                 >
@@ -247,7 +252,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -288,6 +293,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://uebelack.medium.com/supercharge-your-apps-with-ai-dfa0b6804c8d?source=rss-97a4cd81e55c------2"
                   title="Supercharge your Apps with AI"
                 >
@@ -305,7 +311,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -346,6 +352,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://betterprogramming.pub/use-react-and-cypress-to-create-screenshots-for-apples-app-store-d1a367b990a?source=rss-97a4cd81e55c------2"
                   title="Use React and Cypress to Create Screenshots for Apple’s App Store"
                 >
@@ -363,7 +370,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -404,6 +411,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://betterprogramming.pub/the-evolution-of-java-37e4dc8e6cc7?source=rss-97a4cd81e55c------2"
                   title="The Evolution of Java"
                 >
@@ -421,7 +429,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -462,6 +470,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://betterprogramming.pub/some-thoughts-on-scrum-and-agile-software-development-f3b1e9d841ed?source=rss-97a4cd81e55c------2"
                   title="How Our Scrum Team Works —  Insights From a Software Developer"
                 >
@@ -479,7 +488,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -520,6 +529,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://betterprogramming.pub/things-ive-learned-over-the-last-6-years-working-with-react-f01a8f02146b?source=rss-97a4cd81e55c------2"
                   title="8 Things I’ve Learned Over the Last Six Years Working With React"
                 >
@@ -537,7 +547,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -578,6 +588,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355?source=rss-97a4cd81e55c------2"
                   title="How to Use React in a Ruby on Rails App"
                 >
@@ -595,7 +606,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -636,6 +647,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://uebelack.medium.com/gems-you-need-to-use-in-your-ruby-on-rails-application-to-make-testing-fun-23773bfcd82d?source=rss-97a4cd81e55c------2"
                   title="Gems for your Ruby on Rails application to make testing fun"
                 >
@@ -653,7 +665,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"
@@ -694,6 +706,7 @@ exports[`<Home/> should render 1`] = `
                 class="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden"
               >
                 <a
+                  class="relative block h-full"
                   href="https://uebelack.medium.com/5-things-you-can-do-to-make-your-react-based-website-load-super-fast-deb7c5b7d571?source=rss-97a4cd81e55c------2"
                   title="5 Things you can do to make your (React based) website load super fast"
                 >
@@ -711,7 +724,7 @@ exports[`<Home/> should render 1`] = `
                 </a>
               </div>
               <div
-                class="max-h-64 md:flex-1 md:ml-8 md:justify-start"
+                class="md:flex-1 md:ml-8 md:justify-start"
               >
                 <div
                   class="text-lg mt-3 md:mt-0 tracking-tight"

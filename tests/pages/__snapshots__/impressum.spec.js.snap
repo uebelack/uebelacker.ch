@@ -89,7 +89,11 @@ exports[`<Impressum/> should render 1`] = `
                 class="hover:opacity-60 transition-opacity duration-200"
                 href="/#opensource"
               >
-                Open Source
+                <span
+                  class="whitespace-nowrap"
+                >
+                  Open Source
+                </span>
               </a>
             </li>
             <li>

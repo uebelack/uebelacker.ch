@@ -9,7 +9,7 @@ export default function BlogItem({
   return (
     <div className="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group">
       <div className="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden">
-        <Link href={link} title={title}>
+        <Link href={link} title={title} className="relative block h-full">
           <Image
             src={thumbnail}
             alt={title}
@@ -21,7 +21,7 @@ export default function BlogItem({
           />
         </Link>
       </div>
-      <div className="max-h-64 md:flex-1 md:ml-8 md:justify-start">
+      <div className="md:flex-1 md:ml-8 md:justify-start">
         <div className="text-lg mt-3 md:mt-0 tracking-tight">
           <Link href={link} title={title}>
             {title}

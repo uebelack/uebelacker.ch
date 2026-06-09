@@ -5,7 +5,7 @@ import {
 
 export default function Document() {
   return (
-    <Html>
+    <Html data-scroll-behavior="smooth">
       <Head>
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: '' }} />
