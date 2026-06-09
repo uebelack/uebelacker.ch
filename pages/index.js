@@ -13,7 +13,6 @@ import BlogItem from '@/components/BlogItem';
 import App from '@/components/App';
 import ContactForm from '@/components/ContactForm';
 
-// eslint-disable-next-line global-require
 const blogItems = require('../data/blog.json');
 
 export default function Home() {

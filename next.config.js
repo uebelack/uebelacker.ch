@@ -4,8 +4,6 @@ const withMDX = require('@next/mdx')({
 
 const nextConfig = withMDX({
   reactStrictMode: true,
-  swcMinify: true,
-  transpilePackages: ['ui'],
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'en',

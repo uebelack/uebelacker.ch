@@ -230,8 +230,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -288,8 +288,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -346,8 +346,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -404,8 +404,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -462,8 +462,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -520,8 +520,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -578,8 +578,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -636,8 +636,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -694,8 +694,8 @@ exports[`<App/> should render 1`] = `
                     decoding="async"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 192px"
-                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=3840&q=75"
-                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=3840&q=75 3840w"
+                    src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75 1024w"
                     style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
                   />
                 </a>
@@ -874,8 +874,8 @@ exports[`<App/> should render 1`] = `
               decoding="async"
               height="200"
               loading="lazy"
-              src="/_next/image?url=%2Fdavid.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=640&q=75 2x"
+              src="/_next/image?url=%2Fdavid.jpg&w=480&q=75"
+              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=480&q=75 2x"
               style="color: transparent;"
               width="200"
             />
@@ -922,8 +922,8 @@ exports[`<App/> should render 1`] = `
               decoding="async"
               height="200"
               loading="lazy"
-              src="/_next/image?url=%2Fdavid.jpg&w=640&q=75"
-              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=640&q=75 2x"
+              src="/_next/image?url=%2Fdavid.jpg&w=480&q=75"
+              srcset="/_next/image?url=%2Fdavid.jpg&w=256&q=75 1x, /_next/image?url=%2Fdavid.jpg&w=480&q=75 2x"
               style="color: transparent;"
               width="200"
             />
@@ -943,12 +943,103 @@ exports[`<App/> should render 1`] = `
         >
           Contact
         </h1>
-        <div
-          class="lazyload-wrapper "
+        <p
+          class="mb-5"
         >
-          <div
-            class="lazyload-placeholder"
-          />
+          Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.ch.
+        </p>
+        <div
+          class="form-wrapper md:w-9/12"
+        >
+          <form
+            action="#"
+            class="test"
+          >
+            <div
+              class="w-full"
+            >
+              <input
+                class="w-full p-2 border disabled:border-gray dark:text-black"
+                disabled=""
+                name="email"
+                placeholder="Your email address"
+                type="text"
+                value=""
+              />
+              <div
+                class="error-message text-red text-sm h-6"
+              />
+            </div>
+            <div
+              class="w-full"
+            >
+              <input
+                class="w-full p-2 border disabled:border-gray dark:text-black"
+                disabled=""
+                name="subject"
+                placeholder="Your issue"
+                type="text"
+                value=""
+              />
+              <div
+                class="error-message text-red text-sm h-6"
+              />
+            </div>
+            <div
+              class="w-full"
+            >
+              <textarea
+                class="w-full p-2 h-48 border disabled:border-gray dark:text-black"
+                disabled=""
+                maxlength="4000"
+                name="message"
+                placeholder="Your message"
+              />
+              <div
+                class="error-message text-red text-sm h-6"
+              />
+            </div>
+            <div
+              class="w-full"
+            >
+              <div
+                class="checkbox-wrapper"
+              >
+                <input
+                  class="checkbox"
+                  disabled=""
+                  id="privacy"
+                  name="privacy"
+                  type="checkbox"
+                  value="false"
+                />
+                <label
+                  for="privacy"
+                >
+                  I agree to the
+                   
+                  <a
+                    aria-label="Privacy"
+                    class="underline"
+                    href="/en/privacy"
+                  >
+                    privacy policy
+                  </a>
+                </label>
+              </div>
+              <div
+                class="error-message text-red text-sm h-6"
+              />
+            </div>
+            <button
+              class=" py-2 px-4 border hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black disabled:bg-gray-light disabled:text-gray dark:disabled:bg-gray-dark"
+              disabled=""
+              id="contact-form-button"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -960,7 +1051,7 @@ exports[`<App/> should render 1`] = `
       >
         ©
          
-        2024
+        2026
          
         Übelacker Solutions GmbH
         <br />
