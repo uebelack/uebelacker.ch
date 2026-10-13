@@ -2,6 +2,16 @@ name: "Continuous Integration"
 on:
   pull_request:
     branches: '*'
+  # Also on pushes to main. The required "Test and Lint" check could never
+  # report on a direct push without this, so a commit that reached main
+  # outside a PR carried no check result at all — which is how a broken
+  # reCAPTCHA provider shipped with a green-looking history.
+  #
+  # This reports a result, it does not gate: status checks block merges, not
+  # pushes. The gate is still the pull request.
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
