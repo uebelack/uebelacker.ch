@@ -42,3 +42,8 @@ jobs:
       # suite was never actually executed here.
       - name: Run Tests
         run: pnpm test
+      # Lint and tests both passed while the build was broken during the pnpm
+      # migration — a duplicate-React resolution only `next build` caught. The
+      # build is the step that actually proves the site ships.
+      - name: Build
+        run: pnpm build
