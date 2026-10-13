@@ -4,7 +4,7 @@ import prettier from 'prettier';
 import { URL } from 'url';
 
 const LAST_MODIFIED = new Date().toISOString();
-const DOMAIN = 'https://uebelacker.ch';
+const DOMAIN = 'https://uebelacker.dev';
 
 const PAGES = [
   { url: '/', alternates: [{ lang: 'de', url: '/de' }] },

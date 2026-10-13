@@ -1,0 +1,188 @@
+/*
+  The about section: prose on the left, portrait on the right, and a band of
+  skill chips underneath.
+*/
+
+.about {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 976px) {
+  .about {
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: start;
+  }
+}
+
+/* ── Portrait ─────────────────────────────────────────────────────────────── */
+
+.portrait {
+  position: relative;
+  width: 220px;
+  margin-inline: auto;
+  flex-shrink: 0;
+}
+
+@media (min-width: 976px) {
+  .portrait {
+    position: sticky;
+    top: calc(var(--header-height) + 40px);
+  }
+}
+
+.portrait__disc {
+  position: relative;
+}
+
+.portrait__frame {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--sw-magenta);
+  box-shadow:
+    0 0 0 6px rgb(249 42 173 / 8%),
+    0 0 40px -6px rgb(249 42 173 / 55%),
+    0 0 80px -20px rgb(0 240 255 / 45%);
+}
+
+/* The photo is a daylight portrait; the duotone wash puts it in the same night
+   as everything else without having to re-shoot it. */
+.portrait__frame img {
+  display: block;
+  /* Desaturated almost to mono, then re-tinted by the gradient below — a
+     proper duotone rather than a photo with a colour cast on top. */
+  filter: saturate(0.25) contrast(1.15) brightness(0.92);
+}
+
+.portrait__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(165deg, rgb(0 240 255 / 34%) 0%, rgb(73 84 149 / 18%) 48%, rgb(249 42 173 / 46%) 100%);
+  mix-blend-mode: screen;
+}
+
+/* Scanlines over the portrait only, so it reads as being on a monitor. */
+.portrait__frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgb(0 0 0 / 28%) 0 1px, transparent 1px 3px);
+  opacity: 0.35;
+}
+
+/* The orbiting ring. Slow enough to be noticed only once. */
+.portrait__ring {
+  position: absolute;
+  inset: -14px;
+  border: 1px dashed rgb(0 240 255 / 30%);
+  border-radius: 50%;
+  animation: portrait-spin 28s linear infinite;
+}
+
+@keyframes portrait-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.portrait__caption {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sw-comment);
+}
+
+/* ── Prose ────────────────────────────────────────────────────────────────── */
+
+.about__prose {
+  max-width: none;
+  line-height: 1.85;
+}
+
+.about__prose p {
+  color: var(--sw-fg);
+}
+
+/* The opening paragraph gets the lead treatment — it is the only one anybody
+   reads in full. */
+.about__prose p:first-of-type {
+  font-size: 1.1rem;
+  color: var(--sw-white);
+}
+
+/* ── Skill chips ──────────────────────────────────────────────────────────── */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.skill {
+  padding: 6px 13px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sw-aqua);
+  background: rgb(0 240 255 / 6%);
+  border: 1px solid rgb(0 240 255 / 25%);
+  border-radius: 999px;
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.skill:hover {
+  color: var(--sw-white);
+  border-color: var(--sw-cyan);
+  box-shadow: var(--glow-cyan-soft);
+  transform: translateY(-2px);
+}
+
+/* Every third chip is magenta, which breaks up what would otherwise be a solid
+   block of cyan across four rows. */
+.skill:nth-child(3n) {
+  color: var(--sw-hotpink);
+  background: rgb(249 42 173 / 6%);
+  border-color: rgb(249 42 173 / 25%);
+}
+
+.skill:nth-child(3n):hover {
+  border-color: var(--sw-magenta);
+  box-shadow: var(--glow-magenta-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait__ring {
+    animation: none;
+  }
+}
+
+/* On narrow screens the portrait leads, because scrolling past 600 words to
+   find out whose site this is would be the wrong order. */
+.about__portrait {
+  order: -1;
+  /* The ring below spins, and a rotating square's *bounding box* is up to 41%
+     wider than the square — so at 320px it reported 342px of width and pushed
+     the document past the screen. The circle it draws never leaves its own
+     248px box at any angle, so clipping the column is invisible and costs
+     nothing.
+
+     `clip` rather than `hidden`: hidden would make this a scroll container and
+     break the `position: sticky` on .portrait at desktop widths. x-only so the
+     frame's glow still spreads vertically. */
+  overflow-x: clip;
+}
+
+@media (min-width: 976px) {
+  .about__portrait {
+    order: 0;
+  }
+}

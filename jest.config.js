@@ -4,6 +4,7 @@ const createJestConfig = nextJest({
   dir: './',
 });
 const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/components/(.*)$': '<rootDir>/components/$1',
     '^react-typist-component$': '<rootDir>/node_modules/react-typist-component/dist/index.js',

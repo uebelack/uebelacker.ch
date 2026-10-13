@@ -1,70 +1,50 @@
+/*
+  The "keep going" button at the bottom of the hero.
+*/
+
 .scroll-button {
-  animation: bounce 2s infinite 2s;
-  animation: bounce 2s infinite 2s;
-  background: none;
-  background-size: 14px auto;
-  border: 1px solid #000;
-  border-radius: 50%;
-  bottom: 50px;
-  color: inherit;
-  cursor: pointer;
-  display: block;
-  font: inherit;
-  height: 40px;
-  left: 50%;
-  margin-left: -16px;
-  outline: inherit;
-  padding: 0;
   position: absolute;
-  transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  width: 40px;
-  z-index: 2;
+  bottom: 36px;
+  left: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: -22px;
+  color: var(--sw-cyan);
+  background: rgb(10 5 24 / 60%);
+  border: 1px solid rgb(0 240 255 / 45%);
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: var(--glow-cyan-soft);
+  animation: bounce 2.4s ease-in-out infinite 1.5s;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
 }
 
 .scroll-button::before {
-  border: 1px solid #000;
-  border-width: 0 0 1px 1px;
   content: '';
-  display: block;
-  height: 12px;
-  left: calc(50% - 6px);
-  position: absolute;
-  top: calc(50% - 8px);
+  width: 11px;
+  height: 11px;
+  margin-top: -4px;
+  border: 1px solid currentColor;
+  border-width: 0 0 1px 1px;
   transform: rotate(-45deg);
-  width: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scroll-button {
-    border-color: #fff;
-  }
-
-  .scroll-button::before {
-    border-color: #fff;
-  }
+.scroll-button:hover {
+  color: var(--sw-white);
+  border-color: var(--sw-cyan);
+  box-shadow: var(--glow-cyan);
 }
 
-@keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateY(0);
-    transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-10px);
-    transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-
-  60% {
-    transform: translateY(-5px);
-    transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
+/* The ring that sits just outside the button, so it reads as a pulse source. */
+.scroll-button::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgb(0 240 255 / 18%);
+  border-radius: 50%;
 }

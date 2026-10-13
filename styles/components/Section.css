@@ -1,23 +1,58 @@
+/*
+  Sections, and the neon rule between them.
+
+  The divider is a gradient that is thin and bright in the middle and fades to
+  nothing at both edges, so it reads as a light source lying on the page rather
+  than as a border drawn around a box.
+*/
+
+.section {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
 .section.first {
-  min-height: calc(100vh);
-}
-
-.section h1 {
-  padding-top: 120px;
-}
-
-.section + .section {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-@media (prefers-color-scheme: dark) {
-  .section + .section {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-bottom: 40px;
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
+}
+
+.section + .section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1200px, 92vw);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(249 42 173 / 55%) 25%,
+    rgb(255 126 219 / 85%) 50%,
+    rgb(0 240 255 / 55%) 75%,
+    transparent 100%
+  );
+}
+
+/* A soft bloom under the rule, which is what makes the 1px line look lit. */
+.section + .section::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 80vw);
+  height: 80px;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgb(249 42 173 / 12%) 0%, transparent 70%);
 }

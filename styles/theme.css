@@ -1,0 +1,101 @@
+/*
+  ╔══════════════════════════════════════════════════════════════╗
+  ║   T O K E N S                                                 ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  The same hexes as tailwind.config.js, exposed as custom properties so the
+  hand-written component CSS and the canvas in OutrunHero can read them
+  instead of each keeping its own copy.
+
+  The site is dark-only on purpose: Synthwave '85 is a night palette — the
+  neons are accents inside a deep violet dark, never the ground — and a light
+  variant of it would be a different theme wearing the same hexes.
+*/
+:root {
+  color-scheme: dark;
+
+  /* Backgrounds, darkest first. */
+  --sw-abyss: #0a0518;
+  --sw-shadow: #120a25;
+  --sw-deep: #150d2b;
+  --sw-bg: #1a1033;
+  --sw-raised: #1c1238;
+  --sw-float: #241b3a;
+  --sw-line: #2f2350;
+  --sw-border: #3b3163;
+
+  /* Text, brightest first. */
+  --sw-white: #ffffff;
+  --sw-fg: #d4c8ff;
+  --sw-muted: #c3b6ef;
+  --sw-dim: #9d7fd0;
+  --sw-faint: #6e5c96;
+  --sw-comment: #495495;
+
+  /* The neons. */
+  --sw-coral: #fe4450;
+  --sw-coral-bright: #ff6e6e;
+  --sw-green: #72f1b8;
+  --sw-green-bright: #a6ffcb;
+  --sw-gold: #fede5d;
+  --sw-gold-bright: #fff59d;
+  --sw-blue: #03edf9;
+  --sw-blue-bright: #6effff;
+  --sw-magenta: #f92aad;
+  --sw-magenta-bright: #fb66c4;
+  --sw-hotpink: #ff7edb;
+  --sw-cyan: #00f0ff;
+  --sw-aqua: #8bfff5;
+  --sw-orange: #ff8b39;
+
+  /* Glows. Three steps of the same idea, so a hover does not have to invent
+     its own shadow stack. */
+  --glow-magenta: 0 0 8px rgb(249 42 173 / 55%), 0 0 24px rgb(249 42 173 / 30%);
+  --glow-cyan: 0 0 8px rgb(0 240 255 / 55%), 0 0 24px rgb(0 240 255 / 30%);
+  --glow-magenta-soft: 0 0 20px rgb(249 42 173 / 18%);
+  --glow-cyan-soft: 0 0 20px rgb(0 240 255 / 18%);
+
+  /* Text glows, kept separate because text-shadow wants tighter radii than
+     box-shadow to stay legible. */
+  --text-glow-magenta: 0 0 6px rgb(249 42 173 / 70%), 0 0 18px rgb(249 42 173 / 40%);
+  --text-glow-cyan: 0 0 6px rgb(0 240 255 / 70%), 0 0 18px rgb(0 240 255 / 40%);
+  --text-glow-white: 0 0 4px rgb(255 255 255 / 60%), 0 0 16px rgb(249 42 173 / 50%);
+
+  /* The accent gradient, used on rules, borders and chrome text. */
+  --grad-neon: linear-gradient(90deg, var(--sw-magenta) 0%, var(--sw-hotpink) 35%, var(--sw-cyan) 100%);
+  --grad-sunset: linear-gradient(180deg, var(--sw-gold) 0%, var(--sw-hotpink) 45%, var(--sw-magenta) 75%, var(--sw-coral) 100%);
+
+  --header-height: 72px;
+}
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+/* ghostty/config puts selection on orange over the background; same here. */
+::selection {
+  background: var(--sw-orange);
+  color: var(--sw-bg);
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+* {
+  scrollbar-color: var(--sw-magenta) var(--sw-deep);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sw-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--sw-magenta), var(--sw-cyan));
+  border: 2px solid var(--sw-deep);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--sw-hotpink), var(--sw-aqua));
+}

@@ -1,0 +1,181 @@
+/*
+  ╔══════════════════════════════════════════════════════════════╗
+  ║   T H E   S H E L L                                           ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  The full-screen terminal. It reuses the window chrome from Terminal.css and
+  adds the scrolling output, the prompt row, and the tone classes the lines in
+  lib/shell.js are coloured with.
+*/
+
+.shell-overlay {
+  position: fixed;
+  inset: 0;
+  /* Above everything else on the page except the cookie banner (140), which
+     has to stay clickable because `mail` points you at it. */
+  z-index: 130;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgb(10 5 24 / 72%);
+  backdrop-filter: blur(10px) saturate(0.9);
+  -webkit-backdrop-filter: blur(10px) saturate(0.9);
+  animation: shell-backdrop 0.25s ease-out;
+}
+
+@keyframes shell-backdrop {
+  from {
+    opacity: 0;
+  }
+}
+
+.shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(1040px, 100%);
+  /* svh, not vh: on a phone vh is the tall viewport with the browser chrome
+     retracted, so a vh-sized panel is taller than what you can actually see
+     while the on-screen keyboard is up. The vh line is the fallback for
+     browsers without svh. */
+  height: min(80vh, 780px);
+  height: min(80svh, 780px);
+  overflow: hidden;
+  border: 1px solid var(--sw-magenta);
+  border-radius: 12px;
+  background: rgb(10 5 24 / 97%);
+  box-shadow:
+    0 0 0 1px rgb(249 42 173 / 30%),
+    0 40px 120px -30px rgb(249 42 173 / 55%),
+    0 0 160px -60px rgb(0 240 255 / 55%);
+  animation: shell-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes shell-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.975);
+  }
+}
+
+/* The page's CRT layer sits at z-index 90, below the overlay, so the shell
+   carries its own scanlines rather than losing the texture. */
+.shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgb(0 0 0 / 26%) 0 1px, transparent 1px 3px);
+  opacity: 0.2;
+}
+
+.shell__close {
+  margin-left: auto;
+  padding: 2px 8px;
+  font-size: 0.82rem;
+  line-height: 1;
+  color: var(--sw-faint);
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.shell__close:hover {
+  color: var(--sw-coral);
+  text-shadow: 0 0 10px rgb(254 68 80 / 70%);
+}
+
+/* ── Output ───────────────────────────────────────────────────────────────── */
+
+.shell__body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 20px 20px 28px;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  /* The whole output area is a click target that returns focus to the prompt,
+     so the text cursor is the honest affordance. */
+  cursor: text;
+}
+
+@media (min-width: 768px) {
+  .shell__body {
+    padding: 26px 28px 34px;
+    font-size: 0.88rem;
+  }
+}
+
+/* pre-wrap rather than manual wrapping at a fixed column: the panel is
+   responsive, and a shell that hard-wraps at 72 characters would leave a
+   ragged gap on a wide window and still overflow a narrow one. */
+.shell__line {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.shell__gap {
+  height: 0.8em;
+}
+
+/* `ls` output. A flex row that wraps gives the column effect without having to
+   know the panel width or pad names to a fixed cell. */
+.shell__cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.5ch;
+}
+
+/* ── Prompt ───────────────────────────────────────────────────────────────── */
+
+.shell__prompt {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+/* Each span is a flex item, and leading/trailing whitespace inside a flex item
+   is collapsed — which ate the spaces around the ❯ and made the live prompt
+   sit tighter than the echoed one above it. */
+.shell__prompt > span {
+  white-space: pre;
+}
+
+.shell__input {
+  flex: 1;
+  min-width: 10ch;
+  padding: 0;
+  color: var(--sw-white);
+  font: inherit;
+  background: none;
+  border: 0;
+  outline: none;
+  caret-color: var(--sw-cyan);
+}
+
+/* ── Tones ────────────────────────────────────────────────────────────────── */
+
+/* One class per role in lib/shell.js. Same roles as everywhere else in the
+   palette: cyan is what you can call, magenta is executable, gold is a link,
+   coral is something wrong. */
+.sh-fg { color: var(--sw-fg); }
+.sh-white { color: var(--sw-white); }
+.sh-muted { color: var(--sw-muted); }
+.sh-faint { color: var(--sw-faint); }
+.sh-comment { color: var(--sw-comment); }
+.sh-cyan { color: var(--sw-cyan); }
+.sh-magenta { color: var(--sw-magenta); }
+.sh-hotpink { color: var(--sw-hotpink); }
+.sh-gold { color: var(--sw-gold); }
+.sh-green { color: var(--sw-green); }
+.sh-coral { color: var(--sw-coral); }
+
+@media (prefers-reduced-motion: reduce) {
+  .shell-overlay,
+  .shell {
+    animation: none;
+  }
+}

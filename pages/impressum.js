@@ -25,9 +25,9 @@ function Imprint() {
             Schweiz
           </p>
           <p>
-            E-Mail: support@uebelacker.ch
+            E-Mail: support@uebelacker.dev
             <br />
-            Webseite: uebelacker.ch
+            Webseite: uebelacker.dev
           </p>
           <h2>Vertretungsberechtigte Person(en)</h2>
           <p>David Übelacker</p>

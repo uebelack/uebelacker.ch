@@ -1,21 +1,46 @@
+/*
+  react-cookie-consent renders its own markup with inline styles, so these have
+  to be !important to land. Kept in one place rather than threaded through the
+  component's style props, because overriding a library's inline styles is a
+  stylesheet concern.
+*/
+
 .CookieConsent {
-  background: #000 !important;
-  color: #fff !important;
+  align-items: center !important;
+  background: rgb(10 5 24 / 96%) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--sw-magenta) !important;
+  box-shadow: 0 -10px 50px -12px rgb(249 42 173 / 55%) !important;
+  color: var(--sw-fg) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.7 !important;
+  padding: 6px 10px !important;
+  /* Above the shell overlay (130). The shell's `mail` command tells you to
+     accept cookies at the bottom of the screen when consent is missing, and
+     that instruction has to be actionable without closing the shell first.
+     Consent UI outranks everything. */
+  z-index: 140 !important;
+}
+
+.CookieConsent a {
+  color: var(--sw-cyan) !important;
 }
 
 #rcc-confirm-button {
-  background: #fff !important;
-  color: #000 !important;
+  background: linear-gradient(90deg, var(--sw-magenta), var(--sw-cyan)) !important;
+  border-radius: 8px !important;
+  color: var(--sw-abyss) !important;
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  padding: 12px 26px !important;
+  text-transform: uppercase !important;
+  transition: box-shadow 0.25s ease, filter 0.25s ease !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .CookieConsent {
-    background: #fff !important;
-    color: #000 !important;
-  }
-
-  #rcc-confirm-button {
-    background: #000 !important;
-    color: #fff !important;
-  }
+#rcc-confirm-button:hover {
+  box-shadow: var(--glow-magenta) !important;
+  filter: brightness(1.12);
 }

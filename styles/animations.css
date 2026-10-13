@@ -1,18 +1,434 @@
+/*
+  ╔══════════════════════════════════════════════════════════════╗
+  ║   A N I M A T I O N S                                         ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  Every decorative animation in the site lives here, and every one of them is
+  switched off by the prefers-reduced-motion block at the bottom. The rule for
+  what belongs here: if the page still reads correctly with the animation
+  frozen on frame one, it is decoration and it goes here. If it carries
+  meaning — the scroll progress bar, a form error appearing — it is a
+  transition on the component instead.
+*/
+
+/* ── Page entry ───────────────────────────────────────────────────────────── */
+
+/*
+  Opacity only — deliberately.
+
+  This used to also ramp `filter: brightness()/saturate()` for a CRT
+  switch-on, which looked good and quietly broke the entire page: an element
+  with a filter becomes the containing block for its `position: fixed`
+  descendants, and `animation-fill-mode: forwards` holds the last keyframe
+  forever. `filter: none` in a list of filtered keyframes normalises to
+  `brightness(1) saturate(1)` rather than to `none`, so body kept a real filter
+  after the animation ended and every fixed layer on the site — header, CRT,
+  scroll progress, cursor light, the shell overlay — was being sized against
+  the document instead of the viewport.
+
+  If the switch-on effect comes back, it has to live on an element with no
+  fixed descendants.
+*/
 body {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation: boot-in 1s ease-out 1 forwards;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
+@keyframes boot-in {
+  from {
+    opacity: 0;
   }
-  100% {
-      opacity: 1;
-   }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.start {
-  height: calc(100vh - 140px);
+/* ── Neon ─────────────────────────────────────────────────────────────────── */
+
+/* A tube that never quite settles. The dips are short and far apart, because a
+   sign that flickers constantly reads as broken rather than as neon. */
+@keyframes neon-flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+    text-shadow: var(--text-glow-white);
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.72;
+    text-shadow: none;
+  }
+}
+
+@keyframes neon-pulse {
+  0%,
+  100% {
+    box-shadow: var(--glow-magenta-soft);
+  }
+
+  50% {
+    box-shadow: var(--glow-magenta);
+  }
+}
+
+.neon-flicker {
+  animation: neon-flicker 7s linear infinite;
+}
+
+/* ── Chrome text ──────────────────────────────────────────────────────────── */
+
+/* Gold-to-magenta ramp slid slowly across the glyphs, which is the closest a
+   gradient fill gets to looking like polished chrome catching a sunset. */
+@keyframes chrome-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Deliberately light the whole way across — no magenta stop. The headline
+   sits on the pink half of the sun, and a magenta run of letters vanished into
+   it. Chrome is supposed to be bright metal catching a sunset, not the sunset. */
+.text-chrome {
+  background-image: linear-gradient(
+    100deg,
+    var(--sw-white) 0%,
+    var(--sw-gold-bright) 16%,
+    var(--sw-white) 34%,
+    var(--sw-aqua) 56%,
+    var(--sw-cyan) 74%,
+    var(--sw-white) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: chrome-shift 9s linear infinite;
+}
+
+/* ── Glitch ───────────────────────────────────────────────────────────────── */
+
+/* Two offset copies of the same text, one cyan and one magenta, each sliced by
+   an animated clip-path. The copies come from data-text on the element, so the
+   markup stays a single readable string for a screen reader. */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+}
+
+.glitch::before {
+  color: var(--sw-cyan);
+  text-shadow: -2px 0 var(--sw-cyan);
+}
+
+.glitch::after {
+  color: var(--sw-magenta);
+  text-shadow: 2px 0 var(--sw-magenta);
+}
+
+.glitch:hover::before,
+.glitch.is-glitching::before {
+  opacity: 0.9;
+  animation: glitch-top 0.5s steps(2, end) infinite;
+}
+
+.glitch:hover::after,
+.glitch.is-glitching::after {
+  opacity: 0.9;
+  animation: glitch-bottom 0.5s steps(2, end) infinite reverse;
+}
+
+@keyframes glitch-top {
+  0% {
+    clip-path: inset(0 0 72% 0);
+    transform: translate(-3px, -1px);
+  }
+
+  25% {
+    clip-path: inset(22% 0 48% 0);
+    transform: translate(3px, 1px);
+  }
+
+  50% {
+    clip-path: inset(8% 0 80% 0);
+    transform: translate(-2px, 1px);
+  }
+
+  75% {
+    clip-path: inset(55% 0 20% 0);
+    transform: translate(2px, -1px);
+  }
+
+  100% {
+    clip-path: inset(0 0 72% 0);
+    transform: translate(-3px, -1px);
+  }
+}
+
+@keyframes glitch-bottom {
+  0% {
+    clip-path: inset(68% 0 0 0);
+    transform: translate(3px, 1px);
+  }
+
+  25% {
+    clip-path: inset(40% 0 30% 0);
+    transform: translate(-3px, -1px);
+  }
+
+  50% {
+    clip-path: inset(80% 0 4% 0);
+    transform: translate(2px, -1px);
+  }
+
+  75% {
+    clip-path: inset(25% 0 55% 0);
+    transform: translate(-2px, 1px);
+  }
+
+  100% {
+    clip-path: inset(68% 0 0 0);
+    transform: translate(3px, 1px);
+  }
+}
+
+/* ── CRT ──────────────────────────────────────────────────────────────────── */
+
+@keyframes crt-roll {
+  0% {
+    transform: translateY(-20vh);
+  }
+
+  100% {
+    transform: translateY(120vh);
+  }
+}
+
+@keyframes crt-flicker {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  51% {
+    opacity: 0.17;
+  }
+}
+
+/* ── Terminal caret ───────────────────────────────────────────────────────── */
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.05em;
+  margin-left: 0.15em;
+  vertical-align: text-bottom;
+  background: var(--sw-cyan);
+  box-shadow: var(--glow-cyan);
+  animation: caret-blink 1.06s steps(1, end) infinite;
+}
+
+/* ── Scroll reveal ────────────────────────────────────────────────────────── */
+
+/* Driven by the IntersectionObserver in components/Reveal.js: the element
+   ships in its "before" state and the observer adds .is-visible once. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  filter: blur(4px);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/*
+  There are deliberately no horizontal reveal variants.
+
+  A `translateX(32px)` start position still counts toward scrollable overflow,
+  so an element parked off to the right widens the whole document until it
+  scrolls into view — which made the layout viewport 16px wider than the screen
+  on a phone and the page pan sideways. Gutters absorb it on a wide window,
+  which is exactly why it survived desktop testing.
+
+  Clipping the root hides the symptom but leaves the page laid out too wide, so
+  the variants are gone instead. If a sideways entrance is ever wanted again,
+  it has to move an inner element inside a clipping wrapper, never the wrapper
+  itself.
+*/
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+/* ── Card sheen ───────────────────────────────────────────────────────────── */
+
+@keyframes sheen-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+
+  100% {
+    transform: translateX(320%) skewX(-18deg);
+  }
+}
+
+/* ── Marquee ──────────────────────────────────────────────────────────────── */
+
+@keyframes marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ── Grid horizon (footer) ────────────────────────────────────────────────── */
+
+@keyframes grid-approach {
+  0% {
+    background-position-y: 0;
+  }
+
+  100% {
+    background-position-y: 48px;
+  }
+}
+
+/* ── Drift ────────────────────────────────────────────────────────────────── */
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ── Spin-up, for the submit button's pending state ───────────────────────── */
+
+@keyframes sweep-fill {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body,
+  .neon-flicker,
+  .text-chrome,
+  .caret,
+  .glitch::before,
+  .glitch::after,
+  .glitch:hover::before,
+  .glitch:hover::after,
+  .marquee__track,
+  .crt__roll,
+  .crt__lines,
+  .scroll-button,
+  .footer-grid {
+    animation: none !important;
+  }
+
+  /* Reveal still has to resolve, or the content would never appear — it just
+     stops moving and arrives on opacity alone. */
+  .reveal {
+    transform: none !important;
+    filter: none !important;
+    transition: opacity 0.3s linear;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    display: none;
+  }
 }

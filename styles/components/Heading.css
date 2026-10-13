@@ -1,0 +1,84 @@
+/*
+  Section headings.
+
+  Three parts: a monospaced shell prompt above it (`❯ cat blog`), the heading
+  itself in glowing Orbitron, and a gradient rule that draws itself open when
+  the heading scrolls into view.
+*/
+
+.heading {
+  margin-bottom: 48px;
+}
+
+.heading__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  color: var(--sw-comment);
+}
+
+.heading__prompt {
+  color: var(--sw-green);
+  text-shadow: 0 0 8px rgb(114 241 184 / 50%);
+}
+
+.heading__index {
+  margin-left: auto;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--sw-faint);
+}
+
+.heading__title {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--sw-white);
+  text-shadow: var(--text-glow-white);
+}
+
+/* The rule under the heading. Width is the animated property rather than
+   transform, because it has to finish flush with the container edge and a
+   scaled 1px line goes blurry on the way. */
+.heading__rule {
+  position: relative;
+  height: 2px;
+  margin-top: 18px;
+  width: 0;
+  border-radius: 2px;
+  background: var(--grad-neon);
+  box-shadow: var(--glow-magenta);
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+
+.reveal.is-visible .heading__rule,
+.heading.is-visible .heading__rule {
+  width: 100%;
+}
+
+/* The bright head of the rule, which makes it look drawn rather than revealed. */
+.heading__rule::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sw-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+/* ── Page titles (404, legal pages) ───────────────────────────────────────── */
+
+.page-title {
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
