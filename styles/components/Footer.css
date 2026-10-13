@@ -1,0 +1,126 @@
+/*
+  The footer, which echoes the hero: the same horizon, drawn in CSS this time
+  because nothing here needs to be interactive and a second canvas running at
+  the bottom of the page would be a waste.
+*/
+
+.site-footer {
+  position: relative;
+  /* No top margin: the last section already ends with 112px of padding, and
+     stacking another 96 on top of it left a screen-height hole above the
+     horizon. */
+  padding-top: 110px;
+  overflow: hidden;
+}
+
+/* The grid, in perspective. A flat repeating-linear-gradient rotated on the X
+   axis — the gradient's own vertical scroll then reads as motion toward the
+   viewer for free. */
+/* The plane has to be much taller than the strip you see and laid down at a
+   steep angle: the perspective value and the height together decide where the
+   vanishing point lands, and a short element with a small perspective (the
+   first attempt here) projects its far edge off past the camera and renders as
+   a flat smear. 420/420 at 74° puts the horizon just under the glow line. */
+.footer-grid {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  width: 200%;
+  height: 420px;
+  pointer-events: none;
+  transform: perspective(420px) rotateX(74deg);
+  transform-origin: bottom center;
+  background-image:
+    linear-gradient(to right, rgb(0 240 255 / 55%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(249 42 173 / 55%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 55%) 25%, rgb(0 0 0 / 100%) 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 55%) 25%, rgb(0 0 0 / 100%) 100%);
+  /* 48px per cycle, matching background-size, so the wrap is invisible. */
+  animation: grid-approach 2.2s linear infinite;
+}
+
+/* The glow sitting on the horizon line above the grid. */
+.footer-glow {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--sw-hotpink) 30%, var(--sw-cyan) 70%, transparent);
+  box-shadow: 0 0 24px 6px rgb(249 42 173 / 45%);
+}
+
+.site-footer__inner {
+  position: relative;
+  z-index: 1;
+  /* Room underneath for the grid band to show without the copyright line
+     sitting on top of it. */
+  padding-bottom: 170px;
+}
+
+.site-footer__rule {
+  height: 1px;
+  margin-bottom: 28px;
+  background: linear-gradient(90deg, transparent, var(--sw-border) 20%, var(--sw-border) 80%, transparent);
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+}
+
+.site-footer__brand {
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sw-white);
+  text-shadow: var(--text-glow-white);
+}
+
+.site-footer__meta {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--sw-comment);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-footer__links a {
+  color: var(--sw-dim);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.site-footer__links a:hover {
+  color: var(--sw-cyan);
+  text-shadow: var(--text-glow-cyan);
+}
+
+.coffee-counter {
+  margin-top: 18px;
+  font-size: 0.76rem;
+  color: var(--sw-faint);
+}
+
+.coffee-counter__value {
+  color: var(--sw-gold);
+  text-shadow: 0 0 10px rgb(254 222 93 / 45%);
+}

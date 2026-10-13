@@ -5,8 +5,24 @@ export default {
     scroll_down: 'Scroll down',
   },
   home: {
+    kicker: 'status: shipping · uptime 20+ years',
+    role_dev: 'Full-Stack Developer',
+    role_architect: 'Software Architect',
+    role_speaker: 'Conference Speaker',
+    stat_years_value: '20+',
+    stat_years_label: 'Years building software',
+    stat_cert_value: 'iSAQB',
+    stat_cert_label: 'Certified architect',
+    stat_oss_value: '06',
+    stat_oss_label: 'Open source projects',
     quote: 'What one programmer can do in one month, two programmers can do in two months.',
     description: 'The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland. I\'m a full-stack developer and software architect with 20+ years of experience in web and mobile application development.',
+  },
+  shell: {
+    hint: 'click for a shell',
+    open: 'Open an interactive shell',
+    close: 'Close the shell',
+    input: 'Shell input',
   },
   blog: {
     title: 'Blog',
@@ -15,6 +31,14 @@ export default {
   apps: {
     title: 'Apps',
     more: 'More',
+    daitoo: {
+      title: 'Daitoo',
+      description: `Daitoo is a list app for routines, groceries, packing and everything else you keep rewriting.
+      It picks an emoji for every line you add, and it remembers the phrases you have written before — so writing "Coffee" for the three hundredth time costs one tap and no waiting.
+      Native on iOS and Android, works offline, and needs no account.`,
+      thumbnail: '/daitoo.png',
+      link: 'https://daitoo.app',
+    },
     letter: {
       title: 'Letter',
       description: `
@@ -62,6 +86,13 @@ export default {
     title: 'About',
   },
   contact: {
+    aside_privacy_label: 'Your data',
+    aside_title: 'Direct line',
+    aside_email_label: 'Email',
+    aside_location_label: 'Based in',
+    aside_location_value: 'Basel, Switzerland',
+    aside_response_label: 'Response time',
+    aside_response_value: 'Usually within 24 hours',
     title: 'Contact',
     subtitle: 'Please contact me if you have any questions',
     email_placeholder: 'Your email address',
@@ -79,7 +110,7 @@ export default {
     privacy_error: 'Please accept the privacy policy',
     success: 'Thank you for your message! i will come back to you, as soon as possible!',
     error: 'Sorry, something went wrong, please retry later...',
-    cookie: 'Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.ch.',
+    cookie: 'Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.dev.',
   },
   footer: {
     rights: 'all rights reserved.',
@@ -93,7 +124,7 @@ export default {
     accept: 'Accept',
   },
   lost: {
-    title: "You're Lost! 404 - Not Found",
+    title: 'Signal lost',
     description: "The page your are looking for doesn't exist",
     button: 'Go Home',
   },

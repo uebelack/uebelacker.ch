@@ -1,0 +1,286 @@
+/*
+  The header.
+
+  Dark glass over whatever is scrolling behind it, with a gradient hairline
+  along the bottom. It starts transparent over the hero and gains its
+  background once you scroll — the .is-scrolled class comes from Header.js.
+*/
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+  transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-scrolled {
+  background: rgb(10 5 24 / 78%);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+}
+
+/* The hairline, as a pseudo-element so it can be a gradient. */
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background: var(--grad-neon);
+  transition: opacity 0.35s ease;
+}
+
+.site-header.is-scrolled::after {
+  opacity: 0.65;
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--header-height);
+  padding-inline: 16px;
+}
+
+/* ── Wordmark ─────────────────────────────────────────────────────────────── */
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.wordmark__mark {
+  /* The logo ships as flat white strokes; the glow is applied here so the same
+     asset can be lit magenta without a second file. */
+  filter: drop-shadow(0 0 6px rgb(249 42 173 / 80%)) drop-shadow(0 0 14px rgb(0 240 255 / 35%));
+  transition: filter 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wordmark:hover .wordmark__mark {
+  filter: drop-shadow(0 0 10px rgb(0 240 255 / 90%)) drop-shadow(0 0 22px rgb(249 42 173 / 55%));
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.wordmark__text {
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sw-white);
+  text-shadow: var(--text-glow-white);
+  white-space: nowrap;
+}
+
+@media (min-width: 976px) {
+  .wordmark__text {
+    font-size: 1.15rem;
+  }
+}
+
+/* ── Nav ──────────────────────────────────────────────────────────────────── */
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-link {
+  position: relative;
+  padding-block: 4px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sw-dim);
+  white-space: nowrap;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--grad-neon);
+  box-shadow: var(--glow-cyan);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link:hover {
+  color: var(--sw-white);
+  text-shadow: var(--text-glow-cyan);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Set by the IntersectionObserver in Header.js on whichever section is
+   currently crossing the top of the viewport. */
+.nav-link.is-active {
+  color: var(--sw-hotpink);
+  text-shadow: var(--text-glow-magenta);
+}
+
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ── Lang switch & socials ────────────────────────────────────────────────── */
+
+.nav-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--sw-border);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--sw-faint);
+}
+
+.lang-switch a {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--sw-cyan);
+  text-shadow: var(--text-glow-cyan);
+}
+
+.social-link {
+  color: var(--sw-dim);
+  transition: color 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.social-link:hover {
+  color: var(--sw-cyan);
+  filter: drop-shadow(0 0 8px rgb(0 240 255 / 80%));
+  transform: translateY(-2px);
+}
+
+/* ── Hamburger ────────────────────────────────────────────────────────────── */
+
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--sw-border);
+  border-radius: 8px;
+  color: var(--sw-hotpink);
+  background: rgb(36 27 58 / 60%);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle[aria-expanded='true'] {
+  border-color: var(--sw-magenta);
+  box-shadow: var(--glow-magenta-soft);
+  color: var(--sw-white);
+}
+
+/* ── Mobile panel ─────────────────────────────────────────────────────────── */
+
+.mobile-nav {
+  border-top: 1px solid var(--sw-line);
+  background: rgb(10 5 24 / 96%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 20px 16px 28px;
+  box-shadow: 0 24px 60px -20px rgb(249 42 173 / 35%);
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav__item {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: mobile-item-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--item-delay, 0ms);
+}
+
+@keyframes mobile-item-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mobile-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgb(47 35 80 / 60%);
+}
+
+.mobile-nav .nav-link::after {
+  display: none;
+}
+
+.mobile-nav .nav-link::before {
+  content: '❯';
+  color: var(--sw-magenta);
+  opacity: 0.5;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-nav .nav-link:hover::before,
+.mobile-nav .nav-link.is-active::before {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav__item {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ── Responsive show / hide ───────────────────────────────────────────────── */
+
+/* Same reasoning as Card.css: this lives here rather than on Tailwind's
+   md:hidden utilities, because this stylesheet is imported after Tailwind and
+   a component rule would silently beat the utility. Last block in the file, so
+   it also beats the base `display` declarations above it. */
+.site-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-nav {
+    display: block;
+  }
+
+  .menu-toggle,
+  .mobile-nav {
+    display: none;
+  }
+}

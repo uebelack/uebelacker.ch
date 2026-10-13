@@ -1,36 +1,146 @@
+/*
+  ╔══════════════════════════════════════════════════════════════╗
+  ║   B A S E                                                     ║
+  ╚══════════════════════════════════════════════════════════════╝
+*/
+
 html {
   scroll-behavior: smooth;
+  /* A backstop, not a fix — and it must stay that way.
+
+     This was once load-bearing: a scroll-reveal variant parked the contact
+     card at translateX(32px) and the rotating portrait ring's bounding box
+     grew past the column, and clipping here hid both. It hid them badly: the
+     page was still laid out 16px wider than the screen, so everything sized in
+     vw was wrong and the viewport could still pan. Both causes are gone now,
+     and the layout measures overflow-free from 320px up with this rule lifted.
+
+     So it earns its place only as insurance against a stray wide element
+     later. If horizontal scroll ever comes back, set this to `visible`, find
+     what actually sticks out, and fix that — do not lean on this rule.
+
+     `clip` rather than `hidden`: hidden would turn the root into a scroll
+     container and break `position: sticky` (the About portrait uses it). */
+  overflow-x: clip;
+  /* The ground of the whole site: deep violet night, lit slightly from the
+     bottom where the grid lives. Painted on <html> rather than <body> so the
+     body's fixed overlays can sit above it without fighting z-index. */
+  background-color: var(--sw-bg);
+  background-image:
+    radial-gradient(120% 60% at 50% 120%, rgb(249 42 173 / 14%) 0%, transparent 60%),
+    radial-gradient(90% 50% at 50% -10%, rgb(3 237 249 / 7%) 0%, transparent 55%),
+    linear-gradient(180deg, var(--sw-abyss) 0%, var(--sw-bg) 45%, var(--sw-deep) 100%);
+  background-attachment: fixed;
+  scroll-padding-top: calc(var(--header-height) + 24px);
 }
 
 body {
-  background-color: #fff;
-  color: #000;
+  color: var(--sw-fg);
+  background: transparent;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-header {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+/* The grid that never stops: a faint wireframe lattice over the whole page,
+   fading out toward the top so the hero's own animated grid is the only one
+   you actually look at. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  /* Behind every descendant of <body>, but still in front of the background
+     painted on <html> — which is why the ground colour lives up there and not
+     here. Negative rather than 0 so pages that do not use <Page> (the MDX
+     legal pages) still get their text drawn over the lattice. */
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgb(0 240 255 / 7%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(249 42 173 / 7%) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 35%) 30%, rgb(0 0 0 / 85%) 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 35%) 30%, rgb(0 0 0 / 85%) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000;
-    color: #fff;
-  }
-  header {
-    background-color: rgba(0, 0, 0, 0.85);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
+.page {
+  position: relative;
+  z-index: 1;
 }
+
+/* ── Type ─────────────────────────────────────────────────────────────────── */
+
+/* Orbitron for anything that is a label rather than a sentence: headings, the
+   wordmark, nav, buttons. Fira Code carries the prose, which keeps the whole
+   page in the same monospaced register as the terminal. */
+.font-display,
+h1,
+h2,
+h3 {
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--sw-white);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ── Links ────────────────────────────────────────────────────────────────── */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Focus ────────────────────────────────────────────────────────────────── */
 
 *:focus {
   outline: none;
 }
 
 *:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: 2px solid var(--sw-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Prose, for the MDX legal pages ───────────────────────────────────────── */
+
+.prose a {
+  color: var(--sw-cyan);
+  text-decoration: underline;
+  text-decoration-color: rgb(0 240 255 / 40%);
+  text-underline-offset: 3px;
+  transition: text-shadow 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  text-shadow: var(--text-glow-cyan);
+  text-decoration-color: var(--sw-cyan);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  text-shadow: var(--text-glow-white);
+}
+
+.prose h2 {
+  border-bottom: 1px solid var(--sw-line);
+  padding-bottom: 0.3em;
+}
+
+.prose code::before,
+.prose code::after {
+  content: '';
+}
+
+.prose code {
+  background: rgb(10 5 24 / 60%);
+  border: 1px solid var(--sw-line);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
 }

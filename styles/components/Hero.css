@@ -1,0 +1,166 @@
+/*
+  The hero: the animated outrun scene on a canvas, with the name and a
+  terminal window stacked over it.
+
+  The canvas is in the background and the text is in the flow above it, so the
+  scene can be replaced or switched off without the hero losing its layout.
+*/
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__scene {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The scene is drawn full-bleed and then dimmed under the text, rather than
+   the text getting a panel of its own — a box around the headline would cut
+   the horizon in half. */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    /* Tight and high, not centred on the hero: it exists to put a dark ground
+       under the headline and the role line, both of which land on the
+       brightest part of the sun. Anything wider dulls the slices, which are
+       the one thing in the scene worth looking at. */
+    radial-gradient(46% 24% at 50% 33%, rgb(10 5 24 / 68%) 0%, transparent 78%),
+    linear-gradient(180deg, rgb(10 5 24 / 80%) 0%, transparent 22%, transparent 66%, rgb(10 5 24 / 45%) 100%);
+}
+
+.hero__inner {
+  width: 100%;
+  padding-top: calc(var(--header-height) + 32px);
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+/* ── Name ─────────────────────────────────────────────────────────────────── */
+
+.hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 6px 14px;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sw-aqua);
+  border: 1px solid rgb(0 240 255 / 35%);
+  border-radius: 999px;
+  background: rgb(0 240 255 / 7%);
+  box-shadow: var(--glow-cyan-soft);
+}
+
+.hero__kicker-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sw-green);
+  box-shadow: 0 0 8px var(--sw-green);
+  animation: drift 2.4s ease-in-out infinite;
+}
+
+.hero__name {
+  font-size: clamp(2.1rem, 9vw, 5.5rem);
+  line-height: 0.98;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* No text-shadow here: the glyphs are filled with the chrome gradient via
+     background-clip, and a text-shadow would paint behind the transparent
+     fill and turn the letters into a smear. The glow is faked by the
+     ::after copy below instead. */
+}
+
+.hero__name-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* A blurred duplicate of the name sitting behind it, which is how you get a
+   bloom around gradient-filled text. */
+/* The halo is dark, not magenta. A magenta bloom was invisible against the
+   sun it sits on; an abyss-coloured blur of the same glyphs pushes the sun
+   back behind the letters and is what makes the headline legible at all. */
+.hero__name-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: var(--sw-abyss);
+  filter: blur(26px);
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__role {
+  margin-top: 26px;
+  text-shadow: 0 2px 10px rgb(10 5 24 / 90%);
+  font-size: clamp(0.62rem, 2.2vw, 0.86rem);
+  /* Tightened on narrow screens: at 0.3em the three roles wrap mid-phrase. */
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sw-fg);
+}
+
+@media (min-width: 768px) {
+  .hero__role {
+    letter-spacing: 0.3em;
+  }
+}
+
+.hero__role-sep {
+  color: var(--sw-magenta);
+  margin-inline: 0.5em;
+  text-shadow: var(--text-glow-magenta);
+}
+
+/* ── Stat strip ───────────────────────────────────────────────────────────── */
+
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 34px;
+  margin-top: 44px;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat__value {
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sw-cyan);
+  text-shadow: var(--text-glow-cyan);
+}
+
+.hero-stat__label {
+  margin-top: 4px;
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  /* Dim rather than comment: these sit on top of the grid, and comment-grey
+     against a lit cyan line is not readable. */
+  color: var(--sw-dim);
+  text-shadow: 0 1px 6px rgb(10 5 24 / 90%);
+}

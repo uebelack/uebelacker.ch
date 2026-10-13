@@ -1,11 +1,93 @@
-/* button:disabled {
-  background-color: #FAFAFA;
-  color: #9DA3AE;
+/*
+  Buttons and the one link that pretends to be a button.
+
+  The idle state is an outline — a filled neon button at this size would be
+  louder than the headings. The fill arrives on hover as a gradient wiping in
+  from the left, which is cheap (a transform on a pseudo-element) and reads as
+  a sign switching on.
+*/
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  overflow: hidden;
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sw-white);
+  background: rgb(36 27 58 / 50%);
+  border: 1px solid var(--sw-magenta);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  button:disabled {
-    background-color: #484848;
-    color: #9DA3AE;
-  }  
-}  */
+.btn__label {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: translateX(-101%);
+  background: linear-gradient(90deg, var(--sw-magenta), var(--sw-hotpink) 55%, var(--sw-cyan));
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover:not(:disabled),
+.btn:focus-visible:not(:disabled) {
+  color: var(--sw-abyss);
+  border-color: var(--sw-cyan);
+  box-shadow: var(--glow-magenta);
+}
+
+.btn:hover:not(:disabled)::before,
+.btn:focus-visible:not(:disabled)::before {
+  transform: translateX(0);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  color: var(--sw-faint);
+  background: rgb(21 13 43 / 70%);
+  border-color: var(--sw-line);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn:disabled::before {
+  display: none;
+}
+
+/* ── Ghost variant, for "go home" on the 404 ──────────────────────────────── */
+
+.btn--ghost {
+  border-color: var(--sw-border);
+  color: var(--sw-fg);
+}
+
+.btn--ghost::before {
+  background: linear-gradient(90deg, var(--sw-cyan), var(--sw-aqua));
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  border-color: var(--sw-cyan);
+  box-shadow: var(--glow-cyan);
+}

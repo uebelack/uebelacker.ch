@@ -1,0 +1,282 @@
+/*
+  The panel that blog posts, apps and open-source entries all sit in.
+
+  Four things happen on hover, and they are deliberately all cheap: the border
+  goes magenta, a bloom appears behind the card, the card lifts 3px, and a
+  sheen sweeps across it once. No layout property is animated, so a row of
+  twelve of these does not cost anything to hover through.
+*/
+
+/*
+  Layout note: the breakpoint behaviour lives here rather than on Tailwind's
+  `md:flex` utilities. Both are single-class selectors, and this stylesheet is
+  imported after Tailwind — so a utility and a component rule touching the same
+  property is decided by import order, and the component always wins. Keeping
+  display/flex-direction in one place avoids that whole class of surprise.
+*/
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--sw-border);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgb(36 27 58 / 72%) 0%, rgb(21 13 43 / 72%) 100%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 24px 28px;
+  }
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--sw-magenta);
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 1px rgb(249 42 173 / 35%),
+    0 10px 40px -12px rgb(249 42 173 / 45%),
+    0 0 60px -20px rgb(0 240 255 / 35%);
+}
+
+/* The sheen. Parked off the left edge, swept across once per hover. */
+.card__sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(255 126 219 / 14%) 45%,
+    rgb(0 240 255 / 10%) 55%,
+    transparent 100%
+  );
+  transform: translateX(-120%) skewX(-18deg);
+}
+
+.card:hover .card__sheen,
+.card:focus-within .card__sheen {
+  opacity: 1;
+  animation: sheen-sweep 0.9s ease-out 1;
+}
+
+/* Corner brackets — the viewfinder marks that show up on hover and are most of
+   what makes a rectangle feel like an interface rather than a div. */
+.card__corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0;
+  border-color: var(--sw-cyan);
+  border-style: solid;
+  border-width: 0;
+  transition: opacity 0.3s ease, inset 0.3s ease;
+}
+
+.card__corner--tl {
+  top: 8px;
+  left: 8px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.card__corner--br {
+  right: 8px;
+  bottom: 8px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.card:hover .card__corner,
+.card:focus-within .card__corner {
+  opacity: 0.9;
+}
+
+/* ── Contents ─────────────────────────────────────────────────────────────── */
+
+.card__title {
+  font-family: Orbitron, 'Fira Code', ui-monospace, monospace;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--sw-white);
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card__title,
+.card:focus-within .card__title {
+  color: var(--sw-hotpink);
+  text-shadow: var(--text-glow-magenta);
+}
+
+.card__body {
+  color: var(--sw-muted);
+  line-height: 1.7;
+}
+
+.card__media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--sw-line);
+  border-radius: 8px;
+  /* The thumbnails come from Medium and are warm press photos; a touch of
+     saturation and a magenta wash drops them into the palette instead of
+     letting them sit on top of it. */
+  filter: saturate(1.15) contrast(1.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .card__media {
+  border-color: var(--sw-magenta);
+  box-shadow: var(--glow-magenta-soft);
+}
+
+.card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(0 240 255 / 10%) 0%, transparent 40%, rgb(249 42 173 / 22%) 100%);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card__media::after {
+  opacity: 0.4;
+}
+
+.card__media img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.06);
+}
+
+/* ── The "read more" affordance ───────────────────────────────────────────── */
+
+.card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sw-cyan);
+  transition: text-shadow 0.25s ease, gap 0.25s ease;
+}
+
+.card__more::after {
+  content: '→';
+  transition: transform 0.25s ease;
+}
+
+.card:hover .card__more {
+  text-shadow: var(--text-glow-cyan);
+}
+
+.card:hover .card__more::after {
+  transform: translateX(4px);
+}
+
+/* ── Meta line ────────────────────────────────────────────────────────────── */
+
+.card__meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sw-comment);
+}
+
+
+/* ── Variants ─────────────────────────────────────────────────────────────── */
+
+/* Blog: stacked on narrow screens, media beside the text from md up. */
+.card--blog {
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .card--blog {
+    flex-direction: row;
+    gap: 28px;
+    align-items: flex-start;
+  }
+}
+
+.card--blog .card__media {
+  height: 12rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .card--blog .card__media {
+    width: 14rem;
+    height: 9rem;
+  }
+}
+
+.card--blog .card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* App / open source: always a row, because the icon is small enough to sit
+   beside the text at any width. */
+.card--app {
+  flex-direction: row;
+  gap: 20px;
+  height: 100%;
+}
+
+.card--app .card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.card--app .card__media {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 84px;
+  height: 84px;
+  padding: 12px;
+}
+
+/* Equal-height cards in the open-source grid put the "more" link wherever the
+   description happened to end, which left it floating mid-card next to a
+   longer neighbour. Pushing it down with auto margin lines all of them up on
+   the bottom edge instead. */
+.card--app .card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card--app .card__more {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* App icons ship as flat squares — iOS and Android apply the rounding at
+   install time, so a raw AppIcon.png next to the Letter icon (which has its
+   shape baked in) reads as the odd one out. 22.37% is the iOS corner radius,
+   which clips a sliver off a true squircle but gives both icons the same
+   silhouette, and matching beats being exact here. */
+.card--app .card__media img {
+  border-radius: 22.37%;
+}

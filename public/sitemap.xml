@@ -6,28 +6,32 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
   <url>
-    <loc>https://uebelacker.ch/</loc>
-    <lastmod>2023-11-07T10:00:43.521Z</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://uebelacker.ch/de" />
-  </url>
-
-  <url>
-    <loc>https://uebelacker.ch/imprint</loc>
-    <lastmod>2023-11-07T10:00:43.521Z</lastmod>
+    <loc>https://uebelacker.dev/</loc>
+    <lastmod>2026-10-13T12:31:53.926Z</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="https://uebelacker.ch/de/impressum"
+      href="https://uebelacker.dev/de"
     />
   </url>
 
   <url>
-    <loc>https://uebelacker.ch/privacy</loc>
-    <lastmod>2023-11-07T10:00:43.521Z</lastmod>
+    <loc>https://uebelacker.dev/imprint</loc>
+    <lastmod>2026-10-13T12:31:53.926Z</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="de"
-      href="https://uebelacker.ch/de/datenschutz"
+      href="https://uebelacker.dev/de/impressum"
+    />
+  </url>
+
+  <url>
+    <loc>https://uebelacker.dev/privacy</loc>
+    <lastmod>2026-10-13T12:31:53.926Z</lastmod>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://uebelacker.dev/de/datenschutz"
     />
   </url>
 </urlset>

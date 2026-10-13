@@ -3,38 +3,43 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
 
+/*
+  A blog card.
+
+  The whole card is one <Link>, so the hit area is the panel rather than the
+  title — which is also why the "read more" line is a <span> and not a nested
+  anchor: an anchor inside an anchor is invalid, and the card already goes
+  where it would have gone.
+*/
 export default function BlogItem({
   thumbnail, title, link, teaser,
 }) {
   return (
-    <div className="mb-12 md:flex border border-transparent hover:border-gray-light dark:hover:border-gray-dark rounded-lg p-4 -mx-4 transition-all duration-300 group">
-      <div className="relative h-48 md:h-36 md:w-52 rounded-md overflow-hidden">
-        <Link href={link} title={title} className="relative block h-full">
-          <Image
-            src={thumbnail}
-            alt={title}
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 768px) 100vw,
-            208px"
-            className="transition-transform duration-300 group-hover:scale-105"
-          />
-        </Link>
+    <Link href={link} title={title} className="card card--blog">
+      <span className="card__sheen" aria-hidden="true" />
+      <span className="card__corner card__corner--tl" aria-hidden="true" />
+      <span className="card__corner card__corner--br" aria-hidden="true" />
+
+      <div className="card__media relative">
+        <Image
+          src={thumbnail}
+          alt={title}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="(max-width: 768px) 100vw, 224px"
+        />
       </div>
-      <div className="md:flex-1 md:ml-8 md:justify-start">
-        <div className="text-lg mt-3 md:mt-0 tracking-tight">
-          <Link href={link} title={title}>
-            {title}
-          </Link>
+
+      <div className="card__text">
+        <div className="card__meta">
+          <FormattedMessage id="blog.title" />
         </div>
-        <div className="mt-2 text-gray-dark dark:text-gray leading-relaxed">
-          <Link href={link} title={title}>{teaser}</Link>
-          { ' ' }
-          <Link href={link} className="underline" title={title}>
-            <FormattedMessage id="blog.read_more" />
-          </Link>
-        </div>
+        <div className="card__title text-lg mt-2">{title}</div>
+        <p className="card__body mt-3 text-sm">{teaser}</p>
+        <span className="card__more mt-4">
+          <FormattedMessage id="blog.read_more" />
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }

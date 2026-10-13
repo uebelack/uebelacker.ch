@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
-import React from "react";
-import { useRemarkSync } from "react-remark";
-import Image from "next/image";
-import { useRouter } from "next/router";
+import React from 'react';
+import { useRemarkSync } from 'react-remark';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import Reveal from './Reveal';
 
 const content = {
   en: `I'm a full-stack developer and software architect with over 20 years of experience in web and mobile application development. Passionate about coding, problem solving and modern technologies.
@@ -30,33 +31,51 @@ Heute arbeite ich als Senior Software Developer und Technical Lead im Schweizer 
 Eine meiner Stärken ist, dass ich mich sehr schnell in neue Themen und Technologien einarbeite und mich dadurch problemlos in laufende Projekte integrieren oder neue von Grund auf starten kann. Ich glaube daran, Qualität vom ersten Tag an zu bauen. Themen wie Clean Code, Secure Coding, Test-Driven Development und eine gute User Experience sind zentral für meine Arbeit.`,
 };
 
+// The chips under the prose. Same technologies the text names, pulled out so
+// they can be skimmed — the paragraphs are there for whoever wants the story.
+const SKILLS = [
+  'Java', 'Spring Boot', 'Camunda BPM', 'Angular', 'React', 'React Native',
+  'Next.js', 'Node.js', 'TypeScript', 'Kubernetes', 'ArgoCD', 'DevOps',
+  'LLMs', 'AI Agents', 'RAG', 'LangChain', 'LangChain4j',
+  'iSAQB Architect', 'Clean Code', 'TDD', 'Secure Coding', 'UX',
+];
+
 export default function About() {
   const { locale } = useRouter();
-  const language = locale && locale.startsWith("de") ? "de" : "en";
+  const language = locale && locale.startsWith('de') ? 'de' : 'en';
   const reactContent = useRemarkSync(content[language]);
+
   return (
-    <div className="md:flex md:items-start">
-      <div className="grid place-items-center m-5 md:hidden">
-        <Image
-          src="/david.jpg"
-          alt="David Übelacker"
-          width={220}
-          height={220}
-          className="rounded-full align-center"
-        />
+    <div className="about">
+      <div>
+        <Reveal className="prose prose-uebelack dark:prose-uebelackdark about__prose">
+          {reactContent}
+        </Reveal>
+
+        <Reveal className="skills" delay={120}>
+          {SKILLS.map((skill) => <span className="skill" key={skill}>{skill}</span>)}
+        </Reveal>
       </div>
-      <div className="prose prose-uebelack dark:prose-uebelackdark max-w-none flex-grow flex-1 md:mr-12 leading-relaxed">
-        {reactContent}
-      </div>
-      <div className="hidden md:inline-block flex-shrink-0">
-        <Image
-          src="/david.jpg"
-          alt="David Übelacker"
-          width={220}
-          height={220}
-          className="rounded-full"
-        />
-      </div>
+
+      <Reveal className="about__portrait" variant="reveal-scale" delay={80}>
+        <div className="portrait">
+          {/* The ring is sized off this wrapper, not off .portrait — .portrait
+              also contains the caption, so an inset on it put the dashed
+              circle straight through the name. */}
+          <div className="portrait__disc">
+            <div className="portrait__ring" aria-hidden="true" />
+            <div className="portrait__frame">
+              <Image
+                src="/david.jpg"
+                alt="David Übelacker"
+                width={220}
+                height={220}
+              />
+            </div>
+          </div>
+          <div className="portrait__caption">David Übelacker</div>
+        </div>
+      </Reveal>
     </div>
   );
 }

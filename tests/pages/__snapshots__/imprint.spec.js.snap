@@ -6,87 +6,93 @@ exports[`<Imprint/> should render 1`] = `
     class="page"
   >
     <header
-      class="fixed top-0 w-full z-50"
+      class="site-header"
     >
       <div
-        class="md:container px-4 py-4 fade-in flex items-center justify-between"
+        class="md:container site-header__bar"
       >
         <a
-          class="flex items-center transition-opacity duration-200 hover:opacity-70"
+          aria-label="Übelacker Solutions — home"
+          class="wordmark"
           href="/"
         >
           <img
-            alt="Übelacker Solutions logo"
-            class="dark:hidden"
+            alt=""
+            class="wordmark__mark"
             data-nimg="1"
             decoding="async"
-            height="40"
-            loading="lazy"
-            src="/logo.svg"
-            style="color: transparent;"
-            width="40"
-          />
-          <img
-            alt="Übelacker Solutions logo"
-            class="hidden dark:inline-block"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
+            height="38"
             src="/logo_dark.svg"
             style="color: transparent;"
-            width="40"
+            width="38"
           />
-          <div
-            class="text-2xl ml-2 pt-0.5 tracking-tight"
+          <span
+            class="wordmark__text"
           >
-            Übelacker Solutions
-          </div>
+            <span
+              class="glitch"
+              data-text="Übelacker"
+            >
+              Übelacker
+            </span>
+          </span>
         </a>
         <button
+          aria-expanded="false"
           aria-label="Toggle menu"
-          class="md:hidden p-2 hover:opacity-60 transition-opacity duration-200"
+          class="menu-toggle"
           type="button"
         >
           <svg
+            aria-hidden="true"
             fill="currentColor"
-            height="1.5em"
+            height="1.4em"
             stroke="currentColor"
             stroke-width="0"
-            viewBox="0 0 512 512"
-            width="1.5em"
+            viewBox="0 0 20 20"
+            width="1.4em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M250.97 29.357c-106.557-.21-211.806 52.74-203.48 164.053 138.91 11.4 276.71 8.893 414.174.662 10.58-107.69-100.753-164.498-210.693-164.715zm59.876 23.996c11.165 0 20.216 4.468 20.216 9.98 0 5.513-9.051 9.981-20.216 9.981-11.166 0-20.217-4.468-20.217-9.98 0-5.513 9.051-9.98 20.217-9.98zm-111.852 19.83c11.165 0 20.217 4.469 20.217 9.98 0 5.513-9.052 9.981-20.217 9.981s-20.216-4.468-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm178.057 34.02c11.165 0 20.216 4.468 20.217 9.98 0 5.512-9.052 9.98-20.217 9.98s-20.217-4.468-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm-273.59 21.535c11.165 0 20.216 4.468 20.217 9.98 0 5.513-9.052 9.98-20.217 9.98s-20.217-4.467-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm313.77 30.043c11.165 0 20.216 4.468 20.216 9.98 0 5.512-9.051 9.98-20.217 9.98-11.165 0-20.216-4.468-20.216-9.98 0-5.512 9.051-9.98 20.216-9.98zm-137.91 8.045c11.166 0 20.218 4.47 20.216 9.982 0 5.512-9.051 9.98-20.217 9.98-11.165 0-20.216-4.468-20.216-9.98-.002-5.513 9.05-9.982 20.216-9.982zM57.618 212.339c-18.964.405-9.028 24.485 14.383 24.573 128.554 10.208 236.673 9.686 372.117-2.42 16.096-2.708 25.212-13.087 10.824-21.969-131.579 7.67-263.81 10.045-397.324-.184zm403.024 40.612c-131.224 13.6-277.594 10.525-390.065 1.904-46.983-6.226-47.875 46.785-17.014 52.309 146.18 14.663 271.826 10.735 415.137-.53 25.007-1.144 14.554-55.328-8.058-53.683zM20.986 366.679l15.332 9.434c6.342-8.416 17.876-32.05 33.319-32.192 19.122-.174 22.345 39.302 41.98 39.103 22.607-.228 37.828-31.548 52.447-30.882 22.09 1.008 26.333 35.9 43.557 35.928 24.089.04 31.439-36.39 46.805-35.334 21.458 1.475 33.246 28.274 50.879 29.178 19.004.974 30.654-33.027 43.265-32.748 16.61.366 28.31 32.46 54.24 33.193 15.345.434 29.694-37.411 37.005-36.815 14.417 1.174 26.549 20.548 36.085 34.835l15.114-9.776c-12.029-16.216-30.117-44.428-52.558-44.017-20.907.382-25.948 38.114-38.102 37.943-23.28-.328-33.756-32.164-52.598-33.346-19.356-1.214-30.475 33.636-43.353 32.768-18.954-1.277-27.303-29.16-49.475-29.917-19.62-.67-34.121 37.669-46.793 36.044-18.139-2.326-20.226-36.378-43.317-37.836-19.11-1.207-37.562 30.604-50.314 29.999-17.525-.833-25.243-40.224-45.41-39.986-21.826.258-39.145 30.34-48.108 44.424zm47.553 36.174c-8.342.686-18.198 4.251-21.85 12.424-2.452 6.662 19.173 8.558 21.114 8.695 128.615 8.104 254.354 8.26 389.8-1.345 9.225-.655 13.935-3.147 15.252-4.414 3.124-8.208-23.168-13.935-25.818-14.004-185.01-1.178-279.257 2.209-378.498-1.356zm395.555 37.192c-126.786 6.957-283.18 9.384-408.123.707l.521 38.67c135.917 4.617 275.647 3.99 406.658-.088z"
+              clip-rule="evenodd"
+              d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              fill-rule="evenodd"
             />
           </svg>
         </button>
         <nav
-          class="hidden md:block"
+          class="site-nav"
         >
           <ul
-            class="flex items-center gap-4"
+            class="site-nav__list"
           >
             <li>
               <a
-                class="hover:opacity-60 transition-opacity duration-200"
+                class="nav-link"
                 href="/#blog"
               >
-                Blog
+                <span
+                  class="whitespace-nowrap"
+                >
+                  Blog
+                </span>
               </a>
             </li>
             <li>
               <a
-                class="hover:opacity-60 transition-opacity duration-200"
+                class="nav-link"
                 href="/#apps"
               >
-                Apps
+                <span
+                  class="whitespace-nowrap"
+                >
+                  Apps
+                </span>
               </a>
             </li>
             <li>
               <a
-                class="hover:opacity-60 transition-opacity duration-200"
+                class="nav-link"
                 href="/#opensource"
               >
                 <span
@@ -98,97 +104,109 @@ exports[`<Imprint/> should render 1`] = `
             </li>
             <li>
               <a
-                class="hover:opacity-60 transition-opacity duration-200"
+                class="nav-link"
                 href="/#about"
               >
-                About
+                <span
+                  class="whitespace-nowrap"
+                >
+                  About
+                </span>
               </a>
             </li>
             <li>
               <a
-                class="hover:opacity-60 transition-opacity duration-200"
+                class="nav-link"
                 href="/#contact"
               >
-                Contact
-              </a>
-            </li>
-            <li
-              class="text-gray"
-            >
-              |
-            </li>
-            <li
-              class="flex items-center gap-1 text-sm"
-            >
-              <a
-                class="hover:opacity-60 transition-opacity duration-200"
-                href="/en"
-              >
-                en
-              </a>
-              <span
-                class="text-gray"
-              >
-                /
-              </span>
-              <a
-                class="hover:opacity-60 transition-opacity duration-200"
-                href="/de"
-              >
-                de
-              </a>
-            </li>
-            <li
-              class="flex items-center gap-2 ml-1"
-            >
-              <a
-                class="hover:opacity-60 transition-opacity duration-200"
-                href="https://github.com/uebelack"
-                title="Github Profile"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1.3em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 496 512"
-                  width="1.3em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  class="whitespace-nowrap"
                 >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
+                  Contact
+                </span>
               </a>
-              <a
-                class="hover:opacity-60 transition-opacity duration-200"
-                href="https://www.linkedin.com/in/daviduebelacker/"
-                title="LinkedIn Profile"
+            </li>
+            <li
+              aria-hidden="true"
+            >
+              <div
+                class="nav-sep"
+              />
+            </li>
+            <li>
+              <div
+                class="lang-switch"
               >
-                <svg
-                  fill="currentColor"
-                  height="1.3em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 448 512"
-                  width="1.3em"
-                  xmlns="http://www.w3.org/2000/svg"
+                <a
+                  href="/en"
                 >
-                  <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                  />
-                </svg>
-              </a>
+                  en
+                </a>
+                <span
+                  aria-hidden="true"
+                >
+                  /
+                </span>
+                <a
+                  href="/de"
+                >
+                  de
+                </a>
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex items-center gap-3"
+              >
+                <a
+                  class="social-link"
+                  href="https://github.com/uebelack"
+                  title="Github Profile"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1.25em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 496 512"
+                    width="1.25em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/daviduebelacker/"
+                  title="LinkedIn Profile"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1.25em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 448 512"
+                    width="1.25em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <div
+    <section
       class="section"
     >
       <div
-        class="prose prose-uebelack dark:prose-uebelackdark md:container px-4"
+        class="md:container px-4 prose prose-uebelack dark:prose-uebelackdark"
       >
         <h1>
           Imprint
@@ -206,9 +224,9 @@ exports[`<Imprint/> should render 1`] = `
           Switzerland
         </p>
         <p>
-          E-Mail: support@uebelacker.ch
+          E-Mail: support@uebelacker.dev
           <br />
-          Webseite: uebelacker.ch
+          Webseite: uebelacker.dev
         </p>
         <h2>
           Authorized representative
@@ -262,52 +280,115 @@ exports[`<Imprint/> should render 1`] = `
           The copyright and all other rights to the content, images, photos or other files on this website, belong exclusively to the company Übelacker Solutions GmbH or the specifically named rights holders. For the reproduction of any elements, the written consent of the copyright holder must be obtained in advance.
         </p>
       </div>
-    </div>
+    </section>
     <footer
-      class="md:container mt-24 mb-16"
+      class="site-footer"
     >
       <div
-        class="px-4"
+        aria-hidden="true"
+        class="footer-grid"
+      />
+      <div
+        aria-hidden="true"
+        class="footer-glow"
+      />
+      <div
+        class="md:container px-4 site-footer__inner"
       >
         <div
-          class="border-t border-gray-light dark:border-gray-dark pt-8"
+          class="site-footer__rule"
+        />
+        <div
+          class="site-footer__grid"
         >
-          <div
-            class="text-gray-dark dark:text-gray text-sm"
-          >
-            ©
-             
-            2026
-             
-            Übelacker Solutions GmbH
+          <div>
+            <div
+              class="site-footer__brand"
+            >
+              Übelacker Solutions
+            </div>
+            <div
+              class="site-footer__meta"
+            >
+              ©
+               
+              2026
+               
+              Übelacker Solutions GmbH ·
+               
+              all rights reserved.
+            </div>
+            <div
+              class="coffee-counter"
+            >
+              Powered by 
+              <span
+                class="coffee-counter__value"
+              >
+                24,964
+              </span>
+               cups of coffee and counting ☕
+            </div>
           </div>
           <div
-            class="mt-2 text-sm flex gap-3"
+            class="flex flex-col gap-4 md:items-end"
           >
-            <a
-              class="hover:opacity-60 transition-opacity duration-200"
-              href="/en/imprint"
+            <div
+              class="site-footer__links"
             >
-              Imprint
-            </a>
-            <span
-              class="text-gray"
+              <a
+                href="/en/imprint"
+              >
+                Imprint
+              </a>
+              <a
+                href="/en/privacy"
+              >
+                Privacy Policy
+              </a>
+            </div>
+            <div
+              class="flex items-center gap-4"
             >
-              |
-            </span>
-            <a
-              class="hover:opacity-60 transition-opacity duration-200"
-              href="/en/privacy"
-            >
-              Privacy Policy
-            </a>
-          </div>
-          <div
-            class="text-gray-dark dark:text-gray text-sm mt-2"
-          >
-            Powered by 
-            24,587
-             cups of coffee and counting ☕
+              <a
+                class="social-link"
+                href="https://github.com/uebelack"
+                title="Github Profile"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1.2em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 496 512"
+                  width="1.2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/daviduebelacker/"
+                title="LinkedIn Profile"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1.2em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  width="1.2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

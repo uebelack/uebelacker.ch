@@ -1,13 +1,10 @@
 import React from 'react';
-
 import { ErrorMessage as FormikErrorMessage } from 'formik';
 
-function ErrorMessage({ name }) {
+export default function ErrorMessage({ name }) {
   return (
-    <div className="error-message text-red text-sm h-6">
+    <div className="field-error" role="alert">
       <FormikErrorMessage name={name} />
     </div>
   );
 }
-
-export default ErrorMessage;

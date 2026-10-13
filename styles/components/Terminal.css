@@ -1,0 +1,172 @@
+/*
+  The terminal window.
+
+  Shared: the hero renders one inline, and TerminalShell renders a much larger
+  one over the page. Everything common to both — the title bar, the dots, the
+  prompt colours — lives here; Shell.css only adds what the big one needs.
+*/
+
+.terminal {
+  margin: 44px auto 0;
+  max-width: 580px;
+  text-align: left;
+  border: 1px solid var(--sw-border);
+  border-radius: 10px;
+  background: rgb(10 5 24 / 82%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 0 1px rgb(249 42 173 / 20%),
+    0 24px 70px -24px rgb(249 42 173 / 45%),
+    0 0 90px -40px rgb(0 240 255 / 40%);
+  overflow: hidden;
+}
+
+.terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--sw-line);
+  background: linear-gradient(180deg, rgb(36 27 58 / 90%), rgb(21 13 43 / 90%));
+}
+
+.terminal__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal__dot--1 {
+  background: var(--sw-coral);
+  box-shadow: 0 0 8px rgb(254 68 80 / 70%);
+}
+
+.terminal__dot--2 {
+  background: var(--sw-gold);
+  box-shadow: 0 0 8px rgb(254 222 93 / 70%);
+}
+
+.terminal__dot--3 {
+  background: var(--sw-green);
+  box-shadow: 0 0 8px rgb(114 241 184 / 70%);
+}
+
+.terminal__title {
+  margin-left: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--sw-faint);
+}
+
+.terminal__body {
+  padding: 22px 20px 26px;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .terminal__body {
+    padding: 28px 28px 32px;
+    font-size: 1rem;
+  }
+}
+
+.terminal__command {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--sw-comment);
+  font-size: 0.84rem;
+}
+
+.terminal__command-prompt {
+  color: var(--sw-green);
+  flex-shrink: 0;
+}
+
+.terminal__command-name {
+  color: var(--sw-cyan);
+}
+
+.terminal__command-arg {
+  color: var(--sw-gold);
+}
+
+.terminal__quote {
+  color: var(--sw-fg);
+  font-size: 1.02em;
+}
+
+.terminal__author {
+  margin-top: 18px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: var(--sw-hotpink);
+}
+
+.terminal__author::before {
+  content: '— ';
+  color: var(--sw-comment);
+}
+
+/* ── Opening the shell ────────────────────────────────────────────────────── */
+
+/* The hero's terminal is a click target for the real shell. The trigger is a
+   transparent button laid over the panel rather than the panel itself being a
+   <button>: a button may only contain phrasing content, and the quote inside
+   is a <p>. This way the markup stays valid and the whole panel is still one
+   focusable, clickable thing. */
+.terminal--interactive {
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.terminal__trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: inherit;
+}
+
+.terminal--interactive:hover,
+.terminal--interactive:focus-within {
+  border-color: var(--sw-cyan);
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgb(0 240 255 / 35%),
+    0 24px 70px -24px rgb(0 240 255 / 45%),
+    0 0 90px -30px rgb(249 42 173 / 55%);
+}
+
+.terminal__hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgb(47 35 80 / 70%);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sw-comment);
+  transition: color 0.25s ease;
+}
+
+.terminal--interactive:hover .terminal__hint,
+.terminal--interactive:focus-within .terminal__hint {
+  color: var(--sw-aqua);
+}
+
+.terminal__hint-prompt {
+  color: var(--sw-green);
+}
+
+/* Smaller than the prompt caret, because it sits on a line of small caps. */
+.terminal__hint .caret {
+  width: 0.5em;
+  height: 0.9em;
+}

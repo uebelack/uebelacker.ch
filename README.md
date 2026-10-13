@@ -13,7 +13,7 @@
     <img src="public/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">uebelacker.ch</h3>
+<h3 align="center">uebelacker.dev</h3>
   <p align="center">
     My small homepage. A place to try things out and promote my own projects.
   </p>
@@ -21,7 +21,7 @@
 
 ## About
 
-This repository holds my homepage https://uebelacker.ch which I primarily use to try things out and promote my own projects.
+This repository holds my homepage https://uebelacker.dev which I primarily use to try things out and promote my own projects.
 
 
 ### Built With
