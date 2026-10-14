@@ -51,8 +51,43 @@ global.IntersectionObserver = NoopObserver;
 // effect — so this just silences the noise.
 HTMLCanvasElement.prototype.getContext = () => null;
 
+// ── Determinism ─────────────────────────────────────────────────────────────
+//
+// Snapshots capture rendered output, so anything non-deterministic in a render
+// makes them fail on a schedule rather than on a regression. There are two
+// such sources on this site, and both are pinned here.
+
 // The hero picks a random developer quote on mount and types it one character
 // at a time, so a snapshot of the page captures whichever character of
 // whichever quote happened to be on screen. Pinning Math.random makes that
 // deterministic — without it the suite passes or fails depending on the draw.
 Math.random = () => 0.42;
+
+// The footer renders the current year, and CoffeeCounter renders a number
+// derived from Date.now() that climbs by three a day. Snapshotting a live
+// clock meant the suite went red every single day — it did, the morning after
+// the snapshots were written, for no reason other than the date rolling over.
+//
+// Only Date is faked. Every timer API is in doNotFake, because the components
+// under test use real setInterval (CoffeeCounter), setTimeout (SudoMode) and
+// the typing animation, and freezing those would change what renders rather
+// than just when.
+jest.useFakeTimers({
+  now: new Date('2026-06-15T12:00:00Z').getTime(),
+  doNotFake: [
+    'cancelAnimationFrame',
+    'cancelIdleCallback',
+    'clearImmediate',
+    'clearInterval',
+    'clearTimeout',
+    'hrtime',
+    'nextTick',
+    'performance',
+    'queueMicrotask',
+    'requestAnimationFrame',
+    'requestIdleCallback',
+    'setImmediate',
+    'setInterval',
+    'setTimeout',
+  ],
+});
