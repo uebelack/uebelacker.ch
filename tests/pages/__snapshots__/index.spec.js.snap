@@ -2286,7 +2286,7 @@ exports[`<Home/> should render 1`] = `
               <span
                 class="coffee-counter__value"
               >
-                24,964
+                24,604
               </span>
                cups of coffee and counting ☕
             </div>
