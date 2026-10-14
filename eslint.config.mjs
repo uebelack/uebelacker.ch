@@ -27,7 +27,8 @@ export default [
     },
   },
   {
-    files: ["tests/**/*.js", "**/*.spec.js", "**/*.test.js"],
+    // jest.setup.js runs in the jest environment too — it calls jest.useFakeTimers.
+    files: ["tests/**/*.js", "**/*.spec.js", "**/*.test.js", "jest.setup.js"],
     languageOptions: {
       globals: {
         ...globals.jest,
