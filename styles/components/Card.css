@@ -21,8 +21,7 @@
   padding: 20px;
   border: 1px solid var(--sw-border);
   border-radius: 10px;
-  background:
-    linear-gradient(180deg, rgb(36 27 58 / 72%) 0%, rgb(21 13 43 / 72%) 100%);
+  background: linear-gradient(180deg, rgb(36 27 58 / 72%) 0%, rgb(21 13 43 / 72%) 100%);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   overflow: hidden;
@@ -85,7 +84,9 @@
   border-color: var(--sw-cyan);
   border-style: solid;
   border-width: 0;
-  transition: opacity 0.3s ease, inset 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    inset 0.3s ease;
 }
 
 .card__corner--tl {
@@ -114,7 +115,9 @@
   font-weight: 600;
   letter-spacing: 0.01em;
   color: var(--sw-white);
-  transition: text-shadow 0.3s ease, color 0.3s ease;
+  transition:
+    text-shadow 0.3s ease,
+    color 0.3s ease;
 }
 
 .card:hover .card__title,
@@ -137,7 +140,9 @@
      saturation and a magenta wash drops them into the palette instead of
      letting them sit on top of it. */
   filter: saturate(1.15) contrast(1.05);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover .card__media {
@@ -177,7 +182,9 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sw-cyan);
-  transition: text-shadow 0.25s ease, gap 0.25s ease;
+  transition:
+    text-shadow 0.25s ease,
+    gap 0.25s ease;
 }
 
 .card__more::after {
@@ -201,7 +208,6 @@
   text-transform: uppercase;
   color: var(--sw-comment);
 }
-
 
 /* ── Variants ─────────────────────────────────────────────────────────────── */
 

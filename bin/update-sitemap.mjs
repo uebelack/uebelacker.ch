@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import prettier from 'prettier';
 import { URL } from 'url';
 
 const LAST_MODIFIED = new Date().toISOString();
@@ -14,28 +13,29 @@ const PAGES = [
 
 const __dirname = new URL('.', import.meta.url).pathname;
 
-const sitemap = `
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-    >
-      ${PAGES.map((page) => `
-      <url>
-        <loc>${DOMAIN}${page.url}</loc>
-        <lastmod>${LAST_MODIFIED}</lastmod>${page.alternates.map((alternate) => `
-        <xhtml:link
-          rel="alternate"
-          hreflang="${alternate.lang}"
-          href="${DOMAIN}${alternate.url}"/>
-        `).join('\n')}
-      </url>
-    `).join('\n')}
-    </urlset>
+// Written already indented, so the file needs no formatter afterwards — the
+// layout is the one Prettier used to produce from a loosely indented template.
+const alternate = ({ lang, url }) => `    <xhtml:link
+      rel="alternate"
+      hreflang="${lang}"
+      href="${DOMAIN}${url}"
+    />`;
+
+const entry = (page) => `  <url>
+    <loc>${DOMAIN}${page.url}</loc>
+    <lastmod>${LAST_MODIFIED}</lastmod>
+${page.alternates.map(alternate).join('\n')}
+  </url>`;
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+${PAGES.map(entry).join('\n\n')}
+</urlset>
 `;
 
-prettier.format(sitemap, { parser: 'html' }).then((formattedSitemap) => {
-  fs.writeFileSync(path.resolve(path.join(__dirname, '../public/sitemap.xml')), formattedSitemap, 'utf8');
-});
+fs.writeFileSync(path.resolve(path.join(__dirname, '../public/sitemap.xml')), sitemap, 'utf8');

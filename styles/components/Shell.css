@@ -80,7 +80,9 @@
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 .shell__close:hover {
@@ -161,17 +163,39 @@
 /* One class per role in lib/shell.js. Same roles as everywhere else in the
    palette: cyan is what you can call, magenta is executable, gold is a link,
    coral is something wrong. */
-.sh-fg { color: var(--sw-fg); }
-.sh-white { color: var(--sw-white); }
-.sh-muted { color: var(--sw-muted); }
-.sh-faint { color: var(--sw-faint); }
-.sh-comment { color: var(--sw-comment); }
-.sh-cyan { color: var(--sw-cyan); }
-.sh-magenta { color: var(--sw-magenta); }
-.sh-hotpink { color: var(--sw-hotpink); }
-.sh-gold { color: var(--sw-gold); }
-.sh-green { color: var(--sw-green); }
-.sh-coral { color: var(--sw-coral); }
+.sh-fg {
+  color: var(--sw-fg);
+}
+.sh-white {
+  color: var(--sw-white);
+}
+.sh-muted {
+  color: var(--sw-muted);
+}
+.sh-faint {
+  color: var(--sw-faint);
+}
+.sh-comment {
+  color: var(--sw-comment);
+}
+.sh-cyan {
+  color: var(--sw-cyan);
+}
+.sh-magenta {
+  color: var(--sw-magenta);
+}
+.sh-hotpink {
+  color: var(--sw-hotpink);
+}
+.sh-gold {
+  color: var(--sw-gold);
+}
+.sh-green {
+  color: var(--sw-green);
+}
+.sh-coral {
+  color: var(--sw-coral);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .shell-overlay,

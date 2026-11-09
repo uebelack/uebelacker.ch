@@ -104,12 +104,18 @@
   text-transform: uppercase;
 }
 
-.site-footer__links a {
+.site-footer__links a,
+.site-footer__links button {
   color: var(--sw-dim);
-  transition: color 0.25s ease, text-shadow 0.25s ease;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
 }
 
-.site-footer__links a:hover {
+.site-footer__links a:hover,
+.site-footer__links button:hover {
   color: var(--sw-cyan);
   text-shadow: var(--text-glow-cyan);
 }

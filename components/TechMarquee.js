@@ -11,13 +11,32 @@ import React from 'react';
 */
 
 const ROW_ONE = [
-  'Java', 'Spring Boot', 'Camunda BPM', 'Angular', 'Kubernetes', 'ArgoCD',
-  'React', 'React Native', 'Next.js', 'Node.js', 'TypeScript',
+  'Java',
+  'Spring Boot',
+  'Camunda BPM',
+  'Angular',
+  'Kubernetes',
+  'ArgoCD',
+  'React',
+  'React Native',
+  'Next.js',
+  'Node.js',
+  'TypeScript',
 ];
 
 const ROW_TWO = [
-  'LLMs', 'AI Agents', 'RAG', 'LangChain', 'LangChain4j', 'Ruby on Rails',
-  'PostgreSQL', 'Docker', 'Terraform', 'iSAQB Architect', 'Clean Code', 'TDD',
+  'LLMs',
+  'AI Agents',
+  'RAG',
+  'LangChain',
+  'LangChain4j',
+  'Ruby on Rails',
+  'PostgreSQL',
+  'Docker',
+  'Terraform',
+  'iSAQB Architect',
+  'Clean Code',
+  'TDD',
 ];
 
 function Track({ items, reverse }) {

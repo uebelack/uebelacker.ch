@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export default {
   common: {
     more: 'More',
@@ -16,7 +15,8 @@ export default {
     stat_oss_value: '06',
     stat_oss_label: 'Open source projects',
     quote: 'What one programmer can do in one month, two programmers can do in two months.',
-    description: 'The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland. I\'m a full-stack developer and software architect with 20+ years of experience in web and mobile application development.',
+    description:
+      "The company Übelacker Solutions was founded by me, David Übelacker, to work as freelancer in Switzerland. I'm a full-stack developer and software architect with 20+ years of experience in web and mobile application development.",
   },
   shell: {
     hint: 'click for a shell',
@@ -53,22 +53,26 @@ export default {
     title: 'Open Source',
     babeli: {
       title: 'Babeli',
-      description: 'AI-powered translation management. Validate, sort, and automatically generate missing translations using LLMs.',
+      description:
+        'AI-powered translation management. Validate, sort, and automatically generate missing translations using LLMs.',
       link: 'https://github.com/uebelack/babeli',
     },
     babeli4j: {
       title: 'Babeli4j',
-      description: 'AI-powered translation file management for Java projects. Babeli detects missing translations, sorts keys, and generates translations using LLMs — integrated into your Maven or Gradle build, or used standalone via CLI.',
+      description:
+        'AI-powered translation file management for Java projects. Babeli detects missing translations, sorts keys, and generates translations using LLMs — integrated into your Maven or Gradle build, or used standalone via CLI.',
       link: 'https://github.com/uebelack/babeli4j',
     },
     nodeappattest: {
       title: 'node-app-attest',
-      description: 'A JavaScript implementation of the App Attest protocol, which checks whether clients connecting to your server are valid instances of your app.',
+      description:
+        'A JavaScript implementation of the App Attest protocol, which checks whether clients connecting to your server are valid instances of your app.',
       link: 'https://github.com/uebelack/node-app-attest',
     },
     tossitin: {
       title: 'Toss It In',
-      description: 'AI-powered git workflow tool that analyzes your changes, generates meaningful commit messages, and pushes to your repository — all in one command.',
+      description:
+        'AI-powered git workflow tool that analyzes your changes, generates meaningful commit messages, and pushes to your repository — all in one command.',
       link: 'https://github.com/uebelack/tossitin',
     },
     tratschtante: {
@@ -78,7 +82,8 @@ export default {
     },
     screegen: {
       title: 'Screegen',
-      description: 'A screenshot generation toolkit for creating App Store screenshots. Build beautiful, localized screenshots for multiple devices with React and Playwright.',
+      description:
+        'A screenshot generation toolkit for creating App Store screenshots. Build beautiful, localized screenshots for multiple devices with React and Playwright.',
       link: 'https://github.com/uebelack/screegen',
     },
   },
@@ -101,7 +106,8 @@ export default {
     privacy_1: 'I agree to the',
     privacy_2: 'privacy policy',
     privacy_link: '/en/privacy',
-    privacy_info: 'Your email address and message will be stored so that I can reply to it. Your data will not be used for any other purposes.',
+    privacy_info:
+      'Your email address and message will be stored so that I can reply to it. Your data will not be used for any other purposes.',
     submit: 'Submit',
     email_error: 'Please enter a valid email address',
     subject_error: 'Please enter a subject',
@@ -110,7 +116,8 @@ export default {
     privacy_error: 'Please accept the privacy policy',
     success: 'Thank you for your message! i will come back to you, as soon as possible!',
     error: 'Sorry, something went wrong, please retry later...',
-    cookie: 'Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.dev.',
+    cookie:
+      'Please accept cookies at the bottom of the screen to submit a message or send a mail to support@uebelacker.dev.',
   },
   footer: {
     rights: 'all rights reserved.',
@@ -118,9 +125,11 @@ export default {
     imprint_link: '/en/imprint',
     privacy: 'Privacy Policy',
     privacy_link: '/en/privacy',
+    cookie_settings: 'Cookie settings',
   },
   cookie_consent: {
-    message: 'This website uses cookies to ensure you get the best experience on our website. To learn more, please refer to our',
+    message:
+      'This website uses cookies to ensure you get the best experience on our website. To learn more, please refer to our',
     accept: 'Accept',
   },
   lost: {

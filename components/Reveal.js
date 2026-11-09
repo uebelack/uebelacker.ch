@@ -34,19 +34,20 @@ export default function Reveal({
       return undefined;
     }
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      setVisible(true);
-      observer.disconnect();
-    }, { threshold, rootMargin: '0px 0px -8% 0px' });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setVisible(true);
+        observer.disconnect();
+      },
+      { threshold, rootMargin: '0px 0px -8% 0px' },
+    );
 
     observer.observe(node);
     return () => observer.disconnect();
   }, [threshold]);
 
-  const classes = ['reveal', variant, visible ? 'is-visible' : '', className]
-    .filter(Boolean)
-    .join(' ');
+  const classes = ['reveal', variant, visible ? 'is-visible' : '', className].filter(Boolean).join(' ');
 
   return (
     <Tag ref={ref} className={classes} style={{ '--reveal-delay': `${delay}ms` }}>

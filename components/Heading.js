@@ -12,16 +12,20 @@ import Reveal from './Reveal';
   `index` is the "01 / 05" marker on the right. It is decoration, so it is
   aria-hidden; the heading level and text carry the actual structure.
 */
-export default function Heading({
-  id, command, index, children,
-}) {
+export default function Heading({ id, command, index, children }) {
   return (
     <Reveal className="heading" threshold={0.25}>
       <div id={id} style={{ scrollMarginTop: 'calc(var(--header-height) + 32px)' }}>
         <div className="heading__eyebrow">
-          <span className="heading__prompt" aria-hidden="true">❯</span>
+          <span className="heading__prompt" aria-hidden="true">
+            ❯
+          </span>
           <span aria-hidden="true">{command}</span>
-          {index && <span className="heading__index" aria-hidden="true">{index}</span>}
+          {index && (
+            <span className="heading__index" aria-hidden="true">
+              {index}
+            </span>
+          )}
         </div>
         <h2 className="heading__title">{children}</h2>
         <div className="heading__rule" aria-hidden="true" />

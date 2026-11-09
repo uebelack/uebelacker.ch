@@ -8,9 +8,7 @@ import { FormattedMessage } from 'react-intl';
   optional — the open-source entries have no artwork, and the card lays out
   without a media column rather than reserving an empty one.
 */
-export default function App({
-  thumbnail, title, link, description,
-}) {
+export default function App({ thumbnail, title, link, description }) {
   return (
     <Link href={link} title={title} className="card card--app">
       <span className="card__sheen" aria-hidden="true" />

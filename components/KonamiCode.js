@@ -1,9 +1,16 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 
 const KONAMI = [
-  'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-  'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-  'b', 'a',
+  'ArrowUp',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowLeft',
+  'ArrowRight',
+  'b',
+  'a',
 ];
 
 const CHARS = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';

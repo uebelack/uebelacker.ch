@@ -8,9 +8,15 @@ import ScrollButton from './ScrollButton';
 
 const DEV_QUOTES = [
   { text: 'What one programmer can do in one month, two programmers can do in two months.', author: 'Fred Brooks' },
-  { text: 'There are only two hard things in Computer Science: cache invalidation and naming things.', author: 'Phil Karlton' },
+  {
+    text: 'There are only two hard things in Computer Science: cache invalidation and naming things.',
+    author: 'Phil Karlton',
+  },
   { text: 'The best code is no code at all.', author: 'Jeff Atwood' },
-  { text: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.', author: 'Martin Fowler' },
+  {
+    text: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
+    author: 'Martin Fowler',
+  },
   { text: 'First, solve the problem. Then, write the code.', author: 'John Johnson' },
   { text: 'Talk is cheap. Show me the code.', author: 'Linus Torvalds' },
   { text: 'The most disastrous thing that you can ever learn is your first programming language.', author: 'Alan Kay' },
@@ -67,16 +73,22 @@ export default function Hero() {
               {/* A blurred copy behind the real one: the glyphs are filled with
                   a clipped gradient, and a text-shadow on gradient-filled text
                   paints behind the transparent fill and smears it. */}
-              <span className="hero__name-glow" aria-hidden="true">{NAME}</span>
+              <span className="hero__name-glow" aria-hidden="true">
+                {NAME}
+              </span>
               <span className="text-chrome">{NAME}</span>
             </span>
           </h1>
 
           <p className="hero__role">
             <FormattedMessage id="home.role_dev" />
-            <span className="hero__role-sep" aria-hidden="true">◆</span>
+            <span className="hero__role-sep" aria-hidden="true">
+              ◆
+            </span>
             <FormattedMessage id="home.role_architect" />
-            <span className="hero__role-sep" aria-hidden="true">◆</span>
+            <span className="hero__role-sep" aria-hidden="true">
+              ◆
+            </span>
             <FormattedMessage id="home.role_speaker" />
           </p>
 
@@ -100,14 +112,15 @@ export default function Hero() {
               <div className="terminal__command">
                 <span className="terminal__command-prompt">❯</span>
                 <span>
-                  <span className="terminal__command-name">fortune</span>
-                  {' '}
+                  <span className="terminal__command-name">fortune</span>{' '}
                   <span className="terminal__command-arg">--dev</span>
                 </span>
               </div>
 
               {!quote && (
-                <p className="terminal__quote" aria-hidden="true"><span className="caret" /></p>
+                <p className="terminal__quote" aria-hidden="true">
+                  <span className="caret" />
+                </p>
               )}
               {quote && calm && printed}
               {quote && !calm && (
@@ -120,7 +133,9 @@ export default function Hero() {
               )}
 
               <div className="terminal__hint">
-                <span className="terminal__hint-prompt" aria-hidden="true">❯</span>
+                <span className="terminal__hint-prompt" aria-hidden="true">
+                  ❯
+                </span>
                 <span>{formatMessage({ id: 'shell.hint' })}</span>
                 <span className="caret" aria-hidden="true" />
               </div>

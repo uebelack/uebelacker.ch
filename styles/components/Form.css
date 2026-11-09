@@ -22,7 +22,10 @@
   border-radius: 8px;
   font-family: inherit;
   font-size: 0.94rem;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 .field::placeholder {
@@ -37,7 +40,9 @@
   outline: none;
   border-color: var(--sw-cyan);
   background: rgb(10 5 24 / 90%);
-  box-shadow: 0 0 0 1px var(--sw-cyan), var(--glow-cyan-soft);
+  box-shadow:
+    0 0 0 1px var(--sw-cyan),
+    var(--glow-cyan-soft);
 }
 
 .field:disabled {
@@ -100,7 +105,10 @@
   background-color: rgb(10 5 24 / 80%);
   border: 1px solid var(--sw-border);
   border-radius: 4px;
-  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .checkbox:hover + label::before {

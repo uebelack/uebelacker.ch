@@ -2,10 +2,10 @@
 
 <!-- [![Build][build-shield]][build-url]
 [![Coverage][coverage-shield]][coverage-url] -->
+
 [![Language][language-shield]][build-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 <br />
 <div align="center">
@@ -23,16 +23,13 @@
 
 This repository holds my homepage https://uebelacker.dev which I primarily use to try things out and promote my own projects.
 
-
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-
+- [Next.js](https://nextjs.org/)
 
 ## License
 
 MIT License. See `LICENSE.txt` for more information.
-
 
 [build-shield]: https://img.shields.io/github/workflow/status/uebelack/uebelacker.ch/Build.svg?style=for-the-badge
 [build-url]: https://github.com/uebelack/uebelacker.ch/actions/workflows/main.yml

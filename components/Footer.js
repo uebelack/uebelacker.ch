@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import CoffeeCounter from './CoffeeCounter';
+import CookieSettingsLink from './CookieSettingsLink';
 
 /*
   The footer echoes the hero: same horizon, same colours, but drawn in CSS.
@@ -24,13 +25,7 @@ export default function Footer() {
           <div>
             <div className="site-footer__brand">Übelacker Solutions</div>
             <div className="site-footer__meta">
-              &copy;
-              {' '}
-              {new Date().getFullYear()}
-              {' '}
-              Übelacker Solutions GmbH ·
-              {' '}
-              <FormattedMessage id="footer.rights" />
+              &copy; {new Date().getFullYear()} Übelacker Solutions GmbH · <FormattedMessage id="footer.rights" />
             </div>
             <CoffeeCounter />
           </div>
@@ -43,10 +38,17 @@ export default function Footer() {
               <Link href={formatMessage({ id: 'footer.privacy_link' })}>
                 <FormattedMessage id="footer.privacy" />
               </Link>
+              <CookieSettingsLink>
+                <FormattedMessage id="footer.cookie_settings" />
+              </CookieSettingsLink>
             </div>
             <div className="flex items-center gap-4">
-              <a className="social-link" title="Github Profile" href="https://github.com/uebelack"><FaGithub size="1.2em" /></a>
-              <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.2em" /></a>
+              <a className="social-link" title="Github Profile" href="https://github.com/uebelack">
+                <FaGithub size="1.2em" />
+              </a>
+              <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/">
+                <FaLinkedin size="1.2em" />
+              </a>
             </div>
           </div>
         </div>

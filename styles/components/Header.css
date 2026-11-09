@@ -12,7 +12,10 @@
   left: 0;
   width: 100%;
   z-index: 60;
-  transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    backdrop-filter 0.35s ease;
   background: transparent;
   border-bottom: 1px solid transparent;
 }
@@ -62,7 +65,9 @@
   /* The logo ships as flat white strokes; the glow is applied here so the same
      asset can be lit magenta without a second file. */
   filter: drop-shadow(0 0 6px rgb(249 42 173 / 80%)) drop-shadow(0 0 14px rgb(0 240 255 / 35%));
-  transition: filter 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    filter 0.3s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .wordmark:hover .wordmark__mark {
@@ -104,7 +109,9 @@
   text-transform: uppercase;
   color: var(--sw-dim);
   white-space: nowrap;
-  transition: color 0.25s ease, text-shadow 0.25s ease;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
 }
 
 .nav-link::after {
@@ -159,7 +166,9 @@
 }
 
 .lang-switch a {
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 .lang-switch a:hover {
@@ -169,7 +178,10 @@
 
 .social-link {
   color: var(--sw-dim);
-  transition: color 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+  transition:
+    color 0.25s ease,
+    filter 0.25s ease,
+    transform 0.25s ease;
 }
 
 .social-link:hover {
@@ -189,7 +201,10 @@
   border-radius: 8px;
   color: var(--sw-hotpink);
   background: rgb(36 27 58 / 60%);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
 }
 
 .menu-toggle:hover,
@@ -247,7 +262,9 @@
   content: '❯';
   color: var(--sw-magenta);
   opacity: 0.5;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .mobile-nav .nav-link:hover::before,

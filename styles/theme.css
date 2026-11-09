@@ -63,7 +63,13 @@
 
   /* The accent gradient, used on rules, borders and chrome text. */
   --grad-neon: linear-gradient(90deg, var(--sw-magenta) 0%, var(--sw-hotpink) 35%, var(--sw-cyan) 100%);
-  --grad-sunset: linear-gradient(180deg, var(--sw-gold) 0%, var(--sw-hotpink) 45%, var(--sw-magenta) 75%, var(--sw-coral) 100%);
+  --grad-sunset: linear-gradient(
+    180deg,
+    var(--sw-gold) 0%,
+    var(--sw-hotpink) 45%,
+    var(--sw-magenta) 75%,
+    var(--sw-coral) 100%
+  );
 
   --header-height: 72px;
 }

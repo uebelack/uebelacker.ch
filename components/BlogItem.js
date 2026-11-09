@@ -11,9 +11,7 @@ import { FormattedMessage } from 'react-intl';
   anchor: an anchor inside an anchor is invalid, and the card already goes
   where it would have gone.
 */
-export default function BlogItem({
-  thumbnail, title, link, teaser,
-}) {
+export default function BlogItem({ thumbnail, title, link, teaser }) {
   return (
     <Link href={link} title={title} className="card card--blog">
       <span className="card__sheen" aria-hidden="true" />

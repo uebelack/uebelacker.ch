@@ -1,6 +1,4 @@
-import {
-  advanceMail, buildFilesystem, complete, displayPath, execute,
-} from '../../lib/shell';
+import { advanceMail, buildFilesystem, complete, displayPath, execute } from '../../lib/shell';
 
 /*
   lib/shell.js is pure on purpose — input and state in, lines out — so all of
@@ -19,9 +17,12 @@ const formatMessage = ({ id }) => id;
 
 const fs = buildFilesystem({ formatMessage, blogItems });
 const ctx = { fs, cwd: [], history: [], locale: 'en', quotes: [{ text: 'q', author: 'a' }], now: new Date(0) };
-const flat = (result) => result.lines.flatMap((line) => (
-  line.type === 'cols' ? line.items.map((i) => i.text) : (line.segments ?? []).map((s) => s.text)
-)).join(' ');
+const flat = (result) =>
+  result.lines
+    .flatMap((line) =>
+      line.type === 'cols' ? line.items.map((i) => i.text) : (line.segments ?? []).map((s) => s.text),
+    )
+    .join(' ');
 
 describe('filesystem', () => {
   it('lists the top level', () => {
@@ -74,9 +75,7 @@ describe('tab completion', () => {
 
   it('stops at the common prefix and lists the candidates', () => {
     const result = complete('cd ', { fs, cwd: [] });
-    expect(result.lines?.[0].items.map((i) => i.text)).toEqual(
-      expect.arrayContaining(['about/', 'apps/', 'blog/']),
-    );
+    expect(result.lines?.[0].items.map((i) => i.text)).toEqual(expect.arrayContaining(['about/', 'apps/', 'blog/']));
   });
 
   it('leaves the line alone when nothing matches', () => {

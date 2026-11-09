@@ -22,10 +22,8 @@ export default function ContactForm() {
     email: Yup.string()
       .email(formatMessage({ id: 'contact.email_error' }))
       .required(formatMessage({ id: 'contact.email_error' })),
-    subject: Yup.string()
-      .required(formatMessage({ id: 'contact.subject_error' })),
-    message: Yup.string()
-      .required(formatMessage({ id: 'contact.message_error' })),
+    subject: Yup.string().required(formatMessage({ id: 'contact.subject_error' })),
+    message: Yup.string().required(formatMessage({ id: 'contact.message_error' })),
     privacy: Yup.bool().oneOf([true], formatMessage({ id: 'contact.privacy_error' })),
   });
 
@@ -51,13 +49,19 @@ export default function ContactForm() {
         {cookiesAccepted ? (
           <GoogleReCaptcha onVerify={handleOnCaptchaVerify} />
         ) : (
-          <p className="form-notice"><FormattedMessage id="contact.cookie" /></p>
+          <p className="form-notice">
+            <FormattedMessage id="contact.cookie" />
+          </p>
         )}
 
         {state === 'initial' && (
           <Formik
             initialValues={{
-              email: '', subject: '', message: '', captcha: '', privacy: false,
+              email: '',
+              subject: '',
+              message: '',
+              captcha: '',
+              privacy: false,
             }}
             validationSchema={ContactSchema}
             onSubmit={handleOnSubmit}
@@ -81,8 +85,7 @@ export default function ContactForm() {
                 />
                 <Checkbox name="privacy" disabled={isSubmitting || !captcha}>
                   <span>
-                    <FormattedMessage id="contact.privacy_1" />
-                    {' '}
+                    <FormattedMessage id="contact.privacy_1" />{' '}
                     <a href={formatMessage({ id: 'contact.privacy_link' })} aria-label="Privacy">
                       <FormattedMessage id="contact.privacy_2" />
                     </a>
@@ -100,14 +103,18 @@ export default function ContactForm() {
 
         {state === 'submitted' && (
           <p className="form-result form-result--success contact-form-success">
-            <span className="form-result__icon" aria-hidden="true">✓</span>
+            <span className="form-result__icon" aria-hidden="true">
+              ✓
+            </span>
             {formatMessage({ id: 'contact.success' })}
           </p>
         )}
 
         {state === 'error' && (
           <p className="form-result form-result--error contact-form-error">
-            <span className="form-result__icon" aria-hidden="true">!</span>
+            <span className="form-result__icon" aria-hidden="true">
+              !
+            </span>
             {formatMessage({ id: 'contact.error' })}
           </p>
         )}
@@ -116,20 +123,34 @@ export default function ContactForm() {
       {/* The details someone who does not want to fill in a form still needs. */}
       <Reveal delay={80}>
         <div className="contact-card">
-          <div className="card__meta mb-5"><FormattedMessage id="contact.aside_title" /></div>
+          <div className="card__meta mb-5">
+            <FormattedMessage id="contact.aside_title" />
+          </div>
 
-          <div className="contact-card__label"><FormattedMessage id="contact.aside_email_label" /></div>
+          <div className="contact-card__label">
+            <FormattedMessage id="contact.aside_email_label" />
+          </div>
           <div className="contact-card__value">
             <a href="mailto:support@uebelacker.dev">support@uebelacker.dev</a>
           </div>
 
-          <div className="contact-card__label"><FormattedMessage id="contact.aside_location_label" /></div>
-          <div className="contact-card__value"><FormattedMessage id="contact.aside_location_value" /></div>
+          <div className="contact-card__label">
+            <FormattedMessage id="contact.aside_location_label" />
+          </div>
+          <div className="contact-card__value">
+            <FormattedMessage id="contact.aside_location_value" />
+          </div>
 
-          <div className="contact-card__label"><FormattedMessage id="contact.aside_response_label" /></div>
-          <div className="contact-card__value"><FormattedMessage id="contact.aside_response_value" /></div>
+          <div className="contact-card__label">
+            <FormattedMessage id="contact.aside_response_label" />
+          </div>
+          <div className="contact-card__value">
+            <FormattedMessage id="contact.aside_response_value" />
+          </div>
 
-          <div className="contact-card__label"><FormattedMessage id="contact.aside_privacy_label" /></div>
+          <div className="contact-card__label">
+            <FormattedMessage id="contact.aside_privacy_label" />
+          </div>
           <div className="contact-card__value text-sm" style={{ color: 'var(--sw-comment)' }}>
             <FormattedMessage id="contact.privacy_info" />
           </div>

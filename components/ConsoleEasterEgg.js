@@ -25,11 +25,11 @@ export default function ConsoleEasterEgg() {
       'color: #f92aad; text-shadow: 0 0 8px rgba(249,42,173,0.8); font-family: monospace; font-size: 13px; line-height: 1.1;',
     );
     console.log(
-      '%cSYNTHWAVE \'85 · the same palette as my terminal, editors and window manager.',
+      "%cSYNTHWAVE '85 · the same palette as my terminal, editors and window manager.",
       'color: #00f0ff; font-family: monospace; font-size: 12px;',
     );
     console.log(
-      '%cOh, you\'re one of those people... 👀\nWe should talk! → uebelacker.dev/#contact',
+      "%cOh, you're one of those people... 👀\nWe should talk! → uebelacker.dev/#contact",
       'color: #d4c8ff; font-family: monospace; font-size: 13px;',
     );
     console.log(

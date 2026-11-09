@@ -14,10 +14,7 @@ export default function GlitchText({ children, className = '', always = false })
   const text = typeof children === 'string' ? children : undefined;
 
   return (
-    <span
-      className={['glitch', always ? 'is-glitching' : '', className].filter(Boolean).join(' ')}
-      data-text={text}
-    >
+    <span className={['glitch', always ? 'is-glitching' : '', className].filter(Boolean).join(' ')} data-text={text}>
       {children}
     </span>
   );

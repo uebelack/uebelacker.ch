@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import ReactCookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 
-const CookieContext = React.createContext(getCookieConsentValue('uebelacker_cookie_consent') === 'true');
+export const COOKIE_NAME = 'uebelacker_cookie_consent';
+
+const CookieContext = React.createContext(getCookieConsentValue(COOKIE_NAME) === 'true');
 
 export function useCookieConsent() {
   return React.useContext(CookieContext);
@@ -11,7 +13,7 @@ export function useCookieConsent() {
 export default function CookieConsent({ children }) {
   const [cookieConsentAccepted, setCookieConsentAccepted] = useState(false);
 
-  useEffect(() => setCookieConsentAccepted(getCookieConsentValue('uebelacker_cookie_consent') === 'true'), []);
+  useEffect(() => setCookieConsentAccepted(getCookieConsentValue(COOKIE_NAME) === 'true'), []);
 
   const { formatMessage } = useIntl();
   return (
@@ -19,17 +21,12 @@ export default function CookieConsent({ children }) {
       <ReactCookieConsent
         location="bottom"
         buttonText={formatMessage({ id: 'cookie_consent.accept' })}
-        cookieName="uebelacker_cookie_consent"
+        cookieName={COOKIE_NAME}
         onAccept={() => setCookieConsentAccepted(true)}
       >
-        <FormattedMessage id="cookie_consent.message" />
-        {' '}
-        <a
-          href={formatMessage({ id: 'footer.privacy_link' })}
-          className="underline underline-offset-2"
-        >
+        <FormattedMessage id="cookie_consent.message" />{' '}
+        <a href={formatMessage({ id: 'footer.privacy_link' })} className="underline underline-offset-2">
           {formatMessage({ id: 'footer.privacy' })}
-
         </a>
         .
       </ReactCookieConsent>

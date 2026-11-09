@@ -41,11 +41,7 @@ export default function PongGame() {
     if (state.by <= 0 || state.by >= H - BALL_SIZE) state.bdy = -state.bdy;
 
     // Player paddle
-    if (
-      state.bx <= 20 + PADDLE_WIDTH
-      && state.by + BALL_SIZE >= state.py
-      && state.by <= state.py + PADDLE_HEIGHT
-    ) {
+    if (state.bx <= 20 + PADDLE_WIDTH && state.by + BALL_SIZE >= state.py && state.by <= state.py + PADDLE_HEIGHT) {
       state.bdx = Math.abs(state.bdx);
       state.score += 1;
     }
@@ -58,9 +54,9 @@ export default function PongGame() {
     state.ay = Math.max(0, Math.min(H - PADDLE_HEIGHT, state.ay));
 
     if (
-      state.bx + BALL_SIZE >= W - 20 - PADDLE_WIDTH
-      && state.by + BALL_SIZE >= state.ay
-      && state.by <= state.ay + PADDLE_HEIGHT
+      state.bx + BALL_SIZE >= W - 20 - PADDLE_WIDTH &&
+      state.by + BALL_SIZE >= state.ay &&
+      state.by <= state.ay + PADDLE_HEIGHT
     ) {
       state.bdx = -Math.abs(state.bdx);
     }

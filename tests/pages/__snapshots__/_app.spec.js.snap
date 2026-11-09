@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<App/> should render 1`] = `
+exports[`<App/> > should render 1`] = `
 <div>
   <div
     class="CookieConsent"
@@ -760,7 +760,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fnag.ch%2Fwp-content%2Fuploads%2F2026%2F01%2Fnag-team-am-baselhack.jpg&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -821,7 +821,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*4LzaoPeV10DEQ_IMCYGS3g.png&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -882,7 +882,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*JD86aPngQM5I2nH2OgZntw.png&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -943,7 +943,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*C_NbNvuvX0OhiVNx&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1004,7 +1004,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*hs3UR_AShEL-jo3E&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1065,7 +1065,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*S2nsAsQQa0swu6m6643Lkw.png&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1126,7 +1126,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F0*Pp2OEho8alMj083e&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1187,7 +1187,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*E7mRmBTZ4rHATs3SD0wKLg.jpeg&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1248,7 +1248,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*EYQ1-hlWK4TbOGUscSOrtw.png&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -1309,7 +1309,7 @@ exports[`<App/> should render 1`] = `
                   sizes="(max-width: 768px) 100vw, 224px"
                   src="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75"
                   srcset="/_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=480&q=75 480w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=768&q=75 768w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=976&q=75 976w, /_next/image?url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1024%2F1*1fxzYXFmNTlQk-vj2iD52Q.png&w=1024&q=75 1024w"
-                  style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+                  style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;"
                 />
               </div>
               <div
@@ -2265,6 +2265,7 @@ exports[`<App/> should render 1`] = `
               </div>
               <div
                 class="contact-card__value text-sm"
+                style="color: var(--sw-comment);"
               >
                 Your email address and message will be stored so that I can reply to it. Your data will not be used for any other purposes.
               </div>
@@ -2302,12 +2303,9 @@ exports[`<App/> should render 1`] = `
             <div
               class="site-footer__meta"
             >
-              ©
-               
+              © 
               2026
-               
-              Übelacker Solutions GmbH ·
-               
+               Übelacker Solutions GmbH · 
               all rights reserved.
             </div>
             <div
@@ -2338,6 +2336,11 @@ exports[`<App/> should render 1`] = `
               >
                 Privacy Policy
               </a>
+              <button
+                type="button"
+              >
+                Cookie settings
+              </button>
             </div>
             <div
               class="flex items-center gap-4"

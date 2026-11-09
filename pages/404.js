@@ -44,7 +44,9 @@ export default function NotFound() {
 
             <div className="mt-10">
               <Link href="/" className="btn btn--ghost">
-                <span className="btn__label"><FormattedMessage id="lost.button" /></span>
+                <span className="btn__label">
+                  <FormattedMessage id="lost.button" />
+                </span>
               </Link>
             </div>
           </div>

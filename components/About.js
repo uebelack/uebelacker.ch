@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import { useRemarkSync } from 'react-remark';
 import Image from 'next/image';
@@ -34,10 +33,28 @@ Eine meiner Stärken ist, dass ich mich sehr schnell in neue Themen und Technolo
 // The chips under the prose. Same technologies the text names, pulled out so
 // they can be skimmed — the paragraphs are there for whoever wants the story.
 const SKILLS = [
-  'Java', 'Spring Boot', 'Camunda BPM', 'Angular', 'React', 'React Native',
-  'Next.js', 'Node.js', 'TypeScript', 'Kubernetes', 'ArgoCD', 'DevOps',
-  'LLMs', 'AI Agents', 'RAG', 'LangChain', 'LangChain4j',
-  'iSAQB Architect', 'Clean Code', 'TDD', 'Secure Coding', 'UX',
+  'Java',
+  'Spring Boot',
+  'Camunda BPM',
+  'Angular',
+  'React',
+  'React Native',
+  'Next.js',
+  'Node.js',
+  'TypeScript',
+  'Kubernetes',
+  'ArgoCD',
+  'DevOps',
+  'LLMs',
+  'AI Agents',
+  'RAG',
+  'LangChain',
+  'LangChain4j',
+  'iSAQB Architect',
+  'Clean Code',
+  'TDD',
+  'Secure Coding',
+  'UX',
 ];
 
 export default function About() {
@@ -48,12 +65,14 @@ export default function About() {
   return (
     <div className="about">
       <div>
-        <Reveal className="prose prose-uebelack dark:prose-uebelackdark about__prose">
-          {reactContent}
-        </Reveal>
+        <Reveal className="prose prose-uebelack dark:prose-uebelackdark about__prose">{reactContent}</Reveal>
 
         <Reveal className="skills" delay={120}>
-          {SKILLS.map((skill) => <span className="skill" key={skill}>{skill}</span>)}
+          {SKILLS.map((skill) => (
+            <span className="skill" key={skill}>
+              {skill}
+            </span>
+          ))}
         </Reveal>
       </div>
 
@@ -65,12 +84,7 @@ export default function About() {
           <div className="portrait__disc">
             <div className="portrait__ring" aria-hidden="true" />
             <div className="portrait__frame">
-              <Image
-                src="/david.jpg"
-                alt="David Übelacker"
-                width={220}
-                height={220}
-              />
+              <Image src="/david.jpg" alt="David Übelacker" width={220} height={220} />
             </div>
           </div>
           <div className="portrait__caption">David Übelacker</div>

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Imprint/> should render 1`] = `
+exports[`<Imprint/> > should render 1`] = `
 <div>
   <div
     class="page"
@@ -310,12 +310,9 @@ exports[`<Imprint/> should render 1`] = `
             <div
               class="site-footer__meta"
             >
-              ©
-               
+              © 
               2026
-               
-              Übelacker Solutions GmbH ·
-               
+               Übelacker Solutions GmbH · 
               all rights reserved.
             </div>
             <div
@@ -346,6 +343,11 @@ exports[`<Imprint/> should render 1`] = `
               >
                 Privacy Policy
               </a>
+              <button
+                type="button"
+              >
+                Cookie settings
+              </button>
             </div>
             <div
               class="flex items-center gap-4"

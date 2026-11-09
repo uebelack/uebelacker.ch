@@ -114,7 +114,9 @@ a {
   text-decoration: underline;
   text-decoration-color: rgb(0 240 255 / 40%);
   text-underline-offset: 3px;
-  transition: text-shadow 0.2s ease, text-decoration-color 0.2s ease;
+  transition:
+    text-shadow 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
 .prose a:hover {

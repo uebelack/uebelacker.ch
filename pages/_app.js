@@ -23,11 +23,7 @@ export default function App({ Component, pageProps }) {
   const language = locale && locale.startsWith('de') ? 'de' : 'en';
 
   return (
-    <IntlProvider
-      locale={language}
-      defaultLocale="en"
-      messages={messages[language]}
-    >
+    <IntlProvider locale={language} defaultLocale="en" messages={messages[language]}>
       <CookieConsent>
         <CaptchaProvider>
           <Component {...pageProps} />

@@ -1,3 +1,6 @@
+import { createRequire } from 'node:module';
+import '@testing-library/jest-dom/vitest';
+
 /*
   Browser APIs jsdom does not implement.
 
@@ -34,7 +37,9 @@ class NoopObserver {
 
   disconnect() {}
 
-  takeRecords() { return []; }
+  takeRecords() {
+    return [];
+  }
 }
 
 // Never fires a callback: components must render their content without waiting
@@ -68,26 +73,25 @@ Math.random = () => 0.42;
 // clock meant the suite went red every single day — it did, the morning after
 // the snapshots were written, for no reason other than the date rolling over.
 //
-// Only Date is faked. Every timer API is in doNotFake, because the components
-// under test use real setInterval (CoffeeCounter), setTimeout (SudoMode) and
-// the typing animation, and freezing those would change what renders rather
-// than just when.
-jest.useFakeTimers({
+// Only Date is faked. The components under test use real setInterval
+// (CoffeeCounter), setTimeout (SudoMode) and the typing animation, and
+// freezing those would change what renders rather than just when.
+vi.useFakeTimers({
   now: new Date('2026-06-15T12:00:00Z').getTime(),
-  doNotFake: [
-    'cancelAnimationFrame',
-    'cancelIdleCallback',
-    'clearImmediate',
-    'clearInterval',
-    'clearTimeout',
-    'hrtime',
-    'nextTick',
-    'performance',
-    'queueMicrotask',
-    'requestAnimationFrame',
-    'requestIdleCallback',
-    'setImmediate',
-    'setInterval',
-    'setTimeout',
-  ],
+  toFake: ['Date'],
 });
+
+// ── next/image ──────────────────────────────────────────────────────────────
+//
+// The page snapshots contain srcsets, and those are built from
+// `images.deviceSizes` in next.config.js. A real build injects that config by
+// replacing `process.env.__NEXT_IMAGE_OPTS` with an object literal; next/jest
+// did the same. Vitest leaves node_modules untouched and would only ever put a
+// string into process.env, so next/image falls back to its default config —
+// and every srcset changes. Writing our sizes into that default object, before
+// any test imports next/image, gives it the same config the site ships with.
+const require = createRequire(import.meta.url);
+const { images } = require('./next.config.js');
+const { imageConfigDefault } = require('next/dist/shared/lib/image-config');
+
+Object.assign(imageConfigDefault, images);

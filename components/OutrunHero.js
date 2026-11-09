@@ -220,9 +220,7 @@ export default function OutrunHero() {
     };
 
     const draw = (time) => {
-      const {
-        w, h, horizon, sun, sunRadius, focal, zNear,
-      } = scene;
+      const { w, h, horizon, sun, sunRadius, focal, zNear } = scene;
       const t = time / 1000;
 
       // ── Sky ──────────────────────────────────────────────────────────────
@@ -289,7 +287,7 @@ export default function OutrunHero() {
         const y = horizon + focal / z;
         if (y > h + 2) continue;
         // Nearer lines are thicker, which is the other half of the depth cue.
-        ctx.lineWidth = Math.min(2.4, 0.6 + (y - horizon) / (h - horizon) * 2);
+        ctx.lineWidth = Math.min(2.4, 0.6 + ((y - horizon) / (h - horizon)) * 2);
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(w, y);
@@ -353,10 +351,9 @@ export default function OutrunHero() {
     resizeObserver.observe(host);
 
     // No reason to animate a horizon nobody is looking at.
-    const visibility = new IntersectionObserver(
-      ([entry]) => (entry.isIntersecting ? start() : stop()),
-      { threshold: 0 },
-    );
+    const visibility = new IntersectionObserver(([entry]) => (entry.isIntersecting ? start() : stop()), {
+      threshold: 0,
+    });
     visibility.observe(host);
 
     const onVisibilityChange = () => (document.hidden ? stop() : start());

@@ -40,12 +40,7 @@ export default function Home() {
           <ul className="grid gap-5">
             {blogItems.map((item, i) => (
               <Reveal as="li" key={item.guid} delay={i * 70}>
-                <BlogItem
-                  thumbnail={item.thumbnail}
-                  title={item.title}
-                  link={item.link}
-                  teaser={item.teaser}
-                />
+                <BlogItem thumbnail={item.thumbnail} title={item.title} link={item.link} teaser={item.teaser} />
               </Reveal>
             ))}
           </ul>

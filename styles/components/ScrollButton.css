@@ -21,7 +21,10 @@
   -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--glow-cyan-soft);
   animation: bounce 2.4s ease-in-out infinite 1.5s;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
 }
 
 .scroll-button::before {

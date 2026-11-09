@@ -80,7 +80,9 @@
   transform: scaleX(var(--progress, 0));
   transform-origin: left;
   background: var(--grad-neon);
-  box-shadow: 0 0 10px rgb(249 42 173 / 70%), 0 0 24px rgb(0 240 255 / 40%);
+  box-shadow:
+    0 0 10px rgb(249 42 173 / 70%),
+    0 0 24px rgb(0 240 255 / 40%);
 }
 
 /* ── Cursor light ─────────────────────────────────────────────────────────── */
@@ -98,12 +100,7 @@
   margin: -260px 0 0 -260px;
   pointer-events: none;
   mix-blend-mode: screen;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgb(249 42 173 / 13%) 0%,
-    rgb(0 240 255 / 6%) 40%,
-    transparent 70%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgb(249 42 173 / 13%) 0%, rgb(0 240 255 / 6%) 40%, transparent 70%);
   transform: translate3d(var(--cursor-x, -9999px), var(--cursor-y, -9999px), 0);
   will-change: transform;
 }

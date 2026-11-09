@@ -1,3 +1,8 @@
+/*
+  oxlint-disable nextjs/no-html-link-for-pages --
+  The language switch is a plain <a> on purpose: changing locale should be a
+  full page load, not a client-side transition.
+*/
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -72,7 +77,9 @@ export default function Header({ title, description }) {
     if (!menuOpen) return undefined;
     const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = previous; };
+    return () => {
+      document.body.style.overflow = previous;
+    };
   }, [menuOpen]);
 
   const handleOnClick = (e, target) => {
@@ -90,19 +97,19 @@ export default function Header({ title, description }) {
       className={['nav-link', active === id ? 'is-active' : ''].filter(Boolean).join(' ')}
       aria-current={active === id ? 'true' : undefined}
     >
-      <span className="whitespace-nowrap"><FormattedMessage id={`${id}.title`} /></span>
+      <span className="whitespace-nowrap">
+        <FormattedMessage id={`${id}.title`} />
+      </span>
     </Link>
   );
 
   return (
     <header className={['site-header', scrolled ? 'is-scrolled' : ''].filter(Boolean).join(' ')}>
       <Head>
-        <title>
-          {title ? `${title} | Übelacker Solutions` : 'Übelacker Solutions'}
-        </title>
+        <title>{title ? `${title} | Übelacker Solutions` : 'Übelacker Solutions'}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1a1033" />
-        {description && (<meta name="description" content={description} />)}
+        {description && <meta name="description" content={description} />}
       </Head>
       {typeof window !== 'undefined' && cookiesAccess && (
         <>
@@ -127,14 +134,7 @@ export default function Header({ title, description }) {
 
       <div className="md:container site-header__bar">
         <Link href="/" className="wordmark" aria-label="Übelacker Solutions — home">
-          <Image
-            className="wordmark__mark"
-            src="/logo_dark.svg"
-            alt=""
-            width={38}
-            height={38}
-            priority
-          />
+          <Image className="wordmark__mark" src="/logo_dark.svg" alt="" width={38} height={38} priority />
           <span className="wordmark__text">
             <GlitchText>Übelacker</GlitchText>
           </span>
@@ -152,8 +152,12 @@ export default function Header({ title, description }) {
 
         <nav className="site-nav">
           <ul className="site-nav__list">
-            {SECTIONS.map((id) => <li key={id}>{navItem(id)}</li>)}
-            <li aria-hidden="true"><div className="nav-sep" /></li>
+            {SECTIONS.map((id) => (
+              <li key={id}>{navItem(id)}</li>
+            ))}
+            <li aria-hidden="true">
+              <div className="nav-sep" />
+            </li>
             <li>
               <div className="lang-switch">
                 <a href="/en">en</a>
@@ -163,8 +167,12 @@ export default function Header({ title, description }) {
             </li>
             <li>
               <div className="flex items-center gap-3">
-                <a className="social-link" title="Github Profile" href="https://github.com/uebelack"><FaGithub size="1.25em" /></a>
-                <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.25em" /></a>
+                <a className="social-link" title="Github Profile" href="https://github.com/uebelack">
+                  <FaGithub size="1.25em" />
+                </a>
+                <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/">
+                  <FaLinkedin size="1.25em" />
+                </a>
               </div>
             </li>
           </ul>
@@ -179,15 +187,22 @@ export default function Header({ title, description }) {
                 {navItem(id)}
               </li>
             ))}
-            <li className="mobile-nav__item flex items-center gap-4 pt-5" style={{ '--item-delay': `${SECTIONS.length * 45}ms` }}>
+            <li
+              className="mobile-nav__item flex items-center gap-4 pt-5"
+              style={{ '--item-delay': `${SECTIONS.length * 45}ms` }}
+            >
               <div className="lang-switch">
                 <a href="/en">en</a>
                 <span aria-hidden="true">/</span>
                 <a href="/de">de</a>
               </div>
               <div className="nav-sep" aria-hidden="true" />
-              <a className="social-link" title="Github Profile" href="https://github.com/uebelack"><FaGithub size="1.3em" /></a>
-              <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="1.3em" /></a>
+              <a className="social-link" title="Github Profile" href="https://github.com/uebelack">
+                <FaGithub size="1.3em" />
+              </a>
+              <a className="social-link" title="LinkedIn Profile" href="https://www.linkedin.com/in/daviduebelacker/">
+                <FaLinkedin size="1.3em" />
+              </a>
             </li>
           </ul>
         </nav>

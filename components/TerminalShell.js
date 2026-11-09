@@ -1,14 +1,20 @@
-import React, {
-  useCallback, useEffect, useMemo, useRef, useState,
-} from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useIntl } from 'react-intl';
 import { scroller } from 'react-scroll';
 import axios from 'axios';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import {
-  MAIL_ABANDONED, WELCOME, advanceMail, buildFilesystem, complete, displayPath, execute,
-  mailFailed, mailPrompt, mailSent,
+  MAIL_ABANDONED,
+  WELCOME,
+  advanceMail,
+  buildFilesystem,
+  complete,
+  displayPath,
+  execute,
+  mailFailed,
+  mailPrompt,
+  mailSent,
 } from '@/lib/shell';
 import { useCookieConsent } from './CookieConsent';
 
@@ -49,7 +55,9 @@ function Line({ line }) {
       <div className="shell__cols">
         {line.items.map((item, i) => (
           // Index keys: output lines are append-only and never reordered.
-          <span key={i} className={`sh-${item.tone || 'fg'}`}>{item.text}</span>
+          <span key={i} className={`sh-${item.tone || 'fg'}`}>
+            {item.text}
+          </span>
         ))}
       </div>
     );
@@ -64,22 +72,22 @@ function Line({ line }) {
 }
 
 // The shell prompt — or, while `mail` is running, that flow's prompt instead.
-const promptSegments = (cwd, flow) => (flow ? mailPrompt(flow.step) : [
-  { text: PROMPT_USER, tone: 'cyan' },
-  { text: ':', tone: 'faint' },
-  { text: displayPath(cwd), tone: 'fg' },
-  { text: ' ❯ ', tone: 'green' },
-]);
+const promptSegments = (cwd, flow) =>
+  flow
+    ? mailPrompt(flow.step)
+    : [
+        { text: PROMPT_USER, tone: 'cyan' },
+        { text: ':', tone: 'faint' },
+        { text: displayPath(cwd), tone: 'fg' },
+        { text: ' ❯ ', tone: 'green' },
+      ];
 
 export default function TerminalShell({ open, onClose, quotes }) {
   const { formatMessage, locale } = useIntl();
   const cookiesAccepted = useCookieConsent();
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const fs = useMemo(
-    () => buildFilesystem({ formatMessage, blogItems }),
-    [formatMessage],
-  );
+  const fs = useMemo(() => buildFilesystem({ formatMessage, blogItems }), [formatMessage]);
 
   const [lines, setLines] = useState(WELCOME);
   const [cwd, setCwd] = useState([]);
@@ -128,30 +136,36 @@ export default function TerminalShell({ open, onClose, quotes }) {
 
   // The echoed prompt goes in whether or not the line does anything, so the
   // transcript reads like a session rather than like a list of answers.
-  const echoOf = useCallback((raw, activeFlow) => ({
-    type: 'text',
-    segments: [...promptSegments(cwd, activeFlow), { text: raw, tone: 'white' }],
-  }), [cwd]);
+  const echoOf = useCallback(
+    (raw, activeFlow) => ({
+      type: 'text',
+      segments: [...promptSegments(cwd, activeFlow), { text: raw, tone: 'white' }],
+    }),
+    [cwd],
+  );
 
-  const send = useCallback(async (payload) => {
-    try {
-      if (!executeRecaptcha) throw new Error('recaptcha unavailable');
-      const captcha = await executeRecaptcha('shell_mail');
-      await axios.post('/api/contact', {
-        ...payload,
-        captcha,
-        // The confirm step says what sending means and asks for y/N. That
-        // answer is the consent the form collects with its checkbox, and the
-        // API rejects the message without it.
-        privacy: true,
-      });
-      print(mailSent(formatMessage({ id: 'contact.success' })));
-    } catch (error) {
-      print(mailFailed(formatMessage({ id: 'contact.error' })));
-    } finally {
-      setFlow(null);
-    }
-  }, [executeRecaptcha, formatMessage, print]);
+  const send = useCallback(
+    async (payload) => {
+      try {
+        if (!executeRecaptcha) throw new Error('recaptcha unavailable');
+        const captcha = await executeRecaptcha('shell_mail');
+        await axios.post('/api/contact', {
+          ...payload,
+          captcha,
+          // The confirm step says what sending means and asks for y/N. That
+          // answer is the consent the form collects with its checkbox, and the
+          // API rejects the message without it.
+          privacy: true,
+        });
+        print(mailSent(formatMessage({ id: 'contact.success' })));
+      } catch (error) {
+        print(mailFailed(formatMessage({ id: 'contact.error' })));
+      } finally {
+        setFlow(null);
+      }
+    },
+    [executeRecaptcha, formatMessage, print],
+  );
 
   const submit = useCallback(() => {
     const raw = input;
@@ -214,8 +228,20 @@ export default function TerminalShell({ open, onClose, quotes }) {
     }
     if (result.close) onClose();
   }, [
-    cookiesAccepted, cwd, echoOf, executeRecaptcha, flow, formatMessage, fs, history,
-    input, locale, onClose, print, quotes, send,
+    cookiesAccepted,
+    cwd,
+    echoOf,
+    executeRecaptcha,
+    flow,
+    formatMessage,
+    fs,
+    history,
+    input,
+    locale,
+    onClose,
+    print,
+    quotes,
+    send,
   ]);
 
   const sending = flow?.step === 'sending';
@@ -318,12 +344,7 @@ export default function TerminalShell({ open, onClose, quotes }) {
 
         {/* Clicking anywhere in the output puts the caret back in the prompt,
             the way clicking a terminal window does. */}
-        <div
-          className="shell__body"
-          ref={bodyRef}
-          role="presentation"
-          onClick={() => inputRef.current?.focus()}
-        >
+        <div className="shell__body" ref={bodyRef} role="presentation" onClick={() => inputRef.current?.focus()}>
           {lines.map((line, i) => (
             <Line key={i} line={line} />
           ))}

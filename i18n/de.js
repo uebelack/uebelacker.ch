@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 export default {
   common: {
     more: 'Mehr',
@@ -16,7 +15,8 @@ export default {
     stat_oss_value: '06',
     stat_oss_label: 'Open-Source-Projekte',
     quote: 'Was ein Programmierer in einem Monat schaffen kann, können zwei Programmierer in zwei Monaten schaffen.',
-    description: 'Die Firma Übelacker Solutions wurde von mir, David Übelacker, gegründet, um als Freelancer in der Schweiz zu arbeiten. Ich bin ein Full-Stack-Entwickler und Software-Architekt mit über 20 Jahren Erfahrung in der Entwicklung von Web- und mobilen Anwendungen.',
+    description:
+      'Die Firma Übelacker Solutions wurde von mir, David Übelacker, gegründet, um als Freelancer in der Schweiz zu arbeiten. Ich bin ein Full-Stack-Entwickler und Software-Architekt mit über 20 Jahren Erfahrung in der Entwicklung von Web- und mobilen Anwendungen.',
   },
   shell: {
     hint: 'klicken für eine Shell',
@@ -53,22 +53,26 @@ export default {
     title: 'Open Source',
     babeli: {
       title: 'Babeli',
-      description: 'KI-gestützte Übersetzungsverwaltung. Validieren, sortieren und automatisch fehlende Übersetzungen mit LLMs generieren.',
+      description:
+        'KI-gestützte Übersetzungsverwaltung. Validieren, sortieren und automatisch fehlende Übersetzungen mit LLMs generieren.',
       link: 'https://github.com/uebelack/babeli',
     },
     babeli4j: {
       title: 'Babeli4j',
-      description: 'KI-gestützte Übersetzungsdateiverwaltung für Java-Projekte. Babeli erkennt fehlende Übersetzungen, sortiert Schlüssel und generiert Übersetzungen mit LLMs — integriert in Maven- oder Gradle-Builds oder als eigenständiges CLI.',
+      description:
+        'KI-gestützte Übersetzungsdateiverwaltung für Java-Projekte. Babeli erkennt fehlende Übersetzungen, sortiert Schlüssel und generiert Übersetzungen mit LLMs — integriert in Maven- oder Gradle-Builds oder als eigenständiges CLI.',
       link: 'https://github.com/uebelack/babeli4j',
     },
     nodeappattest: {
       title: 'node-app-attest',
-      description: 'Eine JavaScript-Implementierung des App-Attest-Protokolls, das überprüft, ob Clients, die sich mit Ihrem Server verbinden, gültige Instanzen Ihrer App sind.',
+      description:
+        'Eine JavaScript-Implementierung des App-Attest-Protokolls, das überprüft, ob Clients, die sich mit Ihrem Server verbinden, gültige Instanzen Ihrer App sind.',
       link: 'https://github.com/uebelack/node-app-attest',
     },
     tossitin: {
       title: 'Toss It In',
-      description: 'KI-gestütztes Git-Workflow-Tool, das Ihre Änderungen analysiert, aussagekräftige Commit-Nachrichten generiert und in Ihr Repository pusht — alles in einem Befehl.',
+      description:
+        'KI-gestütztes Git-Workflow-Tool, das Ihre Änderungen analysiert, aussagekräftige Commit-Nachrichten generiert und in Ihr Repository pusht — alles in einem Befehl.',
       link: 'https://github.com/uebelack/tossitin',
     },
     tratschtante: {
@@ -78,7 +82,8 @@ export default {
     },
     screegen: {
       title: 'Screegen',
-      description: 'Ein Toolkit zur Screenshot-Generierung für App-Store-Screenshots. Erstellen Sie schöne, lokalisierte Screenshots für mehrere Geräte mit React und Playwright.',
+      description:
+        'Ein Toolkit zur Screenshot-Generierung für App-Store-Screenshots. Erstellen Sie schöne, lokalisierte Screenshots für mehrere Geräte mit React und Playwright.',
       link: 'https://github.com/uebelack/screegen',
     },
   },
@@ -101,7 +106,8 @@ export default {
     privacy_1: 'Ich akzeptiere die',
     privacy_2: 'Datenschutzerklärung',
     privacy_link: '/de/datenschutz',
-    privacy_info: 'Ihre E-Mail-Adresse und Ihre Nachricht werden gespeichert, damit ich darauf antworten kann. Ihre Daten werden nicht für andere Zwecke verwendet.',
+    privacy_info:
+      'Ihre E-Mail-Adresse und Ihre Nachricht werden gespeichert, damit ich darauf antworten kann. Ihre Daten werden nicht für andere Zwecke verwendet.',
     submit: 'Senden',
     email_error: 'Bitte geben Sie eine gültige E-Mail Adrese ein',
     subject_error: 'Bitte geben Sie Ihr Anliegen ein',
@@ -110,7 +116,8 @@ export default {
     privacy_error: 'Bitte akzeptieren Sie die Datenschutzerklärung',
     success: 'Vielen Dank für Ihre Nachricht! Ich werde mich so schnell wie möglich bei Ihnen melden!',
     error: 'Entschuldigung, etwas ist schief gelaufen, bitte versuchen Sie es später noch einmal....',
-    cookie: 'Bitte akzeptieren Sie die Cookies am unteren Rand des Bildschirms, um eine Nachricht zu übermitteln oder senden Sie eine E-Mail an support@uebelacker.dev.',
+    cookie:
+      'Bitte akzeptieren Sie die Cookies am unteren Rand des Bildschirms, um eine Nachricht zu übermitteln oder senden Sie eine E-Mail an support@uebelacker.dev.',
   },
   footer: {
     rights: 'alle Rechte vorbehalten.',
@@ -118,9 +125,11 @@ export default {
     imprint_link: '/de/impressum',
     privacy: 'Datenschutzerklärung',
     privacy_link: '/de/datenschutz',
+    cookie_settings: 'Cookie-Einstellungen',
   },
   cookie_consent: {
-    message: 'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Um mehr zu erfahren, lesen Sie bitte unsere',
+    message:
+      'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können. Um mehr zu erfahren, lesen Sie bitte unsere',
     accept: 'Akzeptieren',
   },
   lost: {

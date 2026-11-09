@@ -1,4 +1,4 @@
-name: "Continuous Integration"
+name: 'Continuous Integration'
 on:
   pull_request:
     branches: '*'
@@ -37,9 +37,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint code
         run: pnpm lint
-      # `pnpm test` runs the package.json script, which is jest. The previous
-      # `bun test` ran Bun's own test runner instead of the script, so the jest
-      # suite was never actually executed here.
+      - name: Check formatting
+        run: pnpm format:check
       - name: Run Tests
         run: pnpm test
       # Lint and tests both passed while the build was broken during the pnpm
